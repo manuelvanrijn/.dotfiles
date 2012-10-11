@@ -7,6 +7,38 @@ task :install do
   puts linkables.inspect
 end
 
+desc "Git installation script"
+task :git do
+  if OS.windows?
+    puts "TODO"
+  elsif OS.mac?
+    Dir.glob('git/*.symlink').each do | link |
+      target = "~/.#{link.split('/').last.split('.symlink').last}"
+      if File.exists?(target) || File.symlink?(target)
+        puts "SKIPPED: #{source} -> #{target}"
+      else
+        `ln #{link} #{target}`
+      end
+    end
+  end
+end
+
+desc "ruby installation script"
+task :ruby do
+  if OS.windows?
+    puts "TODO"
+  elsif OS.mac?
+    Dir.glob('ruby/*.symlink').each do | link |
+      target = "~/.#{link.split('/').last.split('.symlink').last}"
+      if File.exists?(target) || File.symlink?(target)
+        puts "SKIPPED: #{source} -> #{target}"
+      else
+        `ln #{link} #{target}`
+      end
+    end
+  end
+end
+
 desc "Sublime Text 2 installation script"
 task :sublime2 do
   if OS.windows?
@@ -37,6 +69,19 @@ task :sublime2 do
       else
         `ln -s #{source} #{target}`
       end
+    end
+  end
+end
+
+desc "zsh installation script"
+task :zsh do
+  return unless OS.mac?
+  Dir.glob('zsh/*.symlink').each do | link |
+    target = "~/.#{link.split('/').last.split('.symlink').last}"
+    if File.exists?(target) || File.symlink?(target)
+      puts "SKIPPED: #{source} -> #{target}"
+    else
+      `ln #{link} #{target}`
     end
   end
 end

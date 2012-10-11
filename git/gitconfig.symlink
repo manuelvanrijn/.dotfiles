@@ -1,6 +1,8 @@
 [user]
         name = Manuel van Rijn
         email = manuel@manuelles.nl
+[alias]
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [color]
         diff = auto
         status = auto
@@ -8,6 +10,7 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
+        editor = vim
 [diff]
         external = meld
 [merge]

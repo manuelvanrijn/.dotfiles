@@ -1,2 +1,8 @@
+# Global
 .DS_Store
-*~
+*.log
+*.pyc
+
+# NodeJS
+node_modules/
+npm-debug.log
