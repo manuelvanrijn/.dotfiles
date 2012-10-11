@@ -1,6 +1,8 @@
 [user]
         name = Manuel van Rijn
         email = manuel@manuelles.nl
+[credential]
+        helper = osxkeychain
 [alias]
         lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [color]
