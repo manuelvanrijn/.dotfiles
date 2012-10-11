@@ -29,8 +29,8 @@ task :sublime2 do
     Dir.foreach('sublime2/') do | folder |
       next if folder == '.' or folder == '..'
 
-      source = File.join(Dir.pwd, 'sublime2', folder)
-      target = File.join(sublime_data_folder, folder)
+      source = File.join(Dir.pwd, 'sublime2', folder).gsub(' ', '\ ')
+      target = File.join(sublime_data_folder, folder).gsub(' ', '\ ')
 
       if File.exists?(target) || File.symlink?(target)
         puts "SKIPPED: #{source} -> #{target}"
