@@ -23,10 +23,10 @@ task :env do
     end
 
     # Set the $EDITOR Enviroment variable
-    #if ENV['EDITOR'].nil?
+    if ENV['EDITOR'].nil?
       sublime_exe = "/c/Progra~1/Sublim~1/sublime_text.exe"
       `cmd.exe /C setx EDITOR "#{sublime_exe}"`
-    #end
+    end
 
     # Add the $DOTFILES/bin folder to the $PATH variable (of not already)
     bin_folder = File.join(Dir.pwd, 'bin').gsub(File::SEPARATOR, File::ALT_SEPARATOR || File::SEPARATOR)
