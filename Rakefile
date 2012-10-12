@@ -1,14 +1,16 @@
 require 'rake'
 
+task :default => :install
+
 desc "Hook our dotfiles into system-standard positions."
 task :install do
-  # home = File.expand_path('~')
-
-  # Dir['*'].each do |file|
-  #   next if file =~ /install/
-  #   target = File.join(home, ".#{file}")
-  #   `DotfileHelper -s #{File.expand_path file} #{target}`
-  # end
+  puts "Please specify what part you like to install"
+  puts ""
+  puts "Options:"
+  puts "  git       (win/osx)"
+  puts "  ruby      (osx)"
+  puts "  sublime2  (win/osx)"
+  puts "  zsh       (osx)"
 end
 
 desc "Git installation script"
