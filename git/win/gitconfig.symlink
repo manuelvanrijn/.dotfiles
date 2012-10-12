@@ -3,8 +3,9 @@
         email = vanrijn@auxilium.nl
 [alias]
         lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-        rank-contributers = !$DOTFILES/bin/git-rank-contributers
+        st = !git status -sb
         count   = !git shortlog -sn
+        rank-contributers = !$DOTFILES/bin/git-rank-contributers
 [color]
         diff = auto
         status = auto
