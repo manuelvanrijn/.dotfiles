@@ -12,10 +12,6 @@ task :install do
   puts "  ruby      (osx)"
   puts "  sublime2  (win/osx)"
   puts "  zsh       (osx)"
-
-  bin_folder = File.join(Dir.pwd, 'bin').gsub(File::SEPARATOR, File::ALT_SEPARATOR || File::SEPARATOR)
-  #puts "#{ENV['PATH']};#{bin_folder}\\"
-  puts ENV['PATH']
 end
 
 desc "Enviroment installation scripts"
@@ -25,6 +21,13 @@ task :env do
     if ENV['DOTFILES'].nil?
       `cmd.exe /C setx DOTFILES "#{Dir.pwd}"`
     end
+
+    # Set the $EDITOR Enviroment variable
+    #if ENV['EDITOR'].nil?
+      sublime_exe = "/c/Progra~1/Sublim~1/sublime_text.exe"
+      `cmd.exe /C setx EDITOR "#{sublime_exe}"`
+    #end
+
     # Add the $DOTFILES/bin folder to the $PATH variable (of not already)
     bin_folder = File.join(Dir.pwd, 'bin').gsub(File::SEPARATOR, File::ALT_SEPARATOR || File::SEPARATOR)
     unless ENV['PATH'].include?(bin_folder)
