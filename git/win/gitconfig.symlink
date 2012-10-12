@@ -1,0 +1,26 @@
+[user]
+        name = Manuel van Rijn
+        email = vanrijn@auxilium.nl
+[alias]
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        autocrlf = true
+        excludesfile = ~/.gitignore
+        editor = vim
+[diff]
+        external = meld
+[merge]
+        tool = meld
+[mergetool]
+        keepBackup = false
+[mergetool "meld"]
+        path = c:/Program Files (x86)/meld/bin/meld
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1
