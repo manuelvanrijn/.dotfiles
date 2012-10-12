@@ -4,6 +4,7 @@
 [alias]
         lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
         rank-contributers = !$DOTFILES/bin/git-rank-contributers
+        count   = !git shortlog -sn
 [color]
         diff = auto
         status = auto
