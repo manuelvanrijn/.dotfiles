@@ -4,8 +4,9 @@
 [alias]
         lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
         st = !git status -sb
-        count   = !git shortlog -sn
+        count = !git shortlog -sn
         rank-contributers = !$DOTFILES/bin/git-rank-contributers
+        large-files = !$DOTFILES/bin/git-large-files
 [color]
         diff = auto
         status = auto
