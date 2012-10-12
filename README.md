@@ -1,6 +1,10 @@
 # My (cross)platform dotfiles
 
-## Install
+## Prerequisites
+
+* [Adobe - Source Code Pro](https://github.com/adobe/Source-Code-Pro/downloads) font
+
+## Installation
 
 ### Windows
 
