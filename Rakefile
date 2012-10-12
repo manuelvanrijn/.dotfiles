@@ -7,10 +7,21 @@ task :install do
   puts "Please specify what part you like to install"
   puts ""
   puts "Options:"
+  puts "  env       (win)"
   puts "  git       (win/osx)"
   puts "  ruby      (osx)"
   puts "  sublime2  (win/osx)"
   puts "  zsh       (osx)"
+end
+
+desc "Enviroment installation scripts"
+task :env do
+  if OS.windows?
+    # Set the $DOTFILES Enviroment variable
+    if ENV['DOTFILES'].nil?
+      `cmd.exe /C setx DOTFILES #{Dir.pwd}`
+    end
+  end
 end
 
 desc "Git installation script"
