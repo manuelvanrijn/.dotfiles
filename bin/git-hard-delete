@@ -1,0 +1,48 @@
+#!/bin/sh
+function ConfirmOrExit() {
+  while true
+  do
+    echo "Are you sure you want to continue? (y or n) :"
+    read CONFIRM
+    case $CONFIRM in
+      y|Y|YES|yes|Yes) break ;;
+      n|N|no|NO|No)
+      echo Aborted...
+      exit
+    ;;
+  *) echo Please enter only y or n
+  esac
+  done
+}
+
+# Show usage if no arguments are supplied
+if ["$@" == ""]; then
+  echo "Usage:"
+  echo "  git hard-delete file.ext folder/file.ext another_folder/*"
+  exit
+fi
+
+# Inform the user
+echo "WARNING you're going to delete the folowing files/folders from your git repository."
+echo "These means the files and folders will be destroyed and will also be erased from the git history:"
+# Print input
+INPUT="$@"
+IFS=" "
+for i in $INPUT
+do
+  echo "- $i"
+done
+
+ConfirmOrExit
+
+# Perform hard delete
+# see: https://help.github.com/articles/remove-sensitive-data
+git filter-branch -f --index-filter "git rm -rf --cached --ignore-unmatch $@" --prune-empty -- --all
+rm -rf $(git rev-parse --show-toplevel)/.git/refs/original/
+git reflog expire --expire=now --all
+git gc --aggressive --prune=now
+
+# Finished
+echo "Finished hard delete!"
+echo "Don't forget to force push your repository!"
+echo "  git push origin master --force"
