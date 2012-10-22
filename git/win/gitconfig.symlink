@@ -7,6 +7,7 @@
         count = !git shortlog -sn
         rank-contributers = !$DOTFILES/bin/git-rank-contributers
         large-files = !$DOTFILES/bin/git-large-files
+        cl = !git gc && git submodule foreach git gc
 [color]
         diff = auto
         status = auto
