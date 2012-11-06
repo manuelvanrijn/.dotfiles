@@ -144,7 +144,7 @@ module DotfileHelper
     if File.exists?(target) || File.symlink?(target)
       puts "SKIPPED: #{source} -> #{target}"
     else
-      `DotfileHelper #{source} #{target}`
+      `ln -s $PWD/#{source} #{target}`
     end
   end
 
