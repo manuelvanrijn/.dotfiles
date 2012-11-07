@@ -19,15 +19,11 @@
         autocrlf = true
         excludesfile = ~/.gitignore
         editor = vim
-[diff]
-        external = meld
 [merge]
         tool = meld
 [mergetool]
         keepBackup = false
 [mergetool "meld"]
         path = c:/Program Files (x86)/meld/bin/meld
-[difftool]
-        prompt = false
 [help]
         autocorrect = 1

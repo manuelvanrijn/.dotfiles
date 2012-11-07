@@ -20,13 +20,9 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
-[diff]
-        external = meld
 [merge]
         tool = meld
 [mergetool]
         keepBackup = false
-[difftool]
-        prompt = false
 [help]
         autocorrect = 1
