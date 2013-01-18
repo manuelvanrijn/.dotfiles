@@ -2,3 +2,4 @@ export PATH="./bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/local/sbin:$DOTFILES/b
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.2/bin"
+export PATH="$PATH:/usr/local/heroku/bin"
