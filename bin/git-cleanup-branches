@@ -1,0 +1,40 @@
+#!/bin/sh
+function ConfirmOrExit() {
+  while true
+  do
+    echo "Are you sure you want to continue? (y or n) :"
+    read CONFIRM
+    case $CONFIRM in
+      y|Y|YES|yes|Yes) break ;;
+      n|N|no|NO|No)
+      echo Aborted...
+      exit
+    ;;
+  *) echo Please enter only y or n
+  esac
+  done
+}
+
+# Do we have work to do?
+count=$(git branch --merged | grep -v '^\*' | wc -l)
+if [ $count == 0 ]; then
+  echo "There are no branches that are merged already"
+  exit
+fi
+
+# Inform the user
+echo "WARNING you're going to remove the following branches:"
+echo "======================================================"
+git branch --merged | grep -v '^\*'
+
+echo ""
+echo "The following branches will NOT be removed:"
+echo "======================================================"
+git branch --no-merged | grep -v '^\*'
+
+echo ""
+echo ""
+ConfirmOrExit
+
+# Delete branches
+git branch --merged | grep -v "\*" | xargs -n 1 git branch -D

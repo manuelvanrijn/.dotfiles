@@ -9,6 +9,7 @@
         large-files = !$DOTFILES/bin/git-large-files
         cl = !git gc && git submodule foreach git gc
         hard-delete = !$DOTFILES/bin/git-hard-delete
+        cleanup-branches = !$DOTFILES/bin/git-cleanup-branches
         exec = !git update-index --chmod=+x
 [color]
         diff = auto
