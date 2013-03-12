@@ -1,5 +1,5 @@
 [user]
-        name = Manuel van Rijn
+	name = Manuel van Rijn
         email = manuel@manuelles.nl
 [credential]
         helper = osxkeychain
