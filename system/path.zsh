@@ -3,3 +3,6 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.2/bin"
 export PATH="$PATH:/usr/local/heroku/bin"
+
+export PATH="$PATH:/Applications/android-dev/sdk/platform-tools"
+export PATH="$PATH:/Applications/android-dev/sdk/tools"
