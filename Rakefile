@@ -61,7 +61,7 @@ task :sublime2 do
   if OS.windows?
     sublime_data_folder = File.join(ENV['HOMEDRIVE'], ENV['HOMEPATH'], 'AppData', 'Roaming', 'Sublime Text 2').gsub(File::SEPARATOR, File::ALT_SEPARATOR || File::SEPARATOR)
 
-    if Dir.exists?(sublime_data_folder)
+    unless Dir.exists?(sublime_data_folder)
       puts "Sublime Text 2 wasn't installed"
       return
     end
