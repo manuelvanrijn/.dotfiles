@@ -6,7 +6,7 @@
 
 ### Windows
 
-- [python](http://www.python.org/download/) and [python-gtk](http://www.pygtk.org/downloads.html)
+- [python27](http://www.python.org/download/) **32bits** and [pygtk-all-in-one](http://www.pygtk.org/downloads.html) **note: the all in one**
 - [meld](https://live.gnome.org/Meld/Windows) installed into "c:\Program Files (x86)\meld"
 
 ## Installation
