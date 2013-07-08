@@ -66,13 +66,10 @@ task :sublime2 do
       return
     end
 
-    Dir.foreach('sublime2/') do | folder |
-      next if folder == '.' or folder == '..'
-      source = File.join(Dir.pwd, 'sublime2', folder).gsub(File::SEPARATOR, File::ALT_SEPARATOR || File::SEPARATOR)
-      target = File.join(sublime_data_folder, folder).gsub(File::SEPARATOR, File::ALT_SEPARATOR || File::SEPARATOR)
+    source = File.join(Dir.pwd, 'sublime2', 'Packages', 'User').gsub(File::SEPARATOR, File::ALT_SEPARATOR || File::SEPARATOR)
+    target = File.join(sublime_data_folder, 'Packages', 'User').gsub(File::SEPARATOR, File::ALT_SEPARATOR || File::SEPARATOR)
 
-      DotfileHelper.create(source, target)
-    end
+    DotfileHelper.create(source, target)
   elsif OS.mac?
     sublime_data_folder = File.join('~', 'Library', 'Application Support', 'Sublime Text 2')
 
@@ -81,13 +78,10 @@ task :sublime2 do
       return
     end
 
-    Dir.foreach('sublime2/') do | folder |
-      next if folder == '.' or folder == '..'
+    source = File.join(Dir.pwd, 'sublime2', 'Packages', 'User').gsub(' ', '\ ')
+    target = File.join(sublime_data_folder, 'Packages', 'User').gsub(' ', '\ ')
 
-      source = File.join(Dir.pwd, 'sublime2', folder).gsub(' ', '\ ')
-      target = File.join(sublime_data_folder, folder).gsub(' ', '\ ')
-
-      DotfileHelper.create(source, target)
+    DotfileHelper.create(source, target)
     end
   end
 end
