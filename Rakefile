@@ -24,7 +24,7 @@ task :env do
 
     # Set the $EDITOR Enviroment variable
     if ENV['EDITOR'].nil?
-      sublime_exe = "/c/Progra~1/Sublim~1/sublime_text.exe"
+      sublime_exe = "C:/Progra~1/Sublim~1/sublime_text.exe"
       `cmd.exe /C setx EDITOR "#{sublime_exe}"`
     end
 
@@ -82,7 +82,6 @@ task :sublime2 do
     target = File.join(sublime_data_folder, 'Packages', 'User').gsub(' ', '\ ')
 
     DotfileHelper.create(source, target)
-    end
   end
 end
 
