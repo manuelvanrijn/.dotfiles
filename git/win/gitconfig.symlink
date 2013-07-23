@@ -11,6 +11,7 @@
         hard-delete = !$DOTFILES/bin/git-hard-delete
         cleanup-branches = !$DOTFILES/bin/git-cleanup-branches
         exec = !git update-index --chmod=+x
+        unadd = reset HEAD
 [color]
         diff = auto
         status = auto
