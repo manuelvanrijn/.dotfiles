@@ -28,14 +28,11 @@
       // Define globals exposed by Node.js.
       "node": true,
 
-      /*
-       * ENFORCING OPTIONS
-       * =================
-       */
+      // Prohabit the user of camelCasedVariables and CONST_VARS
+      "camelcase": true,
 
-      // Force all variable names to use either camelCase style or UPPER_CASE
-      // with underscores.
-      // "camelcase": true,
+      // Prohabit the user to start the { on the same line "function asdf() {"
+      "curly": true,
 
       // Prohibit the use of == and != in favor of === and !==.
       "eqeqeq": true,
@@ -49,14 +46,20 @@
       // Prohibit the use of a variable before it was defined.
       "latedef": true,
 
+      // Enforce a max line length of 80 chars
+      "maxlen": 80,
+
       // Require capitalized names for constructor functions.
       "newcap": true,
+
+      // Prohabit the use of single (') quotes instead of double (") quotes
+      "quotmark": "single",
 
       // Prohibit trailing whitespace.
       "trailing": true,
 
-      // Prohibit the use of explicitly undeclared variables.
-      "undef": true,
+      // Ignore the use of explicitly undeclared variables.
+      "undef": false,
 
       // Warn when variables are defined but never used.
       "unused": true
