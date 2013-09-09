@@ -11,6 +11,7 @@ task :install do
   puts "  git       (win/osx)"
   puts "  ruby      (osx)"
   puts "  sublime2  (win/osx)"
+  puts "  vim       (win/osx)"
   puts "  zsh       (osx)"
 end
 
@@ -83,6 +84,11 @@ task :sublime2 do
 
     DotfileHelper.create(source, target)
   end
+end
+
+desc "vim installation script"
+task :vim do
+  DotfileHelper.scan_symlinks("vim")
 end
 
 desc "zsh installation script"
