@@ -2,3 +2,4 @@
 *.cache
 *.pyc
 sublime2/Packages/User/Package Control.last-run
+sublime2/Packages/User/Package Control.system-ca-bundle

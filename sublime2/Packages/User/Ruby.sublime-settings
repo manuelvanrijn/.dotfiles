@@ -2,6 +2,7 @@
 	"extensions":
 	[
 		"ru",
-		"Vagrantfile"
+		"Vagrantfile",
+		"rabl"
 	]
 }

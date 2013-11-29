@@ -1,5 +1,5 @@
 [user]
-	name = Manuel van Rijn
+        name = Manuel van Rijn
         email = manuel@manuelles.nl
 [credential]
         helper = osxkeychain
@@ -26,7 +26,8 @@
         excludesfile = ~/.gitignore
         editor = vim
 [merge]
-        tool = meld
+        tool = opendiff
+        #tool = meld
 [mergetool]
         keepBackup = false
 [help]
