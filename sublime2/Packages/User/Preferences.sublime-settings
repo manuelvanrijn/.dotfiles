@@ -1,6 +1,9 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
+	//"theme": "Soda Light.sublime-theme",
+	//"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
+	"theme": "Spacegray.sublime-theme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"detect_slow_plugins": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
@@ -24,7 +27,6 @@
 	"soda_classic_tabs": true,
 	"soda_folder_icons": false,
 	"tab_size": 2,
-	"theme": "Soda Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true
