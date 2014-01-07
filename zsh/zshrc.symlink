@@ -23,3 +23,6 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# php-version
+source $(brew --prefix php-version)/php-version.sh && php-version 5
