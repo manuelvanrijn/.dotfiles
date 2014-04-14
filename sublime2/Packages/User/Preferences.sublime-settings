@@ -23,8 +23,7 @@
 		"*.pdb",
 		"*.idb",
 		"*.psd",
-		"*.db",
-		"*.min.js"
+		"*.db"
 	],
 	"folder_exclude_patterns":
 	[
