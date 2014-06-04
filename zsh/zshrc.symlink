@@ -18,11 +18,11 @@ compinit
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="eastwood"
-plugins=(git brew bundler gem rvm rails)
+plugins=(git brew bundler gem rails)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # php-version
-source $(brew --prefix php-version)/php-version.sh && php-version 5
+# source $(brew --prefix php-version)/php-version.sh && php-version 5
