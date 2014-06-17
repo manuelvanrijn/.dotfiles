@@ -39,6 +39,21 @@ task :sublime2 do
   DotfileHelper.create(source, target)
 end
 
+desc "Sublime Text 3 installation script"
+task :sublime3 do
+  sublime_data_folder = File.join('~', 'Library', 'Application Support', 'Sublime Text 3')
+
+  if Dir.exists?(sublime_data_folder)
+    puts "Sublime Text 3 wasn't installed"
+    return
+  end
+
+  source = File.join(Dir.pwd, 'sublime3', 'Packages', 'User').gsub(' ', '\ ')
+  target = File.join(sublime_data_folder, 'Packages', 'User').gsub(' ', '\ ')
+
+  DotfileHelper.create(source, target)
+end
+
 desc "vim installation script"
 task :vim do
   DotfileHelper.scan_symlinks("vim")

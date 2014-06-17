@@ -8,6 +8,10 @@
 # export PATH="$PATH:/Applications/android-dev/sdk/tools"
 
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# dotfiles bin
+export PATH="$PATH:$DOTFILES/bin"
+# rbenv
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 # brew
 export PATH="/usr/local/bin:$PATH"
 

@@ -1,7 +1,8 @@
 .DS_Store
 *.cache
 *.pyc
-sublime2/Packages/User/Package Control.last-run
-sublime2/Packages/User/Package Control.system-ca-bundle
-sublime2/Packages/User/RubyTest.last-run
-sublime2/Packages/User/SublimeCodeIntel.sublime-settings
+Package Control.last-run
+Package Control.system-ca-bundle
+RubyTest.last-run
+SublimeCodeIntel.sublime-settings
+*.tmTheme
