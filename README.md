@@ -3,6 +3,7 @@
 ## Prerequisites
 
 * [Adobe - Source Code Pro](https://github.com/adobe/Source-Code-Pro/downloads) font
+* ImageMagick - `brew install imagemagick`
 
 ## Installation
 

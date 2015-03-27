@@ -1,17 +1,36 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
+		"AlignTab",
 		"Better CoffeeScript",
+		"Better RSpec",
+		"Color Highlighter",
 		"Cucumber",
 		"DocBlockr",
 		"GitGutter",
+		"Github Tools",
+		"GotoDocumentation",
+		"Gutter Color",
 		"HTML-CSS-JS Prettify",
+		"Jade",
+		"Keymaps",
+		"Liquid",
 		"Markdown Preview",
+		"Package Control",
 		"PlainTasks",
+		"RSpecNavigator",
+		"RubyTest",
 		"Sass",
+		"SCSS",
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
+		"SublimeLinter-rubocop",
+		"Tag",
+		"Theme - Cobalt2",
 		"Theme - Soda",
 		"Theme - Spacegray",
 		"Tomorrow Color Schemes"

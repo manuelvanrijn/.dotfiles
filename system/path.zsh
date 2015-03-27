@@ -14,6 +14,11 @@ export PATH="$PATH:$DOTFILES/bin"
 export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 # brew
 export PATH="/usr/local/bin:$PATH"
+# go
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+
+# lilypond
+export PATH="$PATH:/Applications/LilyPond.app/Contents/Resources/bin"
 
 # some random apps loaded from ~/.bin
 export PATH="$PATH:$HOME/.bin"

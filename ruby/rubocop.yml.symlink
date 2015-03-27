@@ -1,0 +1,6 @@
+# Metrics/LineLength:
+#   Max: 99
+
+# Don't force documentation for classes
+Style/Documentation:
+  Enabled: false

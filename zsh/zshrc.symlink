@@ -26,3 +26,6 @@ unsetopt correct_all
 
 # php-version
 # source $(brew --prefix php-version)/php-version.sh && php-version 5
+
+export NVM_DIR="/Users/manuel/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -12,3 +12,10 @@ npm-debug.log
 
 # Pow
 .powrc
+
+# global ignore folder
+_ignore/
+
+# sublime
+*.sublime-project
+*.sublime-workspace

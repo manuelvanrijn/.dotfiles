@@ -1,0 +1,11 @@
+[
+  //align =
+  {
+    "keys": ["super+shift+a"], "command": "align_tab",
+    "args" : {"user_input" : "=/f"}
+  },
+  //gotodoc
+  {
+    "keys": ["super+shift+h"], "command": "goto_documentation"
+  }
+]
