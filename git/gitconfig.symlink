@@ -31,6 +31,8 @@
 [merge]
         tool = opendiff
         ff = true
+[rebase]
+	autostash = true
 [mergetool]
         keepBackup = false
 [help]
@@ -39,6 +41,8 @@
         required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[remote]
+        pushdefault = origin
 [push]
 	default = current
 [pull]
@@ -48,4 +52,8 @@
 	smudge = git hawser smudge %f
 	required = true
 [heroku]
-	account = personal
+	account = sping-admin
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true

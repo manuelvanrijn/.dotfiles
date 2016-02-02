@@ -22,3 +22,9 @@ export PATH="$PATH:/Applications/LilyPond.app/Contents/Resources/bin"
 
 # some random apps loaded from ~/.bin
 export PATH="$PATH:$HOME/.bin"
+
+# chefdk
+export PATH="$PATH:/opt/chefdk/bin"
+
+# postgres.app
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"

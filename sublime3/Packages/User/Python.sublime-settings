@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-		"haml"
+		"py3",
+		"pyw"
 	]
 }

@@ -5,6 +5,7 @@
 *.pyc
 *.swp
 *.rbc
+*.rdb
 
 # NodeJS
 node_modules/

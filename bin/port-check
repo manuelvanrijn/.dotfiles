@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if test "$1" == ""
+then
+  echo 'usage: port-check <port-number>'
+else
+  lsof -i :$1
+fi

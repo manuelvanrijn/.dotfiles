@@ -1,15 +1,22 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
 	"installed_packages":
 	[
 		"AlignTab",
+		"All Autocomplete",
+		"AngularJS",
+		"ApplySyntax",
+		"BeautifyRuby",
 		"Better CoffeeScript",
 		"Better RSpec",
 		"Color Highlighter",
 		"Cucumber",
 		"DocBlockr",
+		"EditorConfig",
+		"Feature Presentation",
 		"GitGutter",
 		"Github Tools",
 		"GotoDocumentation",
@@ -17,22 +24,32 @@
 		"HTML-CSS-JS Prettify",
 		"Jade",
 		"Keymaps",
+		"LESS",
 		"Liquid",
 		"Markdown Preview",
+		"Meteor Autocomplete (TernJS)",
 		"Package Control",
 		"PlainTasks",
+		"RSense",
 		"RSpecNavigator",
+		"RuboCop",
+		"Ruby Hash Converter",
+		"Ruby Slim",
 		"RubyTest",
 		"Sass",
 		"SCSS",
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
+		"SublimeLinter-jscs",
 		"SublimeLinter-rubocop",
+		"Swift",
 		"Tag",
 		"Theme - Cobalt2",
 		"Theme - Soda",
 		"Theme - Spacegray",
-		"Tomorrow Color Schemes"
+		"Tomorrow Color Schemes",
+		"WakaTime",
+		"yardoc"
 	]
 }
