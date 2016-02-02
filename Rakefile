@@ -9,7 +9,7 @@ task :install do
   puts "Options:"
   puts "  git"
   puts "  ruby"
-  puts "  sublime2"
+  puts "  sublime3"
   puts "  vim"
   puts "  zsh"
 end
@@ -22,21 +22,6 @@ end
 desc "ruby installation script"
 task :ruby do
   DotfileHelper.scan_symlinks("ruby")
-end
-
-desc "Sublime Text 2 installation script"
-task :sublime2 do
-  sublime_data_folder = File.join('~', 'Library', 'Application Support', 'Sublime Text 2')
-
-  if Dir.exists?(sublime_data_folder)
-    puts "Sublime Text 2 wasn't installed"
-    return
-  end
-
-  source = File.join(Dir.pwd, 'sublime2', 'Packages', 'User').gsub(' ', '\ ')
-  target = File.join(sublime_data_folder, 'Packages', 'User').gsub(' ', '\ ')
-
-  DotfileHelper.create(source, target)
 end
 
 desc "Sublime Text 3 installation script"
@@ -63,10 +48,6 @@ desc "zsh installation script"
 task :zsh do
   DotfileHelper.scan_symlinks("zsh")
 end
-
-# git push on commit
-#`echo 'git push' > .git/hooks/post-commit`
-#`chmod 755 .git/hooks/post-commit`
 
 module DotfileHelper
   def DotfileHelper.scan_symlinks(dir)

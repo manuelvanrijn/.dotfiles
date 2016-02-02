@@ -3,6 +3,7 @@
 *.pyc
 Package Control.last-run
 Package Control.system-ca-bundle
+Package Control.merged-ca-bundle
 RubyTest.last-run
 SublimeCodeIntel.sublime-settings
 *.tmTheme
