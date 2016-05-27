@@ -1,6 +1,8 @@
 [user]
         name = Manuel van Rijn
         email = manuel@manuelvanrijn.nl
+[github]
+        user = manuelvanrijn
 [credential]
         helper = osxkeychain
 [alias]
@@ -12,12 +14,15 @@
         cl = !git gc && git submodule foreach git gc
         hard-delete = !$DOTFILES/bin/git-hard-delete
         cleanup-branches = !$DOTFILES/bin/git-cleanup-branches
+        standup = !$DOTFILES/bin/git-standup
         exec = !git update-index --chmod=+x
         assume   = update-index --assume-unchanged
         unassume = update-index --no-assume-unchanged
         assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
         unadd = reset HEAD
         df = !git difftool --no-prompt --extcmd icdiff "$@"
+[branch]
+        autosetuprebase = always
 [color]
         diff = auto
         status = auto
@@ -28,6 +33,7 @@
         editor = vim
         whitespace = trailing-space,space-before-tab,indent-with-non-tab
         autocrlf = false
+	pager = diff-highlight | diff-so-fancy | less -r
 [merge]
         tool = opendiff
         ff = true
@@ -57,3 +63,10 @@
         clean = git lfs clean %f
         smudge = git lfs smudge %f
         required = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[diff]
+        mnemonicprefix = true

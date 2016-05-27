@@ -6,6 +6,7 @@
 *.swp
 *.rbc
 *.rdb
+*.orig
 
 # NodeJS
 node_modules/
