@@ -5,7 +5,8 @@
 * [Adobe - Source Code Pro](https://github.com/adobe/Source-Code-Pro/downloads) font
 * [brew](http://brew.sh/)
 * [iterm2](https://www.iterm2.com/)
-
+* oh-my-zsh
+* Sublime text 3
 
 ## Installation
 
@@ -29,6 +30,6 @@ nvm install stable
 nvm alias default stable
 
 ```
-git#### Quicklook plugins
+#### Quicklook plugins
 
 see: [quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins)

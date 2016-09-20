@@ -1,0 +1,9 @@
+---
+BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries"
+BUNDLE_GEM__COC: 'true'
+BUNDLE_GEM__MIT: 'true'
+BUNDLE_GEM__TEST: rspec
+BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"
+BUNDLE_--JOBS: '8'
+BUNDLE_IGNORE_MESSAGES__CAPISTRANO-HARROW: 'true'
+BUNDLE_IGNORE_MESSAGES__CAPISTRANO: 'true'

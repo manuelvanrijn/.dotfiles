@@ -18,6 +18,13 @@ task :setup do
   target = File.join(sublime_data_folder, 'Packages', 'User').gsub(' ', '\ ')
 
   DotfileHelper.create(source, target)
+
+  # .bundle/config
+  `mkdir -p ~/.bundle`
+  source = File.join(Dir.pwd, 'ruby', 'bundle', 'config').gsub(' ', '\ ')
+  target = File.join('~', '.bundle', 'config').gsub(' ', '\ ')
+
+  DotfileHelper.create(source, target)
 end
 
 task default: :setup
@@ -36,7 +43,6 @@ class DotfileHelper
   end
 
   def self.create_link(source, target)
-    return puts "ln -s #{source} #{target}"
     if File.exist?(target) || File.symlink?(target)
       puts "SKIPPED: #{source} -> #{target}"
     else
