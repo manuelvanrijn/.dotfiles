@@ -29,7 +29,6 @@ nvm install stable
 nvm alias default stable
 
 ```
-
-#### Quicklook plugins
+git#### Quicklook plugins
 
 see: [quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins)
