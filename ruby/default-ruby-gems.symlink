@@ -1,0 +1,8 @@
+gem install awesome_print
+gem install benchmark-ips
+gem install bundler
+gem install bundler-audit
+gem install cocoapods
+gem install rubocop
+gem install rubygems-bundler
+gem install ultrahook

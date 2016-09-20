@@ -17,6 +17,8 @@
 		"DocBlockr",
 		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
+		"Elixir",
+		"Gherkin (Cucumber) Formatter",
 		"GitGutter",
 		"Github Tools",
 		"GotoDocumentation",

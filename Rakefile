@@ -1,34 +1,15 @@
 require 'rake'
 
-task :default => :install
+task :setup do
+  # symlink setup
+  %w(git node ruby vim zsh).each do |folder|
+    DotfileHelper.scan_symlinks(folder)
+  end
 
-desc "Hook our dotfiles into system-standard positions."
-task :install do
-  puts "Please specify what part you like to install"
-  puts ""
-  puts "Options:"
-  puts "  git"
-  puts "  ruby"
-  puts "  sublime3"
-  puts "  vim"
-  puts "  zsh"
-end
-
-desc "Git installation script"
-task :git do
-  DotfileHelper.scan_symlinks("git")
-end
-
-desc "ruby installation script"
-task :ruby do
-  DotfileHelper.scan_symlinks("ruby")
-end
-
-desc "Sublime Text 3 installation script"
-task :sublime3 do
+  # sublime 3
   sublime_data_folder = File.join('~', 'Library', 'Application Support', 'Sublime Text 3')
 
-  if Dir.exists?(sublime_data_folder)
+  if Dir.exist?(sublime_data_folder)
     puts "Sublime Text 3 wasn't installed"
     return
   end
@@ -39,31 +20,24 @@ task :sublime3 do
   DotfileHelper.create(source, target)
 end
 
-desc "vim installation script"
-task :vim do
-  DotfileHelper.scan_symlinks("vim")
-end
+task default: :setup
 
-desc "zsh installation script"
-task :zsh do
-  DotfileHelper.scan_symlinks("zsh")
-end
-
-module DotfileHelper
-  def DotfileHelper.scan_symlinks(dir)
-    Dir.glob("#{dir}/*.symlink").each do | link |
+class DotfileHelper
+  def self.scan_symlinks(dir)
+    Dir.glob("#{dir}/*.symlink").each do |link|
       target = ".#{link.split('/').last.split('.symlink').last}"
       target = "~/#{target}"
       DotfileHelper.create(link, target)
     end
   end
 
-  def DotfileHelper.create(source, target)
+  def self.create(source, target)
     DotfileHelper.create_link(source, target)
   end
 
-  def DotfileHelper.create_link(source, target)
-    if File.exists?(target) || File.symlink?(target)
+  def self.create_link(source, target)
+    return puts "ln -s #{source} #{target}"
+    if File.exist?(target) || File.symlink?(target)
       puts "SKIPPED: #{source} -> #{target}"
     else
       `ln -s #{source} #{target}`

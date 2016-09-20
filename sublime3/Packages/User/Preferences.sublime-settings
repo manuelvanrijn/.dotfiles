@@ -8,6 +8,17 @@
 			"selector": "punctuation.definition.string"
 		}
 	],
+	"binary_file_patterns":
+	[
+		"log/*",
+		"tmp/*",
+		"cache/*",
+		"bin/*",
+		"vendor/*",
+		"coverage/**/*",
+		"public/assets/**/*",
+		"*.map"
+	],
 	"bold_folder_labels": false,
 	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
 	"copy_with_empty_selection": true,
@@ -55,6 +66,11 @@
 	[
 		"RuboCop",
 		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
 	],
 	"index_files": true,
 	"line_padding_bottom": 0.5,

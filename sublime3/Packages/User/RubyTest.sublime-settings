@@ -8,7 +8,7 @@
   // "run_rspec_command": "export PATH=~/.rbenv/shims:$PATH; rspec {relative_path}",
   // "run_single_rspec_command": "export PATH=~/.rbenv/shims:$PATH; rspec {relative_path}:{line_number}",
 
-  "check_for_rbenv": true,
+  "check_for_rbenv": false,
   "check_for_bundler": true,
   "save_on_run": true
 }

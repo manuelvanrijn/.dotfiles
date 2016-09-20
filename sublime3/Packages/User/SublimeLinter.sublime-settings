@@ -35,9 +35,7 @@
         "passive_warnings": false,
         "paths": {
             "linux": [],
-            "osx": [
-                "~/.rbenv/shims"
-            ],
+            "osx": [],
             "windows": []
         },
         "python_paths": {
@@ -46,7 +44,6 @@
             "windows": []
         },
         "rc_search_limit": 3,
-        "ruby": "~/.rbenv/shims/ruby",
         "shell_timeout": 10,
         "show_errors_on_save": false,
         "show_marks_in_minimap": true,

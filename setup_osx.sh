@@ -13,6 +13,7 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 echo "Expand save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 echo "Expand print panel by default"
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
@@ -67,8 +68,20 @@ defaults write com.apple.iTunes disablePing -bool true
 echo "Make ⌘ + F focus the search input in iTunes"
 defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
+echo "Enable airdrop over ethernet"
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+
+echo "Software update interval from 1 week to 1 day"
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
 echo "Show the ~/Library folder"
 chflags nohidden ~/Library
 
+echo "disable motion sensor for ssd"
+sudo pmset -a sms 0
+
 echo "Kill affected applications"
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
+
+echo "Install brew packages"
+cat brew_packages | xargs brew install
