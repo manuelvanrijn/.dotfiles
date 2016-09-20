@@ -1,4 +1,4 @@
-# My (cross)platform dotfiles
+# My dotfiles
 
 ## Prerequisites
 
