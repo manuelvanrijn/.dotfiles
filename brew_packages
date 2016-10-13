@@ -30,7 +30,6 @@ libxslt
 libyaml
 mysql
 nmap
-nvm
 parallel
 perl
 protobuf
@@ -38,6 +37,7 @@ python3
 ruby-build
 siege
 v8
+watchman
 wget
 wrk
 z

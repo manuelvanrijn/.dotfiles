@@ -83,5 +83,18 @@ sudo pmset -a sms 0
 echo "Kill affected applications"
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
 
+################
+# PACKAGES
+################
+
+echo "Instal nvm + stable node"
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
+
 echo "Install brew packages"
 cat brew_packages | xargs brew install
+
+echo "Install cask packages"
+cat cask_packages | xargs brew cask install
+
+echo "Install vagrant plugin(s)"
+vagrant plugin install vagrant-cachier vagrant-vbguest

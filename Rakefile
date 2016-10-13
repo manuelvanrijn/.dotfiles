@@ -7,7 +7,7 @@ task :setup do
   end
 
   # sublime 3
-  sublime_data_folder = File.join('~', 'Library', 'Application Support', 'Sublime Text 3')
+  sublime_data_folder = File.join(Dir.pwd, '..', 'Library', 'Application Support', 'Sublime Text 3')
 
   if Dir.exist?(sublime_data_folder)
     puts "Sublime Text 3 wasn't installed"
@@ -23,7 +23,15 @@ task :setup do
   `mkdir -p ~/.bundle`
   source = File.join(Dir.pwd, 'ruby', 'bundle', 'config').gsub(' ', '\ ')
   target = File.join('~', '.bundle', 'config').gsub(' ', '\ ')
+  DotfileHelper.create(source, target)
 
+  # default-gems
+  path = File.join(Dir.pwd, '..', '.chruby-default-gems')
+  if Dir.exist?(path) == false
+    `git clone https://github.com/tubbo/chruby-default-gems ~/.chruby-default-gems`
+  end
+  source = File.join(Dir.pwd, 'ruby', 'post-install.d').gsub(' ', '\ ')
+  target = File.join('~', '.post-install.d').gsub(' ', '\ ')
   DotfileHelper.create(source, target)
 end
 
@@ -34,7 +42,8 @@ class DotfileHelper
     Dir.glob("#{dir}/*.symlink").each do |link|
       target = ".#{link.split('/').last.split('.symlink').last}"
       target = "~/#{target}"
-      DotfileHelper.create(link, target)
+      source = File.join(Dir.pwd, link)
+      DotfileHelper.create(source, target)
     end
   end
 

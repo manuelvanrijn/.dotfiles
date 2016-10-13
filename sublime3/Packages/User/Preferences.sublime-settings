@@ -20,7 +20,7 @@
 		"*.map"
 	],
 	"bold_folder_labels": false,
-	"color_scheme": "Packages/User/base16-ocean.dark (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
 	"copy_with_empty_selection": true,
 	"detect_slow_plugins": false,
 	"draw_white_space": "all",

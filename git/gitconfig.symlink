@@ -1,7 +1,7 @@
 [user]
         name = Manuel van Rijn
         email = manuel@manuelvanrijn.nl
-	signingkey = 8032A429B5626361
+	signingkey = 55E455EBE2275662
 [github]
         user = manuelvanrijn
 [credential]
