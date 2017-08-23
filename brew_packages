@@ -5,7 +5,6 @@ chruby
 cloc
 dialog
 docker-clean
-exa
 exiftool
 faac
 ffmpeg

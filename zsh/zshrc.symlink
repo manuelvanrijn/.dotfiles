@@ -32,4 +32,3 @@ nvm() {
 }
 
 export PATH="/usr/local/sbin:$PATH"
-alias ls="exa"
