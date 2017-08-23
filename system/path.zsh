@@ -1,4 +1,3 @@
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # dotfiles bin
 export PATH="$PATH:$DOTFILES/bin"
 # brew

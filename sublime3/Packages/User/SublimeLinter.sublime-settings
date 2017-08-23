@@ -19,13 +19,8 @@
                     "README"
                 ]
             },
-            "jscs": {
-                "@disable": true,
-                "args": [],
-                "excludes": []
-            },
             "rubocop": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": []
             }
@@ -35,7 +30,9 @@
         "passive_warnings": false,
         "paths": {
             "linux": [],
-            "osx": [],
+            "osx": [
+                "/Users/manuel/.rubies/ruby-2.4.0/bin"
+            ],
             "windows": []
         },
         "python_paths": {

@@ -1,8 +1,11 @@
+ag
 arp-scan
+chromedriver
 chruby
 cloc
 dialog
 docker-clean
+exa
 exiftool
 faac
 ffmpeg
@@ -18,13 +21,13 @@ gnupg2
 go
 graphviz
 heroku
+homebrew/dupes/libiconv
 htop-osx
 http_load
 ifstat
 imagemagick
 libconfig
 libev
-homebrew/dupes/libiconv
 libvo-aacenc
 libxslt
 libyaml
@@ -36,6 +39,8 @@ protobuf
 python3
 ruby-build
 siege
+speedtest_cli
+tldr
 v8
 watchman
 wget

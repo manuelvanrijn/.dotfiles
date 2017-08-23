@@ -1,3 +1,0 @@
-#!/bin/sh
-# clean up com.apple.bird cache folder (some shit with icloud)
-brctl dump

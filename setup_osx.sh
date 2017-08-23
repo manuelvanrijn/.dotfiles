@@ -83,14 +83,21 @@ sudo pmset -a sms 0
 echo "Kill affected applications"
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
 
+echo 'fix loading ssh keys after reboot'
+cp system/ssh-add-a.plist ~/Library/LaunchAgents/
+
 ################
 # PACKAGES
 ################
 
 echo "Instal nvm + stable node"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+
+echo "Instal crenv + stable node"
+curl -L https://raw.github.com/pine/crenv/master/install.sh | bash
 
 echo "Install brew packages"
+brew tap homebrew/services
 cat brew_packages | xargs brew install
 
 echo "Install cask packages"

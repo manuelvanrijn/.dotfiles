@@ -1,0 +1,8 @@
+#!/bin/sh
+# clean up com.apple.bird cache folder (some shit with icloud)
+brctl dump -o /dev/null
+# cleanup asl for faster startup
+sudo rm /private/var/log/asl/*.asl
+# clean brew
+brew cleanup
+brew cask cleanup

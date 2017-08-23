@@ -1,12 +1,13 @@
 {
 	"extensions":
 	[
-		"podspec",
-		"simplecov",
-		"jbuilder",
 		"rake",
 		"rb",
 		"rabl",
-		"thor"
-	]
+		"thor",
+		"podspec",
+		"simplecov",
+		"jbuilder"
+	],
+	"word_separators": "./\\()\"'-:,.;<>~@#$%^&*|+=[]{}`~"
 }

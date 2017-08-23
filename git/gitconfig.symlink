@@ -1,7 +1,7 @@
 [user]
         name = Manuel van Rijn
         email = manuel@manuelvanrijn.nl
-	signingkey = 55E455EBE2275662
+        signingkey = 55E455EBE2275662
 [github]
         user = manuelvanrijn
 [credential]
@@ -22,6 +22,8 @@
         assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
         unadd = reset HEAD
         df = !git difftool --no-prompt --extcmd icdiff "$@"
+        please = push --force-with-lease
+        first = rev-list --max-parents=0 HEAD
 [branch]
         autosetuprebase = always
 [color]
@@ -34,7 +36,7 @@
         editor = vim
         whitespace = trailing-space,space-before-tab,indent-with-non-tab
         autocrlf = false
-	pager = diff-highlight | diff-so-fancy | less -r
+        pager = diff-highlight | diff-so-fancy | less -r
 [merge]
         tool = opendiff
         ff = true
@@ -65,11 +67,13 @@
         smudge = git lfs smudge %f
         required = true
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+        oldNormal = red bold
+        oldHighlight = red bold 52
+        newNormal = green bold
+        newHighlight = green bold 22
 [diff]
         mnemonicprefix = true
 [commit]
-	gpgsign = true
+        gpgsign = true
+[gpg]
+        program = /usr/local/bin/gpg
