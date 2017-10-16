@@ -38,7 +38,6 @@ protobuf
 python3
 ruby-build
 siege
-speedtest_cli
 tldr
 v8
 watchman

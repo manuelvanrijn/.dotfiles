@@ -1,5 +1,4 @@
 1password
-android-studio
 appcleaner
 docker
 dotnet
@@ -10,13 +9,15 @@ forklift
 franz
 google-chrome
 handbrake
-iterm2
 ifunbox
+insomnia
+iterm2
 macdown
 macpar-deluxe
 macpass
 microsoft-office
 midi-monitor
+ngrok
 nord-sample-editor
 nord-sound-manager
 qlcolorcode
@@ -32,6 +33,7 @@ transmission
 tunnelblick
 vagrant
 vagrant-manager
+vanilla
 virtualbox
 visual-studio-code
 vlc
