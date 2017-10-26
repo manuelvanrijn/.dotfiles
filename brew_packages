@@ -1,7 +1,6 @@
 ag
 arp-scan
 chromedriver
-chruby
 cloc
 dialog
 docker-clean
@@ -17,7 +16,6 @@ gnu-sed
 gnu-time
 gnupg
 gnupg2
-go
 graphviz
 heroku
 homebrew/dupes/libiconv
@@ -36,7 +34,6 @@ parallel
 perl
 protobuf
 python3
-ruby-build
 siege
 tldr
 v8

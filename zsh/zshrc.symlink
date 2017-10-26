@@ -1,7 +1,9 @@
 # shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.dotfiles
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# PATH
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
+
 # source every .zsh file in this rep
 for config_file ($DOTFILES/**/*.zsh) source $config_file
 
@@ -21,14 +23,3 @@ unsetopt correct_all
 
 # source z
 source `brew --prefix`/etc/profile.d/z.sh
-
-nvm() {
-  if [[ `command -v nvm`-ne"nvm" ]]; then
-    echo "loading nvm enviroment ..."
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-    nvm $*
-  fi
-}
-
-export PATH="/usr/local/sbin:$PATH"

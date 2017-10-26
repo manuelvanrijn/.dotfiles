@@ -90,11 +90,15 @@ cp system/ssh-add-a.plist ~/Library/LaunchAgents/
 # PACKAGES
 ################
 
-echo "Instal nvm + stable node"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-
-echo "Instal crenv + stable node"
-curl -L https://raw.github.com/pine/crenv/master/install.sh | bash
+echo "Installing asdf-vm"
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.4.0
+source asdf/asdf.zsh
+asdf plugin-list-all >> /dev/null
+asdf plugin-add crystal
+asdf plugin-add golang
+asdf plugin-add nodejs
+asdf plugin-add ruby
+asdf plugin-update --all
 
 echo "Install brew packages"
 brew tap homebrew/services
