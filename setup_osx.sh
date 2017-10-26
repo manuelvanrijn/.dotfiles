@@ -105,3 +105,8 @@ cat cask_packages | xargs brew cask install
 
 echo "Install vagrant plugin(s)"
 vagrant plugin install vagrant-cachier vagrant-vbguest
+
+echo "Install crenv plugin(s)"
+git clone https://github.com/pine/crystal-build.git "$(crenv root)/plugins/crystal-build"
+git clone https://github.com/pine/crenv-update.git "$(crenv root)/plugins/crenv-update"
+crenv update

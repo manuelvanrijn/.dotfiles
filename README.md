@@ -4,9 +4,7 @@
 
 * [Adobe - Source Code Pro](https://github.com/adobe/Source-Code-Pro/downloads) font
 * [brew](http://brew.sh/)
-* [iterm2](https://www.iterm2.com/)
 * oh-my-zsh
-* Sublime text 3
 
 ## Installation
 
@@ -29,7 +27,11 @@ echo '2.3.1' > ~/.ruby-version
 nvm install stable
 nvm alias default stable
 
+# Install crystal version
+crenv install 0.23.1
+crenv global 0.23.1
 ```
+
 #### Quicklook plugins
 
 see: [quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins)
