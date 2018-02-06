@@ -12,4 +12,4 @@ alias pr-rspec='RAILS_ENV=test rake db:drop && echo "test db dropped" && \
   git checkout db/schema.rb >> /dev/null && \
   rspec spec'
 
-alias http-server='puer'
+alias https-server='http-server --ssl --cert ~/.ssl/localhost.crt --key ~/.ssl/localhost.key -a localhost'

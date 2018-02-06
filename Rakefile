@@ -24,15 +24,6 @@ task :setup do
   source = File.join(Dir.pwd, 'ruby', 'bundle', 'config').gsub(' ', '\ ')
   target = File.join('~', '.bundle', 'config').gsub(' ', '\ ')
   DotfileHelper.create(source, target)
-
-  # default-gems
-  path = File.join(Dir.pwd, '..', '.chruby-default-gems')
-  if Dir.exist?(path) == false
-    `git clone https://github.com/tubbo/chruby-default-gems ~/.chruby-default-gems`
-  end
-  source = File.join(Dir.pwd, 'ruby', 'post-install.d').gsub(' ', '\ ')
-  target = File.join('~', '.post-install.d').gsub(' ', '\ ')
-  DotfileHelper.create(source, target)
 end
 
 task default: :setup

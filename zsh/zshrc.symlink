@@ -4,9 +4,6 @@ export DOTFILES=$HOME/.dotfiles
 # PATH
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin"
 
-# source every .zsh file in this rep
-for config_file ($DOTFILES/**/*.zsh) source $config_file
-
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]
@@ -20,6 +17,9 @@ export ZSH_THEME="eastwood"
 #plugins=(git brew bundler gem rails)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
+
+# source every .zsh file in this rep
+for config_file ($DOTFILES/**/*.zsh) source $config_file
 
 # source z
 source `brew --prefix`/etc/profile.d/z.sh

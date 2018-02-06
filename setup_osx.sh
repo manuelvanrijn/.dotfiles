@@ -86,6 +86,9 @@ for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 
 echo 'fix loading ssh keys after reboot'
 cp system/ssh-add-a.plist ~/Library/LaunchAgents/
 
+echo 'ignore "Last login" message from terminal'
+touch ~/.hushlogin
+
 ################
 # PACKAGES
 ################
@@ -98,6 +101,7 @@ asdf plugin-add crystal
 asdf plugin-add golang
 asdf plugin-add nodejs
 asdf plugin-add ruby
+asdf plugin-add python
 asdf plugin-update --all
 
 echo "Install brew packages"
@@ -109,8 +113,3 @@ cat cask_packages | xargs brew cask install
 
 echo "Install vagrant plugin(s)"
 vagrant plugin install vagrant-cachier vagrant-vbguest
-
-echo "Install crenv plugin(s)"
-git clone https://github.com/pine/crystal-build.git "$(crenv root)/plugins/crystal-build"
-git clone https://github.com/pine/crenv-update.git "$(crenv root)/plugins/crenv-update"
-crenv update

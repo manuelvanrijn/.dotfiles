@@ -22,7 +22,7 @@ homebrew/dupes/libiconv
 htop-osx
 http_load
 ifstat
-imagemagick
+imagemagick@6
 libconfig
 libev
 libvo-aacenc

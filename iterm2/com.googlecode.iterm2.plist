@@ -109,7 +109,7 @@
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
 	<key>NSStatusItem Preferred Position Item-0</key>
-	<real>539</real>
+	<real>499</real>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -141,13 +141,13 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>42 125 400 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 382 620 392 0 0 1440 878 </string>
+	<string>410 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>171 87 606 456 0 0 1440 878 </string>
+	<string>171 87 606 469 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>144 532 796 473 0 0 1440 878 </string>
+	<string>327 337 1018 447 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 425 1440 453 0 0 1440 878 </string>
+	<string>0 449 1440 429 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1576 192 585 452 1440 -300 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -970,7 +970,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-09T10:23:13Z</date>
+	<date>2018-01-08T10:28:14Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -980,7 +980,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SlowPasteBytesPerCall</key>
@@ -991,6 +991,8 @@
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.40727414458225941</real>
+	<key>StatusBarIcon</key>
+	<false/>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
@@ -1034,7 +1036,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.4.beta.1</string>
+	<string>3.1.5.beta.2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

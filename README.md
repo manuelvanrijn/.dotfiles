@@ -15,22 +15,13 @@ cd ~/.dotfiles
 rake
 ```
 
-## Install default versions:
+## http ssl localhost
 
 ```
-# Install (default) ruby
-mkdir -p ~/.rubies
-ruby-build 2.3.1 ~/.rubies/ruby-2.3.1
-echo '2.3.1' > ~/.ruby-version
-
-# Install node version
-nvm install stable
-nvm alias default stable
-
-# Install crystal version
-crenv install 0.23.1
-crenv global 0.23.1
-```
+mkdir -p ~/.ssl
+openssl req -newkey rsa:2048 -x509 -nodes -keyout ~/.ssl/localhost.key -new -out ~/.ssl/localhost.crt -subj /CN=localhost -reqexts SAN -extensions SAN -config <(cat /System/Library/OpenSSL/openssl.cnf <(printf '[SAN]\nsubjectAltName=DNS:localhost')) -sha256 -days 3650
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ~/.ssl/localhost.crt
+``` 
 
 #### Quicklook plugins
 
