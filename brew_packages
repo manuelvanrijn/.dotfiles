@@ -25,6 +25,7 @@ ifstat
 imagemagick@6
 libconfig
 libev
+openssl
 libvo-aacenc
 libxslt
 libyaml

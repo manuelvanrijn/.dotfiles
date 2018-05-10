@@ -23,6 +23,7 @@ task :setup do
   `mkdir -p ~/.bundle`
   source = File.join(Dir.pwd, 'ruby', 'bundle', 'config').gsub(' ', '\ ')
   target = File.join('~', '.bundle', 'config').gsub(' ', '\ ')
+  `bundle config --global jobs $(($(sysctl -n hw.ncpu) - 1))`
   DotfileHelper.create(source, target)
 end
 

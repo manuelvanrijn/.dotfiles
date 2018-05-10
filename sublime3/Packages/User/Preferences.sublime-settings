@@ -24,7 +24,7 @@
 	"caret_extra_top": 0,
 	"caret_extra_width": 0,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/SublimeLinter/base16-ocean.dark (SL).tmTheme",
+	"color_scheme": "Packages/Oceanic Next Color Scheme/Oceanic Next.tmTheme",
 	"copy_with_empty_selection": true,
 	"detect_slow_plugins": false,
 	"draw_white_space": "all",
@@ -68,7 +68,8 @@
 		".vagrant",
 		".svn",
 		"tmp/cache",
-		".cache/*"
+		".cache/*",
+		"tmp/bundle"
 	],
 	"font_face": "Hack",
 	"font_size": 13.0,
@@ -77,6 +78,7 @@
 	"ignored_packages":
 	[
 		"RuboCop",
+		"SublimeLinter",
 		"TypeScript",
 		"Vintage"
 	],
