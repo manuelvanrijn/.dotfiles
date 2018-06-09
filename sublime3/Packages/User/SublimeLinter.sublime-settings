@@ -1,0 +1,20 @@
+{
+  "linters": {
+    "annotations": {
+      "@disable": false,
+      "args": [],
+      "errors": [
+        "DIRTY HACK",
+        "FIXME",
+        "TEST"
+      ],
+      "excludes": [],
+      "warnings": [
+        "CAUTION",
+        "TODO",
+        "README"
+      ]
+    }
+  },
+  "show_marks_in_minimap": true
+}

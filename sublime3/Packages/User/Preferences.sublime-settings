@@ -77,8 +77,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"RuboCop",
-		"SublimeLinter",
+		"Tag",
 		"TypeScript",
 		"Vintage"
 	],
@@ -97,6 +96,7 @@
 	],
 	"scroll_past_end": true,
 	"shift_tab_unindent": true,
+	"show_navigation_bar": false,
 	"soda_folder_icons": true,
 	"tab_size": 2,
 	"theme": "Cobalt2.sublime-theme",

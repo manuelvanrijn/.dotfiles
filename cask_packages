@@ -1,6 +1,7 @@
 1password
 appcleaner
 caskroom/fonts/font-hack
+chromedriver
 docker
 dotnet
 dropbox
@@ -13,7 +14,6 @@ handbrake
 ifunbox
 insomnia
 iterm2
-macdown
 macpar-deluxe
 macpass
 microsoft-office
@@ -28,13 +28,12 @@ quicklook-json
 sequel-pro
 skype
 spotify
-sqlitebrowser
 sublime-text
 transmission
 tunnelblick
+typora
 vagrant
 vagrant-manager
 vanilla
 virtualbox
-visual-studio-code
 vlc

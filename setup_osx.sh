@@ -109,6 +109,7 @@ brew tap homebrew/services
 cat brew_packages | xargs brew install
 
 echo "Install cask packages"
+brew tap caskroom/cask
 cat cask_packages | xargs brew cask install
 
 echo "Install vagrant plugin(s)"

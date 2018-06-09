@@ -12,6 +12,9 @@
 node_modules/
 npm-debug.log
 
+# Ruby
+.byebug_history
+
 # Pow
 .powrc
 

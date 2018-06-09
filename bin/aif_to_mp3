@@ -1,0 +1,4 @@
+#!/bin/sh
+for i in *.aif; do ffmpeg -i "$i" -codec:a libmp3lame -qscale:a 2 "$(basename "$i" .aif)".mp3 -y; done
+mkdir -p aif
+mv *.aif aif/

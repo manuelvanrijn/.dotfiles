@@ -2,7 +2,7 @@ require 'rake'
 
 task :setup do
   # symlink setup
-  %w(git node ruby vim zsh).each do |folder|
+  %w(asdf git node ruby vim zsh).each do |folder|
     DotfileHelper.scan_symlinks(folder)
   end
 
