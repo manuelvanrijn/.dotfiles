@@ -1,0 +1,33 @@
+#!/bin/bash
+if test "$1" == ""
+then
+  echo 'usage: live_mode on'
+  echo '       live_mode off'
+  exit
+fi
+
+# install required package
+install=true
+if which dnd > /dev/null; then
+  install=false
+fi
+
+if $install; then
+  yarn global add do-not-disturb-cli
+fi
+
+if [ $1 == "on" ]; then
+  echo 'going live! 🎹'
+  networksetup -setairportpower airport off > /dev/null
+  dnd on
+  exit
+fi
+
+if [ $1 == "off" ]; then
+  echo 'going backstage! 🥃'
+  networksetup -setairportpower airport on > /dev/null
+  dnd off
+  exit
+fi
+
+echo 'unsupported option. try on or off'
