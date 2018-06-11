@@ -114,3 +114,7 @@ cat cask_packages | xargs brew cask install
 
 echo "Install vagrant plugin(s)"
 vagrant plugin install vagrant-cachier vagrant-vbguest
+
+echo "Install zsh plugin(s)"
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/iam4x/zsh-iterm-touchbar.git
