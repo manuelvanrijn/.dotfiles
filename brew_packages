@@ -1,8 +1,8 @@
 adns
 arp-scan
+awless
 cloc
 dialog
-docker-clean
 docker-machine-nfs
 exiftool
 faac

@@ -6,3 +6,5 @@ cocoapods
 rubocop
 rubygems-bundler
 berkshelf
+knife-solo
+knife-solo_data_bag

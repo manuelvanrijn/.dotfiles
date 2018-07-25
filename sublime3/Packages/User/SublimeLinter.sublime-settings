@@ -1,4 +1,9 @@
 {
+  "paths": {
+    "osx": [
+      "/Users/manuel/.asdf/shims/"
+    ]
+  },
   "linters": {
     "annotations": {
       "@disable": false,

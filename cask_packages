@@ -28,6 +28,7 @@ midi-monitor
 ngrok
 nord-sample-editor
 nord-sound-manager
+postbird
 qlcolorcode
 qlimagesize
 qlstephen
@@ -36,6 +37,7 @@ sequel-pro
 skype
 spotify
 sublime-text
+symboliclinker
 teamviewer
 transmission
 tunnelblick
@@ -44,3 +46,4 @@ vagrant
 vagrant-manager
 virtualbox
 vlc
+youtube-dl

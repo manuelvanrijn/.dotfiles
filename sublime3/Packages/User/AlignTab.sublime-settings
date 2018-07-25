@@ -1,0 +1,6 @@
+{
+  "named_patterns": {
+    "dsl": "(?<=:|,) /l1l1",
+    "hash": "\\w*:/lf1"
+  }
+}

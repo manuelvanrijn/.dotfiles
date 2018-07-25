@@ -106,6 +106,7 @@ asdf plugin-update --all
 
 echo "Install brew packages"
 brew tap homebrew/services
+brew tap wallix/awless
 cat brew_packages | xargs brew install
 
 echo "Install cask packages"
