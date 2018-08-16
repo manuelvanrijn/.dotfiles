@@ -58,7 +58,7 @@ libyaml
 libzip
 lua
 m-cli
-mysql
+mysql@5.7
 nettle
 nmap
 node
@@ -88,5 +88,6 @@ x264
 xvid
 xz
 yarn
+youtube-dl
 z
 zsh

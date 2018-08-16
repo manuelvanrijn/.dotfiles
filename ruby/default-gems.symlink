@@ -1,10 +1,11 @@
 awesome_print
 benchmark-ips
+berkshelf
 bundler
 bundler-audit
 cocoapods
-rubocop
-rubygems-bundler
-berkshelf
+istats
 knife-solo
 knife-solo_data_bag
+rubocop
+rubygems-bundler

@@ -1,30 +1,26 @@
 require 'rake'
 
 task :setup do
+  `./setup_osx.sh`
+  `./setup_software.sh`
+
   # symlink setup
-  %w(asdf git node ruby vim zsh).each do |folder|
+  %w[asdf git node ruby vim zsh].each do |folder|
     DotfileHelper.scan_symlinks(folder)
   end
 
-  # sublime 3
-  sublime_data_folder = File.join(Dir.pwd, '..', 'Library', 'Application Support', 'Sublime Text 3')
+  # Setup sublime symlinks
+  `mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
+  `ln -s ~/.dotfiles/sublime3/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`
 
-  if Dir.exist?(sublime_data_folder)
-    puts "Sublime Text 3 wasn't installed"
-    return
-  end
+  # Setup übersicht widgets
+  `mkdir -p ~/Library/Application\ Support/Übersicht/`
+  `ln -s ~/.dotfiles/übersicht/widgets ~/Library/Application\ Support/Übersicht/widgets`
 
-  source = File.join(Dir.pwd, 'sublime3', 'Packages', 'User').gsub(' ', '\ ')
-  target = File.join(sublime_data_folder, 'Packages', 'User').gsub(' ', '\ ')
-
-  DotfileHelper.create(source, target)
-
-  # .bundle/config
+  # Bundle config
   `mkdir -p ~/.bundle`
-  source = File.join(Dir.pwd, 'ruby', 'bundle', 'config').gsub(' ', '\ ')
-  target = File.join('~', '.bundle', 'config').gsub(' ', '\ ')
+  `ln -s ~/.dotfiles/ruby/bundle/config ~/.bundle/config`
   `bundle config --global jobs $(($(sysctl -n hw.ncpu) - 1))`
-  DotfileHelper.create(source, target)
 end
 
 task default: :setup

@@ -18,15 +18,24 @@ fi
 
 if [ $1 == "on" ]; then
   echo 'going live! 🎹'
-  networksetup -setairportpower airport off > /dev/null
+  networksetup -setairportpower airport off >/dev/null 2>&1
   dnd on
+  docker-machine stop $(docker-machine ls -q --filter "state=running") >/dev/null 2>&1
+  pkill -f Dropbox.app
+  pkill -f Docker.app
+  pkill -f Harvest.app
+  pkill -f bersicht.app
   exit
 fi
 
 if [ $1 == "off" ]; then
   echo 'going backstage! 🥃'
-  networksetup -setairportpower airport on > /dev/null
+  networksetup -setairportpower airport on >/dev/null 2>&1
   dnd off
+  open /Applications/Dropbox.app
+  open /Applications/Docker.app
+  open /Applications/Harvest.app
+  open /Applications/Übersicht.app
   exit
 fi
 

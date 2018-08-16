@@ -6,9 +6,7 @@ chromedriver
 docker
 dotnet
 dropbox
-flux
 fork
-forklift
 franz
 gas-mask
 google-chrome
@@ -18,9 +16,10 @@ ifunbox
 imageoptim
 insomnia
 iterm2
+itsycal
 java8
 jet
-macdown
+keycastr
 macpar-deluxe
 macpass
 microsoft-office
@@ -31,7 +30,9 @@ nord-sound-manager
 postbird
 qlcolorcode
 qlimagesize
+qlmarkdown
 qlstephen
+quicklook-csv
 quicklook-json
 sequel-pro
 skype
@@ -42,8 +43,9 @@ teamviewer
 transmission
 tunnelblick
 typora
+ubersicht
 vagrant
 vagrant-manager
 virtualbox
 vlc
-youtube-dl
+webpquicklook

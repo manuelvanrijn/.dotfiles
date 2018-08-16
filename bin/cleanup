@@ -15,4 +15,3 @@ brew cask cleanup
 rm -rf $(brew --cache)
 # clean docker
 docker system prune -f
-docker volume rm $(docker volume ls -f dangling=true -q)
