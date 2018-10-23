@@ -11,6 +11,7 @@ fontconfig
 freetds
 freetype
 freexl
+fzf
 gd
 gdb
 gdbm
@@ -31,6 +32,7 @@ http_load
 icu4c
 ifstat
 imagemagick@6
+jemalloc
 jpeg
 json-c
 lame

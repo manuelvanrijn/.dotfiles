@@ -13,6 +13,11 @@ task :setup do
   `mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
   `ln -s ~/.dotfiles/sublime3/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`
 
+  # Setup vscode symlinks
+  `mkdir -p ~/Library/Application\ Support/Code/User/`
+  `ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json`
+  `ln -s ~/.dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json`
+
   # Setup übersicht widgets
   `mkdir -p ~/Library/Application\ Support/Übersicht/`
   `ln -s ~/.dotfiles/übersicht/widgets ~/Library/Application\ Support/Übersicht/widgets`

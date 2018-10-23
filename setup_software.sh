@@ -26,6 +26,8 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 cat cask_packages | xargs brew cask install
 
+reload!
+
 # Remove Dropbox’s green checkmark icons in Finder
 file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
 [ -e "${file}" ] && mv -f "${file}" "${file}.bak"
@@ -36,6 +38,9 @@ vagrant plugin install vagrant-cachier vagrant-vbguest
 echo "Install zsh plugin(s)"
 cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/iam4x/zsh-iterm-touchbar.git
+
+echo "Install vscode plugins"
+~/.dotfiles/vscode/install.sh
 
 # Setup settings
 ln -s ~/.dotfiles/settings/itsyscal/preferences.plist ~/Library/Preferences/com.mowglii.ItsycalApp.plist

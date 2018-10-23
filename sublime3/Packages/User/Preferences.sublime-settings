@@ -10,14 +10,15 @@
 	],
 	"binary_file_patterns":
 	[
-		"log/*",
-		"tmp/*",
-		"cache/*",
+		"*.map",
 		"bin/*",
-		"vendor/*",
+		"cache/*",
 		"coverage/**/*",
+		"log/*",
+		"node_modules/**",
 		"public/assets/**/*",
-		"*.map"
+		"tmp/*",
+		"vendor/*"
 	],
 	"bold_folder_labels": false,
 	"caret_extra_bottom": 0,

@@ -1,0 +1,23 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "cmd+.",
+    "command": "-settings.action.editFocusedSetting",
+    "when": "inSettingsSearch"
+  },
+  {
+    "key": "cmd+.",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+.",
+    "command": "extension.railsGoToSpec",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+y",
+    "command": "-extension.railsGoToSpec",
+    "when": "editorTextFocus"
+  }
+]

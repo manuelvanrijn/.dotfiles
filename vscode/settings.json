@@ -1,0 +1,57 @@
+{
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "[yaml]": {
+    "editor.autoIndent": false
+  },
+  "beautify.config": {
+    "indent_char": " ",
+    "indent_size": 2
+  },
+  "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    80
+  ],
+  "editor.tabSize": 2,
+  "files.associations": {
+    "*.erb": "erb"
+  },
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/*.asset-cache": true,
+    "**/*.cache": true,
+    "**/*.coverage": true,
+    "**/*.egg-info": true,
+    "**/*.jekyll-cache": true,
+    "**/*.pyc": true,
+    "**/*.tweet-cache": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.pytest_cache": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/__pycache__": true,
+    "**/_site": true,
+    "**/bower_components": true,
+    "**/celerybeat-schedule": true,
+    "**/node_modules": true,
+    "**/tmp": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "github.hosts": [
+    {
+      "host": "https://github.com",
+      "token": "system",
+      "username": "oauth"
+    }
+  ],
+  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none"
+}

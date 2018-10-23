@@ -7,12 +7,12 @@ osascript -e 'tell application "System Preferences" to quit'
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+# Keep-alive: update existing `sudo` time stamp until script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Setting hostname
-sudo scutil --set ComputerName "toeter 📣"
-sudo scutil --set LocalHostName "toeter 📣"
+sudo scutil --set ComputerName "toeter"
+sudo scutil --set LocalHostName "toeter"
 
 # Setup gpg config
 mkdir -p ~/.gnupg
@@ -22,9 +22,6 @@ ln -s ~/.dotfiles/gnupg/gpg.conf.symlink ~/.gnupg/gpg.conf
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
-
-# Disable hibernation (speeds up entering sleep mode)
-sudo pmset -a hibernatemode 0
 
 # Disable menu bar transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
@@ -73,16 +70,6 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-###############################################################################
-# SSD-specific tweaks                                                         #
-###############################################################################
-
-# Disable hibernation (speeds up entering sleep mode)
-sudo pmset -a hibernatemode 0
-
-# Disable motion sensor
-sudo pmset -a sms 0
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
