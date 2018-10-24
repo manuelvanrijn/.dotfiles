@@ -1,4 +1,4 @@
-export EDITOR='code'#'subl'
+export EDITOR='code'
 
 # correct encoding
 export LC_CTYPE=en_US.UTF-8

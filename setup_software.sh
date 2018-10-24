@@ -20,6 +20,8 @@ brew tap homebrew/services
 brew tap wallix/awless
 cat brew_packages | xargs brew install
 brew link --force mysql@5.7
+# enable fzf
+$(brew --prefix)/opt/fzf/install
 
 echo "Install cask packages"
 brew tap caskroom/cask
@@ -40,7 +42,7 @@ cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/iam4x/zsh-iterm-touchbar.git
 
 echo "Install vscode plugins"
-~/.dotfiles/vscode/install.sh
+vscode_install_extensions
 
 # Setup settings
 ln -s ~/.dotfiles/settings/itsyscal/preferences.plist ~/Library/Preferences/com.mowglii.ItsycalApp.plist

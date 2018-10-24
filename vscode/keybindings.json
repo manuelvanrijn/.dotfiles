@@ -19,5 +19,15 @@
     "key": "shift+cmd+y",
     "command": "-extension.railsGoToSpec",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+d",
+    "command": "todo.toggleDone",
+    "when": "editorTextFocus && editorLangId == 'todo'"
+  },
+  {
+    "key": "alt+d",
+    "command": "-todo.toggleDone",
+    "when": "editorTextFocus && editorLangId == 'todo'"
   }
 ]

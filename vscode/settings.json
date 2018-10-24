@@ -53,5 +53,11 @@
   ],
   "workbench.colorTheme": "Material Theme Darker High Contrast",
   "workbench.iconTheme": "vscode-icons",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "todo.embedded.providers.ag.regex": "(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|FIX|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)",
+  "todo.embedded.providers.rg.regex": "(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|FIX|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)",
+  "todo.embedded.regex": "(?:<!-- *)?(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|FIX|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/|(?= *(?:[^:]//|/\\*+|<!--|@|--))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)))|(?: +[^@\\n]+)?))",
+  "todohighlight.isEnable": true,
+  "explorer.openEditors.visible": 0,
+  "workbench.statusBar.feedback.visible": false,
 }
