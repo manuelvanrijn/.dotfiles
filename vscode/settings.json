@@ -60,4 +60,5 @@
   "todohighlight.isEnable": true,
   "explorer.openEditors.visible": 0,
   "workbench.statusBar.feedback.visible": false,
+  "git.autofetch": true,
 }
