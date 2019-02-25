@@ -3,6 +3,7 @@ aki77.rails-routes
 bung87.rails
 bung87.vscode-gemfile
 CraigMaslowski.erb
+eamodio.gitlens
 Equinusocio.vsc-material-theme
 fabiospampinato.vscode-todo-plus
 faustinoaq.crystal-lang
@@ -18,6 +19,7 @@ mikestead.dotenv
 mjmcloug.vscode-elixir
 ms-vscode.Go
 ms-vscode.sublime-keybindings
+ms-vsliveshare.vsliveshare
 octref.vetur
 PeterJausovec.vscode-docker
 rebornix.ruby
@@ -27,8 +29,9 @@ robinbentley.sass-indented
 shanehofstetter.rails-i18n
 shanoor.vscode-nginx
 sianglim.slim
+sleistner.vscode-fileutils
 sporto.rails-go-to-spec
-timonwong.shellcheck
+tiibun.vscode-docker-ws
 tomoki1207.pdf
 vincaslt.highlight-matching-tag
 WakaTime.vscode-wakatime

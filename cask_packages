@@ -1,8 +1,11 @@
 1password
 altair
 appcleaner
+behringer-x-air-edit
+brave-browser
 caskroom/fonts/font-hack
 chromedriver
+coconutbattery
 docker
 dotnet
 dropbox
@@ -27,6 +30,7 @@ midi-monitor
 ngrok
 nord-sample-editor
 nord-sound-manager
+notable
 postbird
 qlcolorcode
 qlimagesize
@@ -42,7 +46,6 @@ symboliclinker
 teamviewer
 transmission
 tunnelblick
-typora
 ubersicht
 vagrant
 vagrant-manager

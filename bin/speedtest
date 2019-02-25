@@ -1,0 +1,7 @@
+#!/bin/sh
+if hash fast 2>/dev/null; then
+  fast --upload
+else
+  npm install --global fast-cli
+  fast --upload
+fi

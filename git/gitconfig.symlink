@@ -53,6 +53,8 @@
         smudge = git media smudge %f
 [remote]
         pushdefault = origin
+[remote "origin"]
+        prune = true
 [push]
         default = current
 [pull]

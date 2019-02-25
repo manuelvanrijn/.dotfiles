@@ -9,6 +9,7 @@
     "indent_char": " ",
     "indent_size": 2
   },
+  "editor.cursorBlinking": "phase",
   "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 13,
   "editor.renderWhitespace": "boundary",
@@ -16,8 +17,11 @@
     80
   ],
   "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
+  "explorer.openEditors.visible": 0,
   "files.associations": {
-    "*.erb": "erb"
+    "*.erb": "erb",
+    "*.inky-haml": "haml"
   },
   "files.eol": "\n",
   "files.exclude": {
@@ -44,21 +48,24 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "github.hosts": [
-    {
-      "host": "https://github.com",
-      "token": "system",
-      "username": "oauth"
-    }
-  ],
+  "git.autofetch": true,
+  "gitlens.blame.heatmap.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.hovers.enabled": false,
+  "todo.embedded.providers.ag.regex": "(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)",
+  "todo.embedded.providers.rg.regex": "(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)",
+  "todo.embedded.regex": "(?:<!-- *)?(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/|(?= *(?:[^:]//|/\\*+|<!--|@|--))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)))|(?: +[^@\\n]+)?))",
+  "todohighlight.isEnable": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Material Theme Darker High Contrast",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
-  "todo.embedded.providers.ag.regex": "(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|FIX|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)",
-  "todo.embedded.providers.rg.regex": "(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|FIX|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)",
-  "todo.embedded.regex": "(?:<!-- *)?(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|FIX|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/|(?= *(?:[^:]//|/\\*+|<!--|@|--))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)))|(?: +[^@\\n]+)?))",
-  "todohighlight.isEnable": true,
-  "explorer.openEditors.visible": 0,
   "workbench.statusBar.feedback.visible": false,
-  "git.autofetch": true,
+  "gitlens.views.repositories.enabled": false,
+  "gitlens.views.fileHistory.location": "scm",
+  "gitlens.views.lineHistory.location": "scm"
 }

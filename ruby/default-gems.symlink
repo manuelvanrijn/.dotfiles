@@ -4,8 +4,5 @@ berkshelf
 bundler
 bundler-audit
 cocoapods
-istats
-knife-solo
-knife-solo_data_bag
 rubocop
 rubygems-bundler
