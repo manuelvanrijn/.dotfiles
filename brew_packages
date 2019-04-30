@@ -1,6 +1,7 @@
 adns
 arp-scan
 awless
+awscli
 cloc
 dialog
 docker-machine-nfs
@@ -79,6 +80,7 @@ qt@5.5
 readline
 siege
 sqlite
+terraform
 the_silver_searcher
 tldr
 trash
@@ -93,4 +95,5 @@ xz
 yarn
 youtube-dl
 z
+zlib
 zsh

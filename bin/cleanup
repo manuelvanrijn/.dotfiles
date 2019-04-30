@@ -13,7 +13,4 @@ sudo rm /private/var/log/asl/*.asl
 brew cleanup
 rm -rf $(brew --cache)
 # clean docker
-# clean old docker images
-docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
-docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
-docker rm $(docker ps -qa --no-trunc --filter "status=exited")
+docker-clean

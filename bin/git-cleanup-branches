@@ -16,7 +16,7 @@ function ConfirmOrExit() {
 }
 
 # Do we have work to do?
-count=$(git branch --merged | grep -v '^\*' | wc -l)
+count=$(git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | grep -v "acceptance" | grep -v "integration" | grep -v "chef" | grep -v "keepass" | wc -l)
 if [ $count == 0 ]; then
   echo "There are no branches that are merged already"
   exit
@@ -25,7 +25,7 @@ fi
 # Inform the user
 echo "WARNING you're going to remove the following branches:"
 echo "======================================================"
-git branch --merged | grep -v '^\*'
+git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | grep -v "acceptance" | grep -v "integration" | grep -v "chef" | grep -v "keepass"
 
 echo ""
 echo "The following branches will NOT be removed:"
@@ -37,4 +37,4 @@ echo ""
 ConfirmOrExit
 
 # Delete branches
-git branch --merged | grep -v "\*" | xargs -n 1 git branch -D
+git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | grep -v "acceptance" | grep -v "integration" | grep -v "chef" | grep -v "keepass" | xargs -n 1 git branch -D

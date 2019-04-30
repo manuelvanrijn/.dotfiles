@@ -1,5 +1,6 @@
-ruby 2.5.1
-nodejs 8.11.3
-golang 1.9.7
-crystal 0.25.0
-python 3.6.5
+ruby 2.6.2
+nodejs 10.15.3
+golang 1.12.4
+crystal 0.28.0
+python 3.7.3
+postgres 11.2
