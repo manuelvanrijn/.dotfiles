@@ -24,7 +24,11 @@ if [ $1 == "on" ]; then
   pkill -f Dropbox.app
   pkill -f Docker.app
   pkill -f Harvest.app
-  # pkill -f bersicht.app
+  pkill -f iTerm.app
+  pkill -f Franz.app
+  pkill -f Visual Studio Code.app
+  pkill -f Fork.app
+  pkill -f Mail.app
   exit
 fi
 
@@ -35,7 +39,7 @@ if [ $1 == "off" ]; then
   open /Applications/Dropbox.app
   open /Applications/Docker.app
   open /Applications/Harvest.app
-  # open /Applications/Übersicht.app
+  open /Applications/iTerm.app
   exit
 fi
 

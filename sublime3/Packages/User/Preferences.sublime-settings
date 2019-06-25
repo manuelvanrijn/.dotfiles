@@ -78,9 +78,18 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"HTML-CSS-JS Prettify",
+		"MarkdownPreview",
+		"PlainTasks",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-eslint",
+		"SublimeLinter-rubocop",
 		"Tag",
 		"TypeScript",
-		"Vintage"
+		"Vintage",
+		"WakaTime"
 	],
 	"indent_guide_options":
 	[

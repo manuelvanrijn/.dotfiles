@@ -18,10 +18,6 @@ task :setup do
   `ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json`
   `ln -s ~/.dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json`
 
-  # Setup übersicht widgets
-  `mkdir -p ~/Library/Application\ Support/Übersicht/`
-  `ln -s ~/.dotfiles/übersicht/widgets ~/Library/Application\ Support/Übersicht/widgets`
-
   # Bundle config
   `mkdir -p ~/.bundle`
   `ln -s ~/.dotfiles/ruby/bundle/config ~/.bundle/config`
