@@ -5,4 +5,6 @@ bundler
 bundler-audit
 cocoapods
 rubocop
+rubocop-performance
+rubocop-rails
 rubygems-bundler

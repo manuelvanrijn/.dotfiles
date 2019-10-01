@@ -2,15 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"HTML-CSS-JS Prettify",
-		"MarkdownPreview",
-		"PlainTasks",
-		"Sass",
-		"SideBarEnhancements",
-		"SublimeLinter",
-		"SublimeLinter-eslint",
-		"SublimeLinter-rubocop",
-		"WakaTime"
 	],
 	"installed_packages":
 	[

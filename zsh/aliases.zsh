@@ -21,4 +21,4 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 alias path='echo -e ${PATH//:/\\n}'
 
 # brew upgrade
-alias bup='brew update && brew upgrade && brew cu --all --yes && brew cleanup && rm -rf $(brew --cache) && brew cleanup'
+alias bup='brew update && brew upgrade && brew cu --all --yes && rm -rf $(brew --cache) && brew cleanup'

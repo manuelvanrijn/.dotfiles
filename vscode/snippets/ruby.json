@@ -1,0 +1,54 @@
+{
+  "Time a method": {
+    "prefix": "time",
+    "body": [
+      "def time_method",
+      "  starting = Process.clock_gettime(Process::CLOCK_MONOTONIC)",
+      "  result = yield",
+      "  ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)",
+      "  elapsed = ending - starting",
+      "  puts elapsed",
+      "  result",
+      "end",
+      "",
+      "time_method do",
+      "  $1",
+      "end",
+    ],
+    "description": "Correct timing of method"
+  },
+  "Benchmark": {
+    "prefix": "bench",
+    "body": [
+      "require 'benchmark/ips'",
+      "",
+      "def benchmark_a",
+      "end",
+      "",
+      "def benchmark_b",
+      "end",
+      "",
+      "Benchmark.ips do |x|",
+      "  x.report('Benchmark A:') { benchmark_a }",
+      "  x.report('Benchmark B:') { benchmark_b }",
+      "  x.compare!",
+      "end",
+      ],
+    "description": "Benchmark"
+  },
+  "Model structure": {
+    "prefix": "mdoc",
+    "body": [
+      "#== Constants ================================================================",
+      "#== Attributes ===============================================================",
+      "#== Extensions ===============================================================",
+      "#== Relationships ============================================================",
+      "#== Validations ==============================================================",
+      "#== Scopes ===================================================================",
+      "#== Callbacks ================================================================",
+      "#== Class Methods ============================================================",
+      "#== Instance Methods =========================================================",
+    ],
+    "description": "Model document parts"
+  }
+}

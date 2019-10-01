@@ -14,14 +14,9 @@ fi
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="eastwood"
-plugins=(gitfast zsh-iterm-touchbar)
+plugins=(gitfast zsh-iterm-touchbar asdf docker)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # source every .zsh file in this rep
 for config_file ($DOTFILES/**/*.zsh) source $config_file
-
-# source z
-source `brew --prefix`/etc/profile.d/z.sh
-# source fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -6,3 +6,7 @@ AllCops:
 # Don't force documentation for classes
 Style/Documentation:
   Enabled: false
+
+require:
+  - rubocop-performance
+  - rubocop-rails

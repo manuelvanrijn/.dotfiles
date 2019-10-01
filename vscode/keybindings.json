@@ -21,13 +21,31 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "cmd+d",
-    "command": "todo.toggleDone",
-    "when": "editorTextFocus && editorLangId == 'todo'"
+    "key": "ctrl+shift+r",
+    "command": "-editor.action.formatDocument",
+    "when": "editorLangId == ''ruby' || editorLangId'"
   },
   {
-    "key": "alt+d",
-    "command": "-todo.toggleDone",
-    "when": "editorTextFocus && editorLangId == 'todo'"
+    "key": "ctrl+shift+r",
+    "command": "-editor.action.formatDocument",
+    "when": "editorLangId == ''ruby' || editorLangId'"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "-editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "-workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "editor.action.quickFix"
   }
 ]

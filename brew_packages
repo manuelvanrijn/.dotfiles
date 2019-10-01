@@ -64,7 +64,6 @@ m-cli
 mysql@5.7
 nettle
 nmap
-node
 npth
 openssl
 p11-kit
@@ -92,8 +91,8 @@ wrk
 x264
 xvid
 xz
-yarn
 youtube-dl
 z
 zlib
 zsh
+zsh-autosuggestion

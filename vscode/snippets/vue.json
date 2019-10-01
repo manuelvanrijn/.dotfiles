@@ -1,0 +1,30 @@
+{
+  "Component structure": {
+    "prefix": "component_start",
+    "body": [
+      "<template></template>",
+      "",
+      "<script>",
+      "export default {",
+      "  components: {",
+      "  },",
+      "  props: {",
+      "  },",
+      "  data() {",
+      "    return {",
+      "    }",
+      "  },",
+      "  computed: {",
+      "  },",
+      "  methods: {",
+      "  }",
+      "}",
+      "</script>",
+      "",
+      "<style lang=\"scss\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Vue component"
+  }
+}
