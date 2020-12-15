@@ -10,3 +10,4 @@ Style/Documentation:
 require:
   - rubocop-performance
   - rubocop-rails
+  - rubocop-rspec

@@ -7,8 +7,6 @@ alias pr-rspec='RAILS_ENV=test rake db:drop && echo "test db dropped" && \
   git checkout db/schema.rb >> /dev/null && \
   rspec spec'
 
-alias https-server='http-server --ssl --cert ~/.ssl/localhost.crt --key ~/.ssl/localhost.key -a localhost'
-
 # Always enable colored `grep` output
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -21,4 +19,20 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 alias path='echo -e ${PATH//:/\\n}'
 
 # brew upgrade
-alias bup='brew update && brew upgrade && brew cu --all --yes && rm -rf $(brew --cache) && brew cleanup'
+alias bup='brew update && brew upgrade && rm -rf $(brew --cache) && brew cleanup'
+
+# edit host file
+alias edithost='sudo e /etc/hosts'
+
+alias gup='project=${PWD##*/}; gh repo create manuelvanrijn/${project}; git remote add uppersource git@github.com:manuelvanrijn/${project}.git'
+alias pullpushall='update_git_repos'
+
+alias toron='sudo networksetup -setsocksfirewallproxy Wi-Fi 127.0.0.1 9050 off; sudo networksetup -setsocksfirewallproxystate Wi-Fi on'
+alias toroff='sudo networksetup -setsocksfirewallproxy Wi-Fi ""; sudo networksetup -setsocksfirewallproxystate Wi-Fi off'
+
+# exa in favour of ls
+alias ls="exa -lhgbH --git"
+alias la="exa -lahgbH --git"
+
+# bat in favour of cat
+alias cat="bat"

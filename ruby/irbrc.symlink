@@ -1,6 +1,8 @@
 #!/usr/bin/ruby
 require 'irb/ext/save-history'
 require 'irb/completion'
+require 'irb/completion'
+require 'rubygems'
 
 IRB.conf[:SAVE_HISTORY] = 5000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
@@ -9,11 +11,33 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 require 'awesome_print'
 AwesomePrint.irb!
 
-def log_sql(on = true)
-  if on
-    ActiveRecord::Base.logger = Logger.new STDOUT
-  else
-    ActiveRecord::Base.logger = nil
-  end
-  puts "sql logging active: #{on}"
+ActiveRecord::Base.logger.level = 1 if defined?(ActiveRecord)
+
+# copy a string to the clipboard
+def cp(string)
+  `echo "#{string}" | pbcopy`
+  puts "copied in clipboard"
+end
+
+def bm
+  # From http://blog.evanweaver.com/articles/2006/12/13/benchmark/
+  # Call benchmark { } with any block and you get the wallclock runtime
+  # as well as a percent change + or - from the last run
+  cur = Time.now
+  result = yield
+  print "#{cur = Time.now - cur} seconds"
+  puts " (#{(cur / $last_benchmark * 100).to_i - 100}% change)" rescue puts ""
+  $last_benchmark = cur
+  result
+end
+
+# exit using `q`
+alias q exit
+
+# all available methods explaination
+def ll
+  puts '============================================================================================================='
+  puts 'cp(str) --------------> copy string in clipboard e.g cp(lead.name)'
+  puts 'bm(block) ------------> benchmarking for block passed as an argument e.g bm { Lead.all.pluck(:stage);0 }'
+  puts '============================================================================================================='
 end

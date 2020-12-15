@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# install required package
+install=true
+if which serve > /dev/null; then
+  install=false
+fi
+
+if $install; then
+  yarn global add serve
+fi
+
+echo "starting http-server for folder '$PWD'"
+serve --cors -l 80

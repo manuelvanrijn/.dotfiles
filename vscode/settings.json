@@ -1,34 +1,56 @@
 {
+  "[dockerfile]": {
+    "editor.formatOnSave": false
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
   "[yaml]": {
     "editor.autoIndent": false
   },
-  "beautify.config": {
-    "indent_char": " ",
-    "indent_size": 2
-  },
+  "cSpell.language": "en,nl",
   "editor.cursorBlinking": "phase",
-  "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+  "editor.defaultFormatter": null,
+  "editor.fontFamily": "JetBrains Mono, Hack, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 13,
+  "editor.formatOnPaste": true,
   "editor.minimap.maxColumn": 200,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "always",
+  "editor.quickSuggestionsDelay": 0,
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [120],
   "editor.smoothScrolling": true,
+  "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
+  "extensions.ignoreRecommendations": false,
   "files.associations": {
     "*.erb": "erb",
     "*.inky-haml": "haml"
   },
   "files.eol": "\n",
   "files.exclude": {
+    "**/__pycache__": true,
+    "**/_site": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.pytest_cache": true,
+    "**/.svn": true,
     "**/*.asset-cache": true,
     "**/*.cache": true,
     "**/*.coverage": true,
@@ -36,55 +58,54 @@
     "**/*.jekyll-cache": true,
     "**/*.pyc": true,
     "**/*.tweet-cache": true,
-    "**/.DS_Store": true,
-    "**/.git": true,
-    "**/.hg": true,
-    "**/.pytest_cache": true,
-    "**/.svn": true,
-    "**/CVS": true,
-    "**/__pycache__": true,
-    "**/_site": true,
     "**/bower_components": true,
     "**/celerybeat-schedule": true,
+    "**/CVS": true,
     "**/node_modules": true,
     "**/tmp": true
   },
   "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
   "gitlens.blame.heatmap.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.hovers.enabled": false,
   "gitlens.views.fileHistory.location": "scm",
   "gitlens.views.lineHistory.location": "scm",
   "gitlens.views.repositories.enabled": false,
+  "headwind.runOnSave": true,
+  "liveshare.featureSet": "insiders",
+  "markdown-pdf.outputDirectoryRelativePathFile": true,
+  "oneDark.italic": false,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "todo.embedded.providers.ag.regex": "(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)",
   "todo.embedded.providers.rg.regex": "(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)",
   "todo.embedded.regex": "(?:<!-- *)?(?:#|//|/\\*+|<!--|--|\\* @) *(TODO|FIXME|BUG|UGLY|HACK|IDEA|REVIEW|OPTIMIZE)(?:\\s*\\([^)]+\\))?:?(?!\\w)(?: *-->| *\\*/|(?= *(?:[^:]//|/\\*+|<!--|@|--))|((?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)))|(?: +[^@\\n]+)?))",
   "todohighlight.isEnable": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vscodeGoogleTranslate.preferredLanguage": "English",
+  "vsicons.dontShowNewVersionMessage": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  "window.titleBarStyle": "custom",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "One Dark",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "none",
-  "workbench.statusBar.feedback.visible": false,
-  "extensions.ignoreRecommendations": false,
-  "vsicons.dontShowNewVersionMessage": true,
-  "gitlens.settings.mode": "advanced",
-  "workbench.colorTheme": "Oceanic Next",
   "[json]": {
     "editor.defaultFormatter": "HookyQR.beautify"
   },
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "cSpell.language": "en,nl",
   "cSpell.userWords": [
-    "Vuex",
-    "fixables"
+    "Kinly"
   ],
-  "gitlens.currentLine.enabled": false,
-  "gitlens.codeLens.enabled": false
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }

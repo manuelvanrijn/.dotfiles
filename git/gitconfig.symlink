@@ -15,7 +15,7 @@
         large-files = !$DOTFILES/bin/git-large-files
         cl = !git gc && git submodule foreach git gc
         hard-delete = !$DOTFILES/bin/git-hard-delete
-        cleanup-branches = !$DOTFILES/bin/git-cleanup-branches
+        cleanup-branches = "!git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d #"
         standup = !$DOTFILES/bin/git-standup
         exec = !git update-index --chmod=+x
         assume   = update-index --assume-unchanged
@@ -25,6 +25,7 @@
         df = !git difftool --no-prompt --extcmd icdiff "$@"
         please = push --force-with-lease
         first = rev-list --max-parents=0 HEAD
+        all = "!f() { find . -name .git -type d | sed s,/.git,, | xargs -P10 -I{} git -C {} ${*:1}; }; f"
 [branch]
         autosetuprebase = always
 [color]
@@ -80,3 +81,5 @@
         gpgsign = true
 [gpg]
         program = /usr/local/bin/gpg
+[init]
+	defaultBranch = main

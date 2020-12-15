@@ -4,4 +4,5 @@
 # Handy when you get those nasty deprecation warnings
 # Example: bundle_search "before_filter"
 #
+# requires the silversearch-ag package
 for gem in $(bundle list | awk '{print $2}'); do ag -Q $1 `bundle show "$gem"`; done

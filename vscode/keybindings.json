@@ -47,5 +47,13 @@
   {
     "key": "cmd+enter",
     "command": "editor.action.quickFix"
+  },
+  {
+    "key": "[IntlBackslash]",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal"
   }
 ]

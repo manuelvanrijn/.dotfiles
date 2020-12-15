@@ -18,28 +18,34 @@ fi
 
 if [ $1 == "on" ]; then
   echo 'going live! 🎹'
-  networksetup -setairportpower airport off >/dev/null 2>&1
+  #networksetup -setairportpower airport off >/dev/null 2>&1
   dnd on
   docker-machine stop $(docker-machine ls -q --filter "state=running") >/dev/null 2>&1
-  pkill -f Dropbox.app
-  pkill -f Docker.app
-  pkill -f Harvest.app
-  pkill -f iTerm.app
-  pkill -f Franz.app
-  pkill -f Visual Studio Code.app
-  pkill -f Fork.app
-  pkill -f Mail.app
+  blueutil --power 0
+  pkill -f "Dropbox.app"
+  pkill -f "Docker.app"
+  pkill -f "Harvest.app"
+  pkill -f "iTerm.app"
+  pkill -f "Franz.app"
+  pkill -f "Visual Studio Code.app"
+  pkill -f "Fork.app"
+  pkill -f "Mail.app"
+  pkill -f "Time Out.app"
+  pkill -f "Tunnelblick.app"
+  pkill -f "Atlassian Companion.app"
   exit
 fi
 
 if [ $1 == "off" ]; then
   echo 'going backstage! 🥃'
-  networksetup -setairportpower airport on >/dev/null 2>&1
+  #networksetup -setairportpower airport on >/dev/null 2>&1
   dnd off
-  open /Applications/Dropbox.app
-  open /Applications/Docker.app
-  open /Applications/Harvest.app
-  open /Applications/iTerm.app
+  blueutil --power 1
+  open "/Applications/Dropbox.app"
+  open "/Applications/Docker.app"
+  open "/Applications/Harvest.app"
+  open "/Applications/iTerm.app"
+  open "/Applications/Time Out.app"
   exit
 fi
 
