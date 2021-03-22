@@ -99,8 +99,6 @@
   "workbench.colorTheme": "One Dark",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "none",
-  "[json]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
   },
   "cSpell.userWords": [
     "Kinly"
@@ -108,4 +106,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "10.0.1.96": "windows"
+  },
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe"
 }
