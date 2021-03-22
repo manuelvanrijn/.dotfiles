@@ -1,4 +1,0 @@
-[
-  //gotodoc
-  { "keys": ["super+shift+h"], "command": "goto_documentation" },
-]

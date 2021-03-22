@@ -21,9 +21,5 @@ npm-debug.log
 # global ignore folder
 _ignore/
 
-# sublime
-*.sublime-project
-*.sublime-workspace
-
 # visual studio code
 *.vscode/

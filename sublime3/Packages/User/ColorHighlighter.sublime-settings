@@ -1,5 +1,0 @@
-{
-  "icon_factory": {
-    "convert_command": "/usr/local/opt/imagemagick@6/bin/convert"
-  }
-}

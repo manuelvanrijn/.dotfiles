@@ -9,17 +9,6 @@ task :setup do
     DotfileHelper.scan_symlinks(folder)
   end
 
-  # Setup sublime symlinks
-  `mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
-  `ln -s ~/.dotfiles/sublime3/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`
-
-  # Setup vscode symlinks
-  `mkdir -p ~/Library/Application\ Support/Code/User/`
-  `ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json`
-  `ln -s ~/.dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json`
-  `mkdir -p ~/Library/Application\ Support/Code/User/snippets`
-  `ln -s ~/.dotfiles/vscode/snippets ~/Library/Application\ Support/Code/User/snippets`
-
   # Bundle config
   `mkdir -p ~/.bundle`
   `ln -s ~/.dotfiles/ruby/bundle/config ~/.bundle/config`
