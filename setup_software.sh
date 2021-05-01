@@ -18,17 +18,13 @@ asdf plugin-update --all
 echo "Install brew packages"
 brew tap homebrew/services
 brew tap wallix/awless
-brew tap buo/cask-upgrade
+brew tap caskroom/cask
+brew tap caskroom/versions
+brew tap homebrew/cask-drivers
 cat brew_packages | xargs brew install
 brew link --force mysql@5.7
 # enable fzf
 $(brew --prefix)/opt/fzf/install
-
-echo "Install cask packages"
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew tap homebrew/cask-drivers
-cat cask_packages | xargs brew cask install
 
 reload!
 

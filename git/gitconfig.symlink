@@ -83,3 +83,5 @@
         program = /usr/local/bin/gpg
 [init]
 	defaultBranch = main
+[diff "sopsdiffer"]
+	textconv = sops -d

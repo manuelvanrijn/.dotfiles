@@ -7,7 +7,7 @@ if which serve > /dev/null; then
 fi
 
 if $install; then
-  yarn global add serve
+  npm install -g serve
 fi
 
 echo "starting http-server for folder '$PWD'"

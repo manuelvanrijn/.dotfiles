@@ -1,6 +1,5 @@
 awesome_print
 benchmark-ips
-berkshelf
 bundler
 bundler-audit
 cocoapods
@@ -11,3 +10,4 @@ rubocop-rspec
 ruby-debug-ide
 rubygems-bundler
 solargraph
+synvert
