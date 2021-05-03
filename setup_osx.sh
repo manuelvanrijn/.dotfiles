@@ -14,10 +14,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo scutil --set ComputerName "toeter"
 sudo scutil --set LocalHostName "toeter"
 
-# Setup gpg config
-mkdir -p ~/.gnupg
-rm ~/.gnupg/gpg.conf
-ln -s ~/.dotfiles/gnupg/gpg.conf.symlink ~/.gnupg/gpg.conf
 
 ###############################################################################
 # General UI/UX                                                               #

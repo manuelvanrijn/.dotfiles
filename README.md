@@ -5,6 +5,7 @@
 * [Adobe - Source Code Pro](https://github.com/adobe/Source-Code-Pro/downloads) font
 * [brew](http://brew.sh/)
 * oh-my-zsh
+* Xcode
 
 ## Installation
 
