@@ -80,8 +80,8 @@
 [commit]
         gpgsign = true
 [gpg]
-        program = /usr/local/bin/gpg
+        program = /opt/homebrew/bin/gpg
 [init]
-	defaultBranch = main
+        defaultBranch = main
 [diff "sopsdiffer"]
-	textconv = sops -d
+        textconv = sops -d

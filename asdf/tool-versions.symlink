@@ -1,9 +1,8 @@
-awscli 2.1.28
-crystal 0.35.1
-golang 1.16
-nodejs 15.4.0
-postgres 13.1
-python 3.9.1
+crystal 1.0.0
+golang 1.16.4
+nodejs 16.2.0
+postgres 13.3
+python 3.9.5
 ruby 3.0.1
 rust stable
-terraform 0.14.2
+terraform 0.15.4

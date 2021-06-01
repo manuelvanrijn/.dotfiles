@@ -14,8 +14,11 @@ asdf plugin-list-all >> /dev/null
 asdf plugin-add crystal
 asdf plugin-add golang
 asdf plugin-add nodejs
-asdf plugin-add ruby
+asdf plugin-add postgres
 asdf plugin-add python
+asdf plugin-add ruby
+asdf plugin-add rust
+asdf plugin-add terraform
 asdf plugin-update --all
 
 echo "Install brew packages"
@@ -25,6 +28,8 @@ brew tap homebrew/cask
 brew tap homebrew/cask-versions
 brew tap homebrew/cask-drivers
 cat brew_packages | xargs brew install
+# for installing the cask version, not the cli only version
+brew install --cask docker
 brew link --force mysql@5.7
 # enable fzf
 $(brew --prefix)/opt/fzf/install
