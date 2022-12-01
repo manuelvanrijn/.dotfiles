@@ -30,7 +30,6 @@ brew tap homebrew/cask-drivers
 cat brew_packages | xargs brew install
 # for installing the cask version, not the cli only version
 brew install --cask docker
-brew link --force mysql@5.7
 # enable fzf
 $(brew --prefix)/opt/fzf/install
 

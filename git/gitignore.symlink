@@ -7,6 +7,10 @@
 *.rbc
 *.rdb
 *.orig
+*.dump
+*.bak
+*.swo
+*.swp
 
 # NodeJS
 node_modules/
@@ -20,6 +24,9 @@ npm-debug.log
 
 # global ignore folder
 _ignore/
+
+# ignore custom initializer with helpers
+*/initializers/_uppersource.rb
 
 # visual studio code
 *.vscode/

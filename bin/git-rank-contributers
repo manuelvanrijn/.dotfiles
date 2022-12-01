@@ -28,13 +28,12 @@ class String
 end
 
 lines = {}
-verbose = ARGV.delete("-v")
 obfuscate = ARGV.delete("-o")
 htmlize = ARGV.delete("-h")
 
 author = nil
 state = :pre_author
-`git log -M -C -C -p --no-color`.split("\n").each do |l|
+`git log -M -C -C -p --no-color`.encode!('UTF-8', 'UTF-8', :invalid => :replace).split("\n").each do |l|
   case
   when (state == :pre_author || state == :post_author) && l =~ /Author: (.*)$/
     author = $1
@@ -52,9 +51,6 @@ end
 lines.sort_by { |a, c| -c }.each do |a, c|
   a = a.obfuscate if obfuscate
   a = a.htmlize if htmlize
-  if verbose
-    puts "#{a}: #{c} lines of diff"
-  else
-    puts a
-  end
+
+  puts "#{a}: #{c} lines of diff"
 end

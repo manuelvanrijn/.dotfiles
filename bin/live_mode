@@ -20,19 +20,29 @@ if [ $1 == "on" ]; then
   echo 'going live! 🎹'
   #networksetup -setairportpower airport off >/dev/null 2>&1
   dnd on
-  docker-machine stop $(docker-machine ls -q --filter "state=running") >/dev/null 2>&1
   blueutil --power 0
-  pkill -f "Dropbox.app"
+  pkill -f "Bear.app"
+  pkill -f "Brave Browser.app"
+  pkill -f "Clockify Desktop.app"
   pkill -f "Docker.app"
-  pkill -f "Harvest.app"
-  pkill -f "iTerm.app"
-  pkill -f "Franz.app"
-  pkill -f "Visual Studio Code.app"
+  pkill -f "Dropbox.app"
+  pkill -f "Fastmate.app"
   pkill -f "Fork.app"
+  pkill -f "Gitify.app"
   pkill -f "Mail.app"
+  pkill -f "Microsoft Outlook.app"
+  pkill -f "Microsoft Teams.app"
+  pkill -f "ReadKit.app"
+  pkill -f "Slack.app"
+  pkill -f "Spotify.app"
+  pkill -f "TablePlus.app"
+  pkill -f "Telegram.app"
   pkill -f "Time Out.app"
+  pkill -f "Todoist.app"
   pkill -f "Tunnelblick.app"
-  pkill -f "Atlassian Companion.app"
+  pkill -f "Visual Studio Code.app"
+  pkill -f "WhatsApp.app"
+  pkill -f "zoom.us.app"
   exit
 fi
 
@@ -41,10 +51,10 @@ if [ $1 == "off" ]; then
   #networksetup -setairportpower airport on >/dev/null 2>&1
   dnd off
   blueutil --power 1
+  open "/Applications/Clockify Desktop.app"
   open "/Applications/Dropbox.app"
   open "/Applications/Docker.app"
-  open "/Applications/Harvest.app"
-  open "/Applications/iTerm.app"
+  open "/Applications/Gitify.app"
   open "/Applications/Time Out.app"
   exit
 fi

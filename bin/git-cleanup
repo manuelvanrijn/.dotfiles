@@ -1,0 +1,23 @@
+#!/bin/sh
+function ConfirmOrExit() {
+  while true
+  do
+    echo "Are you sure you want to continue? (y or n) :"
+    read CONFIRM
+    case $CONFIRM in
+      y|Y|YES|yes|Yes) break ;;
+      n|N|no|NO|No)
+      echo Aborted...
+      exit
+    ;;
+  *) echo Please enter only y or n
+  esac
+  done
+}
+
+echo "The following branches are merged and can be deleted"
+git checkout -q main && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && echo "- $branch"; done
+echo ""
+ConfirmOrExit
+
+git checkout -q main && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done

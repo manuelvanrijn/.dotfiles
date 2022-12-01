@@ -15,7 +15,7 @@
         large-files = !$DOTFILES/bin/git-large-files
         cl = !git gc && git submodule foreach git gc
         hard-delete = !$DOTFILES/bin/git-hard-delete
-        cleanup-branches = "!git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d #"
+        cleanup-branches = !$DOTFILES/bin/git-cleanup
         standup = !$DOTFILES/bin/git-standup
         exec = !git update-index --chmod=+x
         assume   = update-index --assume-unchanged
@@ -58,6 +58,7 @@
         prune = true
 [push]
         default = current
+        autoSetupRemote = true
 [pull]
         default = current
 [filter "hawser"]
@@ -80,7 +81,7 @@
 [commit]
         gpgsign = true
 [gpg]
-        program = /opt/homebrew/bin/gpg
+        program = /usr/local/bin/gpg
 [init]
         defaultBranch = main
 [diff "sopsdiffer"]

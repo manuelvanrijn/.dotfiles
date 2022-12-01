@@ -11,13 +11,13 @@ clockify
 coconutbattery
 daisydisk
 dialog
+direnv
 docker-machine-nfs
 dropbox
 exa
 exa
 exiftool
 faac
-ferdi
 ffmpeg
 flixtools
 focusrite-control
@@ -44,6 +44,7 @@ google-chrome
 google-cloud-sdk
 grammarly
 graphviz
+hadolint
 highlight
 htop
 http_load
@@ -109,14 +110,16 @@ qlstephen
 qt
 quicklook-csv
 quicklook-json
+rajiv/fastmate/fastmate
+raycast
 readline
 rectangle
 responsively
-sequel-pro
 siege
-silversearch-ag
 spotify
 sqlite
+suspicious-package
+tableplus
 the_silver_searcher
 tldr
 transmission
@@ -141,3 +144,4 @@ youtube-dl
 z
 zlib
 zsh
+zsh-autosuggestions

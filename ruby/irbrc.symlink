@@ -12,6 +12,7 @@ require 'awesome_print'
 AwesomePrint.irb!
 
 ActiveRecord::Base.logger.level = 1 if defined?(ActiveRecord)
+ActiveRecord::Base.logger = Logger.new(STDOUT) if defined?(ActiveRecord)
 
 # copy a string to the clipboard
 def cp(string)
