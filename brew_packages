@@ -1,8 +1,6 @@
 1password
 adns
 appcleaner
-arp-scan
-awscli
 bat
 blueutil
 brave-browser
@@ -10,11 +8,8 @@ cloc
 clockify
 coconutbattery
 daisydisk
-dialog
 direnv
-docker-machine-nfs
 dropbox
-exa
 exa
 exiftool
 faac
@@ -23,7 +18,6 @@ flixtools
 focusrite-control
 fontconfig
 fork
-forklift
 freetds
 freetype
 freexl
@@ -41,7 +35,6 @@ gnu-time
 gnupg
 gnutls
 google-chrome
-google-cloud-sdk
 grammarly
 graphviz
 hadolint
@@ -85,9 +78,7 @@ logitech-options
 lua
 m-cli
 macpar-deluxe
-mailspring
 midi-monitor
-mysql@5.7
 nettle
 ngrok
 nmap
@@ -100,7 +91,6 @@ pcre
 perl
 pinentry-mac
 postman
-proj
 protobuf
 qlcolorcode
 qlimagesize
@@ -113,7 +103,6 @@ rajiv/fastmate/fastmate
 raycast
 readline
 rectangle
-responsively
 siege
 spotify
 sqlite
@@ -124,10 +113,8 @@ tldr
 transmission
 trash
 tunnelblick
-typora
 v8
 vagrant
-vagrant-manager
 virtualbox
 visual-studio-code
 vlc

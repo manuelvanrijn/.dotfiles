@@ -1,8 +1,8 @@
 require 'rake'
 
 task :setup do
-  #`./setup_osx.sh`
-  #`./setup_software.sh`
+  `./setup_osx.sh`
+  `./setup_software.sh`
 
   # symlink setup
   %w[asdf git node ruby vim zsh].each do |folder|

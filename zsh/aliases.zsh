@@ -36,3 +36,6 @@ alias la="exa -lahgbH --git"
 
 # bat in favour of cat
 alias cat="bat"
+
+# use trash instead of the default rm command
+if [ -f /usr/local/bin/trash ]; then alias rm="/usr/local/bin/trash"; fi
