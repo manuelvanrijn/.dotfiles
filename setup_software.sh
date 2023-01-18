@@ -46,4 +46,4 @@ ln -s ~/.dotfiles/gnupg/gpg.conf.symlink ~/.gnupg/gpg.conf
 
 # Setup git diff
 mkdir -p ~/.bin
-ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ~/.bin/diff-highlight
+ln -s /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight ~/.bin/diff-highlight
