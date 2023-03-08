@@ -10,4 +10,5 @@ rubocop-rspec
 ruby-debug-ide
 rubygems-bundler
 solargraph
+standardrb
 synvert

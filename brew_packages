@@ -29,6 +29,7 @@ geos
 gettext
 giflib
 git
+git-delta
 gmp
 gnu-sed
 gnu-time
