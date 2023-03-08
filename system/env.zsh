@@ -1,3 +1,6 @@
+# brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 export EDITOR='code'
 
 # correct encoding

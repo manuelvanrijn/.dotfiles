@@ -21,9 +21,7 @@ asdf plugin-add terraform
 asdf plugin-update --all
 
 echo "Install brew packages"
-cat brew_packages | xargs brew install
-# for installing the cask version, not the cli only version
-brew install --cask docker
+brew bundle install
 # enable fzf
 $(brew --prefix)/opt/fzf/install
 
