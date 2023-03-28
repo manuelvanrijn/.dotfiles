@@ -26,6 +26,7 @@
         please = push --force-with-lease
         first = rev-list --max-parents=0 HEAD
         all = "!f() { find . -name .git -type d | sed s,/.git,, | xargs -P10 -I{} git -C {} ${*:1}; }; f"
+        update = !$DOTFILES/bin/git-rebase-against-main
 [branch]
         autosetuprebase = always
 [color]

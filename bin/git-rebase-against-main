@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Get the name of the current branch
+current_branch=$(git symbolic-ref --short HEAD)
+
+if git show-ref --quiet refs/heads/main; then
+    rebase_branch="main"
+else
+    rebase_branch="master"
+fi
+
+# Checkout the rebase branch, pull changes, and rebase
+git stash
+git checkout "$rebase_branch"
+git pull origin "$rebase_branch"
+git checkout "$current_branch"
+git rebase "$rebase_branch"
+git stash pop
