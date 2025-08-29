@@ -7,7 +7,6 @@ rubocop
 rubocop-performance
 rubocop-rails
 rubocop-rspec
-ruby-debug-ide
 rubygems-bundler
 solargraph
 standardrb

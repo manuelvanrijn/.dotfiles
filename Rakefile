@@ -4,8 +4,11 @@ task :setup do
   `./setup_osx.sh`
   `./setup_software.sh`
 
+  # Mise
+  DotfileHelper.create(File.join(Dir.pwd, "mise/.config/mise/config.toml"), File.join(Dir.home, ".confg/mise/config.toml"))
+
   # symlink setup
-  %w[asdf git node ruby vim zsh].each do |folder|
+  %w[git mise node ruby vim zsh].each do |folder|
     DotfileHelper.scan_symlinks(folder)
   end
 
@@ -35,6 +38,7 @@ class DotfileHelper
     if File.exist?(target) || File.symlink?(target)
       puts "SKIPPED: #{source} -> #{target}"
     else
+      `mkdir -p #{File.dirname(target)}`
       `ln -s #{source} #{target}`
     end
   end

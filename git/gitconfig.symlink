@@ -26,7 +26,7 @@
         please = push --force-with-lease
         first = rev-list --max-parents=0 HEAD
         all = "!f() { find . -name .git -type d | sed s,/.git,, | xargs -P10 -I{} git -C {} ${*:1}; }; f"
-        update = !$DOTFILES/bin/git-rebase-against-main
+        update = !$DOTFILES/bin/git-rebase-against
 [branch]
         autosetuprebase = always
 [color]
@@ -36,26 +36,36 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
+        attributesfile = ~/.gitattributes
         editor = vim
         whitespace = trailing-space,space-before-tab,indent-with-non-tab
         autocrlf = false
         pager = delta
 [interactive]
-    diffFilter = delta --color-only
+        diffFilter = delta --color-only
 [merge]
         tool = opendiff
         ff = true
-        conflictstyle = diff3
+        conflictstyle = zdiff3
+[merge "railsschema"]
+  name = Rails schema version
+  driver = "ruby -e '\n\
+    system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
+    b = File.read(%(%A))\n\
+    b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.version: ([0-9_]+). do\\n=+\\nActiveRecord::Schema\\.define.version: ([0-9_]+). do\\n>+ .*/) do\n\
+      v1, v2 = $1.delete(\"_\").to_i, $2.delete(\"_\").to_i\n\
+      highest_version = v1 >= v2 ? $1 : $2\n\
+      %(ActiveRecord::Schema.define(version: #{highest_version}) do)\n\
+    end\n\
+    File.open(%(%A), %(w)) {|f| f.write(b)}\n\
+    exit 1 if b.include?(%(<)*%L)'"
 [rebase]
         autostash = true
+        autosquash = true
 [mergetool]
         keepBackup = false
 [help]
         autocorrect = 1
-[filter "media"]
-        required = true
-        clean = git media clean %f
-        smudge = git media smudge %f
 [remote]
         pushdefault = origin
 [remote "origin"]
@@ -65,12 +75,7 @@
         autoSetupRemote = true
 [pull]
         default = current
-[filter "hawser"]
-        clean = git hawser clean %f
-        smudge = git hawser smudge %f
-        required = true
-[heroku]
-        account = sping-admin
+        rebase = true
 [filter "lfs"]
         clean = git lfs clean %f
         smudge = git lfs smudge %f
@@ -78,11 +83,16 @@
 [diff]
         mnemonicprefix = true
         colorMoved = default
+	algorithm = histogram
 [commit]
         gpgsign = true
 [gpg]
-        program = /usr/local/bin/gpg
+	program = /opt/homebrew/bin/gpg
 [init]
         defaultBranch = main
-[diff "sopsdiffer"]
-        textconv = sops -d
+[advice]
+	detachedHead = false
+[rerere]
+        enabled = true
+[fetch]
+	prune = true

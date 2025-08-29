@@ -2,8 +2,8 @@
 export PATH="$PATH:$DOTFILES/bin"
 # brew
 export PATH="$PATH:/usr/local/bin"
-# some random apps loaded from ~/.bin
-export PATH="$PATH:$HOME/.bin"
+# some random apps loaded from ~/.bin and ~/.local/bin
+export PATH="$PATH:$HOME/.bin:$HOME/.local/bin"
 # android platform tools
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 

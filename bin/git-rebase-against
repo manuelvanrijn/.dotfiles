@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Get the name of the current branch
+current_branch=$(git symbolic-ref --short HEAD)
+
+# Use provided branch argument or determine default branch
+if [ -n "$1" ]; then
+    rebase_branch="$1"
+elif git show-ref --quiet refs/heads/main; then
+    rebase_branch="main"
+else
+    rebase_branch="master"
+fi
+
+git stash save "WIP before rebasing on $rebase_branch"
+
+# Checkout the rebase branch, pull changes, and rebase
+git checkout "$rebase_branch"
+git pull origin "$rebase_branch"
+git checkout "$current_branch"
+git rebase "$rebase_branch"
+
+# Pop if the stash was created
+if git stash list | head -n 1 | grep -q "WIP before rebasing on $rebase_branch"; then
+    git stash pop stash@{0}
+fi

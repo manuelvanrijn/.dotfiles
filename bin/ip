@@ -1,2 +1,2 @@
 #!/bin/sh
-curl ifconfig.co
+curl -4 ifconfig.co

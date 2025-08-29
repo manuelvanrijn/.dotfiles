@@ -1,0 +1,15 @@
+[tools]
+nodejs = "19.6.0"
+ruby = "3.4.5"
+rust = "stable"
+python = "3.13.3t"
+
+[settings]
+idiomatic_version_file_enable_tools = [
+  "node",
+  "ruby"
+]
+
+trusted_config_paths = [
+  "~/Working"
+]

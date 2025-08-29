@@ -4,22 +4,6 @@
 # PACKAGES
 ################
 
-echo "Installing asdf-vm"
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-cd ~/.asdf
-git checkout "$(git describe --abbrev=0 --tags)"
-cd ~/.dotfiles
-source asdf/asdf.zsh
-asdf plugin-list-all >> /dev/null
-asdf plugin-add crystal
-asdf plugin-add golang
-asdf plugin-add nodejs
-asdf plugin-add python
-asdf plugin-add ruby
-asdf plugin-add rust
-asdf plugin-add terraform
-asdf plugin-update --all
-
 echo "Install brew packages"
 brew bundle install
 # enable fzf
@@ -41,3 +25,6 @@ ln -s ~/.dotfiles/settings/itsyscal/preferences.plist ~/Library/Preferences/com.
 mkdir -p ~/.gnupg
 rm ~/.gnupg/gpg.conf
 ln -s ~/.dotfiles/gnupg/gpg.conf.symlink ~/.gnupg/gpg.conf
+
+# mise
+ln -s ~/.dotfiles/mise/.config/mise ~/.config

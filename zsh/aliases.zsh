@@ -1,12 +1,5 @@
 alias reload!='. ~/.zshrc'
 
-# rake helpers
-alias pr-rspec='RAILS_ENV=test rake db:drop && echo "test db dropped" && \
-  RAILS_ENV=test rake db:create && echo "test db created" && \
-  RAILS_ENV=test rake db:migrate >> /dev/null && echo "test db migrated" && \
-  git checkout db/schema.rb >> /dev/null && \
-  rspec spec'
-
 # Always enable colored `grep` output
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -30,12 +23,17 @@ alias pullpushall='update_git_repos'
 alias toron='sudo networksetup -setsocksfirewallproxy Wi-Fi 127.0.0.1 9050 off; sudo networksetup -setsocksfirewallproxystate Wi-Fi on'
 alias toroff='sudo networksetup -setsocksfirewallproxy Wi-Fi ""; sudo networksetup -setsocksfirewallproxystate Wi-Fi off'
 
-# exa in favour of ls
-alias ls="exa -lhgbH --git"
-alias la="exa -lahgbH --git"
+# eza in favour of ls
+alias ls="eza -lhgbH --git"
+alias la="eza -lahgbH --git"
 
 # bat in favour of cat
 alias cat="bat"
 
 # use trash instead of the default rm command
 if [ -f /usr/local/bin/trash ]; then alias rm="/usr/local/bin/trash"; fi
+
+# search rails routes using fzf
+alias routes="bin/rails routes | fzf -e"
+
+alias ring="open raycast://confetti"
