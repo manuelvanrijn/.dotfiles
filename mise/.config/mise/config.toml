@@ -3,14 +3,8 @@ nodejs = "24.11.1"
 ruby = "3.4.7"
 rust = "stable"
 python = "3.13.3t"
-"github:tuist/guck" = "latest"
 
 [settings]
-idiomatic_version_file_enable_tools = [
-  "node",
-  "ruby"
-]
+idiomatic_version_file_enable_tools = ["node", "ruby"]
 
-trusted_config_paths = [
-  "~/Working"
-]
+trusted_config_paths = ["~/Working"]

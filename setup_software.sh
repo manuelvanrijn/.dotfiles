@@ -18,9 +18,6 @@ file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
 echo "Install vagrant plugin(s)"
 vagrant plugin install vagrant-cachier vagrant-vbguest
 
-# Setup settings
-ln -s ~/.dotfiles/settings/itsyscal/preferences.plist ~/Library/Preferences/com.mowglii.ItsycalApp.plist
-
 # Setup gpg config
 mkdir -p ~/.gnupg
 rm ~/.gnupg/gpg.conf
