@@ -93,6 +93,10 @@
 [advice]
 	detachedHead = false
 [rerere]
-        enabled = true
+	enabled = true
 [fetch]
 	prune = true
+[gtr "editor"]
+	default = vscode
+[gtr "ai"]
+	default = none

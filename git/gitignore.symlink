@@ -30,3 +30,10 @@ _ignore/
 
 # visual studio code
 *.vscode/
+
+.ck
+.augment/
+mise.local.toml
+AGENTS.md
+.factory/
+.kilocode/
