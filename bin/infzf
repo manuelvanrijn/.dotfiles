@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require "tempfile"
+
+Tempfile.create do |file|
+  file.write $stdin.read
+  file.flush
+  preview = "rg --pretty --fixed-strings --before-context=3 --after-context=6 {} #{file.path}"
+  `fzf --ansi --preview=\"#{preview}\" --preview-window=wrap,60% < #{file.path}`
+end
