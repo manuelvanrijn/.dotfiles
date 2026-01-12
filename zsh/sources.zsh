@@ -1,8 +1,4 @@
-source `brew --prefix`/etc/profile.d/z.sh
-source `brew --prefix`/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+BREW_PREFIX="/opt/homebrew"
+source $BREW_PREFIX/etc/profile.d/z.sh
+source $BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-## kubectl, minikube & stern
-# source <(kubectl completion zsh)
-# source <(minikube completion zsh)
-# source <(stern --completion=zsh)
