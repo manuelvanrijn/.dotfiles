@@ -5,10 +5,13 @@ task :setup do
   `./setup_software.sh`
 
   # Mise
-  DotfileHelper.create(File.join(Dir.pwd, "mise/.config/mise/config.toml"), File.join(Dir.home, ".confg/mise/config.toml"))
+  DotfileHelper.create(File.join(Dir.pwd, "config/mise"), File.join(Dir.home, ".config/mise"))
+
+  # Opencode
+  DotfileHelper.create(File.join(Dir.pwd, "config/opencode"), File.join(Dir.home, ".config/opencode"))
 
   # symlink setup
-  %w[git mise node ruby vim zsh].each do |folder|
+  %w[git node ruby vim zsh].each do |folder|
     DotfileHelper.scan_symlinks(folder)
   end
 

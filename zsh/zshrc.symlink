@@ -22,3 +22,14 @@ unsetopt correct_all
 
 # source every .zsh file in this rep
 for config_file ($DOTFILES/**/*.zsh) source $config_file
+
+# bun completions
+[ -s "/Users/manuel/.bun/_bun" ] && source "/Users/manuel/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# mise
+eval "$(mise activate zsh)"
+export MISE_RUBY_BUILD_OPTS=$RUBY_CONFIGURE_OPTS
