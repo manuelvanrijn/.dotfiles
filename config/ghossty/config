@@ -1,0 +1,55 @@
+theme = One Double Dark
+
+# Background
+background-opacity = 0.9
+background-blur = 16
+background-blur-radius = 20
+
+# Font
+font-family = "Hack Nerd Font Mono"
+font-size = 13
+adjust-cell-height = 1
+
+# Mouse & Scrolling
+mouse-hide-while-typing = true
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+scrollback-limit = 10000
+
+# Automatic Update
+auto-update = check
+
+# Merges titlebar with contents
+macos-titlebar-style = native
+macos-titlebar-style = transparent
+
+# Window Settings
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+# Custom Keybinds & Config (supor == command key on mac)
+# global means overrides all other apps
+# # Example) keybind = global:toggle_quick_terminal
+# Userful Keybinds
+keybind = super+i=inspector:toggle
+# keybind = global:super+backquote=toggle_quick_terminal
+keybind = global:§=toggle_quick_terminal
+# keybind = super+section=toggle_quick_terminal
+# keybind = global:section=toggle_quick_terminal
+## Custom keybinds for navigation
+# keybind = super+alt+h=goto_split:left
+# keybind = super+alt+j=goto_split:down
+# keybind = super+alt+k=goto_split:up
+# keybind = super+alt+l=goto_split:right
+
+# Quick Terminal
+quick-terminal-position = top
+quick-terminal-size = 100%,100%
+quick-terminal-animation-duration = 0
+quick-terminal-screen = main
+quick-terminal-autohide = false
+# quick-terminal-screen = mouse
+# ENABLE when quick-terminal-size is fixed....
+# macos-hidden = always
