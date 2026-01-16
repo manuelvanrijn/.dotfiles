@@ -34,6 +34,5 @@ _ignore/
 .ck
 .augment/
 mise.local.toml
-AGENTS.md
 .factory/
 .kilocode/
