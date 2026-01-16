@@ -36,3 +36,4 @@ _ignore/
 mise.local.toml
 .factory/
 .kilocode/
+AGENTS.md

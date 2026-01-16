@@ -35,7 +35,7 @@ window-padding-balance = true
 # Userful Keybinds
 keybind = super+i=inspector:toggle
 # keybind = global:super+backquote=toggle_quick_terminal
-keybind = global:§=toggle_quick_terminal
+#keybind = global:§=toggle_quick_terminal
 # keybind = super+section=toggle_quick_terminal
 # keybind = global:section=toggle_quick_terminal
 ## Custom keybinds for navigation
@@ -45,11 +45,11 @@ keybind = global:§=toggle_quick_terminal
 # keybind = super+alt+l=goto_split:right
 
 # Quick Terminal
-quick-terminal-position = top
-quick-terminal-size = 100%,100%
-quick-terminal-animation-duration = 0
-quick-terminal-screen = main
-quick-terminal-autohide = false
+#quick-terminal-position = top
+#quick-terminal-size = 100%,100%
+#quick-terminal-animation-duration = 0
+#quick-terminal-screen = main
+#quick-terminal-autohide = false
 # quick-terminal-screen = mouse
 # ENABLE when quick-terminal-size is fixed....
 # macos-hidden = always
