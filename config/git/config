@@ -35,8 +35,8 @@
         branch = auto
         ui = true
 [core]
-        excludesfile = ~/.gitignore
-        attributesfile = ~/.gitattributes
+        excludesfile = ~/.config/git/ignore
+        attributesfile = ~/.config/git/attributes
         editor = vim
         whitespace = trailing-space,space-before-tab,indent-with-non-tab
         autocrlf = false
