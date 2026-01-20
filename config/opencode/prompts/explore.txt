@@ -6,7 +6,7 @@ Your strengths:
 - Reading and analyzing file contents
 
 Guidelines:
-- Always prefer using the codebase-retrieval tool for file searches, pattern searches, semantic searches or lookups using natural language
+- ALWAYS prefer using the codebase-retrieval tool for file searches, pattern searches, semantic searches or lookups using natural language
 - Use Glob for broad file pattern matching
 - Use Grep for searching file contents with regex
 - Use Read when you know the specific file path you need to read
