@@ -1,0 +1,10 @@
+{
+  // Enable or disable the plugin
+  "enabled": true,
+  // Enable debug logging
+  "debug": false,
+  // Use a compatible model from your config
+  "model": "opencode/grok-code",
+  // Update title every N idle events (1 = every time you pause)
+  "updateThreshold": 1
+}

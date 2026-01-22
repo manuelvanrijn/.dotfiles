@@ -1,7 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "github-copilot/claude-sonnet-4.5",
-  "small_model": "opencode/grok-code-fast-1",
   "theme": "one-dark",
   "autoupdate": true,
   "username": "Manuel",
@@ -24,88 +22,36 @@
     "auto": true,
     "prune": true
   },
-  "default_agent": "plan",
+  "default_agent": "build",
   "agent": {
     "explore": {
-      "prompt": "{file:./prompts/explore.txt}",
-      // "model": "opencode/glm-4.7-free"
-      "model": "github-cp/claude-sonnet-4.5"
+      "mode": "subagent",
+      //"model": "github-copilot/gpt-5-mini", // best free default
+      "model": "opencode/grok-code", // fastest
+      //"model": "openai/ gpt-5.1-codex-mini", // more complex code tracing
+      "prompt": "{file:./prompts/explore.txt}"
     },
     "general": {
       "mode": "subagent",
-      "model": "github-copilot/claude-sonnet-4.5",
-    },
-    "build": {
-      "model": "github-copilot/claude-sonnet-4.5"
-    },
-    "plan": {
-      "model": "openai/gpt-5.2",
-      "permission": {
-        "bash": {
-          "git *": "allow",
-          "rg *": "allow"
-        }
-      }
+      // "model": "github-copilot/claude-sonnet-4.5",
+      "model": "openai/gpt-5.2"
     }
   },
   "plugin": [
-    "opencode-openai-codex-auth",
+    "opencode-openai-codex-auth@4.4.0",
     "@franlol/opencode-md-table-formatter@0.0.3",
-    "@plannotator/opencode@latest",
+    "@tarquinen/opencode-smart-title@0.1.7",
     // "oh-my-opencode"
   ],
   "permission": {
-    "augment-context-engine*": "allow"
+    "augment-context-engine*": "allow",
   },
   "mcp": {
-    "sequential-thinking": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@modelcontextprotocol/server-sequential-thinking"
-      ]
-    },
-    "context7": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@upstash/context7-mcp@latest"
-      ]
-    },
-    "brave-search": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@modelcontextprotocol/server-brave-search"
-      ],
-      "environment": {
-        "BRAVE_API_KEY": "{env:BRAVE_API_KEY}"
-      }
-    },
-    "fetch": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@tokenizin/mcp-npx-fetch"
-      ]
-    },
     "augment-context-engine": {
       "type": "local",
       "command": [
         "auggie",
         "--mcp"
-      ]
-    },
-    "playwriter": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "playwriter@latest"
       ]
     }
   },
