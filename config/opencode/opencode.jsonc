@@ -44,7 +44,9 @@
     // "oh-my-opencode"
   ],
   "permission": {
+    "agent-browser*": "allow",
     "augment-context-engine*": "allow",
+    "brave-search*": "allow",
   },
   "mcp": {
     "augment-context-engine": {
