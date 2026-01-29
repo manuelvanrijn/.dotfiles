@@ -55,7 +55,7 @@
     "Format-Volume",
     "format.com"
   ],
-  "includeCoAuthoredByDroid": true,
+  "includeCoAuthoredByDroid": false,
   "enableDroidShield": true,
   "todoDisplayMode": "pinned",
   "allowBackgroundProcesses": true,
@@ -81,9 +81,11 @@
     ]
   },
   "sessionDefaultSettings": {
-    "model": "custom:Anthropic:-Sonnet-4.5-(Low)-15",
+    "model": "gemini-3-pro-preview",
     "reasoningEffort": "none",
-    "autonomyMode": "auto-high"
+    "autonomyMode": "spec",
+    "specModeReasoningEffort": "low"
   },
-  "logoAnimation": "off"
+  "logoAnimation": "off",
+  "terminalColorMode": "dark"
 }
