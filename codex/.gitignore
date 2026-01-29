@@ -1,0 +1,11 @@
+auth.json
+history.jsonl
+models_cache.json
+version.json
+
+archived_sessions/
+log/
+rules/
+tmp/
+sessions/
+skills/.system

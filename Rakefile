@@ -10,6 +10,12 @@ task :setup do
   # Opencode
   DotfileHelper.create(File.join(Dir.pwd, "config/opencode"), File.join(Dir.home, ".config/opencode"))
 
+  # Codex
+  DotfileHelper.create(File.join(Dir.pwd, "codex"), File.join(Dir.home, ".codex"))
+
+  # Agents
+  DotfileHelper.create(File.join(Dir.pwd, "agents"), File.join(Dir.home, ".agents"))
+
   # symlink setup
   %w[git node ruby vim zsh].each do |folder|
     DotfileHelper.scan_symlinks(folder)
