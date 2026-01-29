@@ -16,6 +16,9 @@ task :setup do
   # Agents
   DotfileHelper.create(File.join(Dir.pwd, "agents"), File.join(Dir.home, ".agents"))
 
+  # Factory
+  DotfileHelper.create(File.join(Dir.pwd, "factory"), File.join(Dir.home, ".factory"))
+
   # symlink setup
   %w[git node ruby vim zsh].each do |folder|
     DotfileHelper.scan_symlinks(folder)

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "augment-context-engine": {
+      "type": "stdio",
+      "command": "auggie",
+      "args": [
+        "--mcp"
+      ],
+      "disabled": false
+    }
+  }
+}

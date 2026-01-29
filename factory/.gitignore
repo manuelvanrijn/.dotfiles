@@ -1,0 +1,17 @@
+auth.*
+history.json
+mcp-oauth.*
+background-processes.json
+
+.factory/
+artifacts/
+bin/
+certs/
+ide/
+logs/
+sessions/
+sounds/
+specs/
+temp/
+updates/
+_IGNORE/
