@@ -1,7 +1,6 @@
 ---
 description: Programming agent with great Software Engineering skills
 mode: primary
-model: github-copilot/claude-opus-4.5
 temperature: 0.2
 permission:
   "*": allow
