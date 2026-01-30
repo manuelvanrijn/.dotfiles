@@ -39,8 +39,6 @@
   },
   "plugin": [
     "opencode-openai-codex-auth@4.4.0",
-    "@franlol/opencode-md-table-formatter@0.0.3",
-    "@tarquinen/opencode-smart-title@0.1.7",
     // "oh-my-opencode"
   ],
   "permission": {

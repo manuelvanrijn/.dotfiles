@@ -1,6 +1,7 @@
 # ~/.codex/config.toml — managed by codex-1up (patch mode)
 notify = ["~/.codex/notify.sh"]
 profile = "balanced"
+suppress_unstable_features_warning = true
 
 [features]
 collaboration_modes = true
@@ -8,8 +9,8 @@ collaboration_modes = true
 [profiles.balanced]
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
-model = "gpt-5.2-codex"
-model_reasoning_effort = "medium"
+model = "gpt-5.2"
+model_reasoning_effort = "high"
 #model_reasoning_summary = "concise"
 
 [profiles.balanced.features]
@@ -28,8 +29,8 @@ web_search_request = false
 [profiles.yolo]
 approval_policy = "never"
 sandbox_mode = "danger-full-access"
-model = "gpt-5.2-codex"
-model_reasoning_effort = "medium"
+model = "gpt-5.2"
+model_reasoning_effort = "high"
 model_reasoning_summary = "detailed"
 tool_output_token_limit = 25000
 model_auto_compact_token_limit = 233000
@@ -50,17 +51,4 @@ notifications = true
 
 [mcp_servers.augment-context-engine]
 command = "auggie"
-args = ["-w", "/Users/manuel/Working/jobport2", "--mcp"]
-
-[mcp_servers.context7]
-command = "npx"
-args = ["-y", "@upstash/context7-mcp"]
-
-[mcp_servers.fetch]
-command = "npx"
-args = ["-y", "@tokenizin/mcp-npx-fetch"]
-
-[mcp_servers.sequential-thinking]
-command = "npx"
-args = ["-y", "@modelcontextprotocol/server-sequential-thinking"]
-
+args = ["--mcp"]

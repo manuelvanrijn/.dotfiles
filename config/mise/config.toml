@@ -1,4 +1,5 @@
 [tools]
+go = "1.25.6"
 nodejs = "24.11.1"
 rust = "stable"
 python = "3.13.3t"

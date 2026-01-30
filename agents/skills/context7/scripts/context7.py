@@ -10,11 +10,12 @@ import urllib.request
 import urllib.parse
 import urllib.error
 import os
+from typing import Union, Optional
 
 API_BASE = "https://context7.com/api/v2"
 
 
-def make_request(url: str, api_key: str) -> dict | str:
+def make_request(url: str, api_key: str) -> Union[dict, str]:
     """Make an authenticated request to Context7 API."""
     headers = {"Authorization": f"Bearer {api_key}"}
     req = urllib.request.Request(url, headers=headers)
@@ -42,7 +43,13 @@ def search_libraries(library_name: str, api_key: str, query: str = "") -> dict:
     return make_request(url, api_key)
 
 
-def get_context(library_id: str, query: str, api_key: str, output_type: str = "txt", tokens: int = None) -> str | dict:
+def get_context(
+    library_id: str,
+    query: str,
+    api_key: str,
+    output_type: str = "txt",
+    tokens: Optional[int] = None,
+) -> Union[str, dict]:
     """Fetch documentation context for a specific library."""
     params = {
         "libraryId": library_id,
