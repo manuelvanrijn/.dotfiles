@@ -1,7 +1,10 @@
 ---
+$schema: https://opencode.ai/config.json
 description: list pricing of GitHub Copilot Models
-agent: plan
-model: opencode/grok-code
+model: github-copilot/gpt-4o
+compaction:
+  auto: false
+  prune: false
 ---
 
 Your task is to fetch the latest information from [GitHub Copilot Model Multipliers](https://docs.github.com/en/copilot/concepts/billing/copilot-requests#model-multipliers).

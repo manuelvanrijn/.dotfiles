@@ -19,8 +19,18 @@ Retrieve current library documentation via Context7 API.
 
 This skill requires a Context7 API key in `CONTEXT7_API_KEY`.
 
+Recommended setup options:
+1) Export it in your shell profile (global):
+
 ```bash
 export CONTEXT7_API_KEY="your-context7-key"
+```
+
+2) Use a local `.env` file (per-repo):
+
+```bash
+cp skills/context7/.env.example .env
+set -a; source .env; set +a
 ```
 
 ## Workflow
@@ -28,12 +38,12 @@ export CONTEXT7_API_KEY="your-context7-key"
 ### 1. Search for the library
 
 ```bash
-python3 ~/.config/opencode/skill/context7/scripts/context7.py search "<library-name>"
+python3 ~/.agents/skills/context7/scripts/context7.py search "<library-name>"
 ```
 
 Example:
 ```bash
-python3 ~/.config/opencode/skill/context7/scripts/context7.py search "next.js"
+python3 ~/.agents/skills/context7/scripts/context7.py search "next.js"
 ```
 
 Returns library metadata including the `id` field needed for step 2.
@@ -41,12 +51,12 @@ Returns library metadata including the `id` field needed for step 2.
 ### 2. Fetch documentation context
 
 ```bash
-python3 ~/.config/opencode/skill/context7/scripts/context7.py context "<library-id>" "<query>"
+python3 ~/.agents/skills/context7/scripts/context7.py context "<library-id>" "<query>"
 ```
 
 Example:
 ```bash
-python3 ~/.config/opencode/skill/context7/scripts/context7.py context "/vercel/next.js" "app router middleware"
+python3 ~/.agents/skills/context7/scripts/context7.py context "/vercel/next.js" "app router middleware"
 ```
 
 Options:
