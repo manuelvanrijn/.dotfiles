@@ -1,7 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "theme": "ayu-dark",
-  "model": "github-copilot/gpt-4o",
+  "model": "github-copilot/gpt-5-mini",
   "autoupdate": true,
   "username": "Manuel",
   "instructions": [
@@ -28,7 +28,7 @@
     "explore": {
       "mode": "subagent",
       //"model": "github-copilot/gpt-5-mini", // best free default
-      "model": "github-copilot/gpt-4o", // fastest free
+      "model": "github-copilot/gpt-5-mini", // fastest free
       //"model": "openai/ gpt-5.1-codex-mini", // more complex code tracing
       "prompt": "{file:./prompts/explore.txt}"
     },
@@ -36,8 +36,8 @@
       "mode": "subagent",
       // "model": "github-copilot/claude-sonnet-4.5",
       // "model": "openai/gpt-5.2"
-      "model": "github-copilot/gpt-4o", // fastest free
-    }
+      "model": "github-copilot/gpt-5-mini", // fastest free
+    },
   },
   "plugin": [
     "opencode-openai-codex-auth@4.4.0",
