@@ -33,3 +33,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # mise
 eval "$(mise activate zsh)"
 export MISE_RUBY_BUILD_OPTS=$RUBY_CONFIGURE_OPTS
+
+# worktree
+eval "$(git wt --init zsh)"

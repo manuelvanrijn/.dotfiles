@@ -12,7 +12,7 @@ Headless web search and content extraction using Brave Search. No browser requir
 Run once before first use:
 
 ```bash
-cd ~/.config/opencode/skill/brave-search
+cd ~/.agents/skills/brave-search
 npm ci
 ```
 

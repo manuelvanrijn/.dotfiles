@@ -2,6 +2,7 @@
 notify = ["~/.codex/notify.sh"]
 profile = "balanced"
 suppress_unstable_features_warning = true
+web_search = "live"
 
 [features]
 collaboration_modes = true
@@ -11,10 +12,8 @@ approval_policy = "on-request"
 sandbox_mode = "workspace-write"
 model = "gpt-5.2"
 model_reasoning_effort = "high"
+personality = "pragmatic"
 #model_reasoning_summary = "concise"
-
-[profiles.balanced.features]
-web_search_request = true
 
 [profiles.safe]
 approval_policy = "on-failure"
@@ -22,9 +21,6 @@ sandbox_mode = "read-only"
 model = "gpt-5.1-codex"
 model_reasoning_effort = "medium"
 #model_reasoning_summary = "concise"
-
-[profiles.safe.features]
-web_search_request = false
 
 [profiles.yolo]
 approval_policy = "never"
@@ -34,9 +30,6 @@ model_reasoning_effort = "high"
 model_reasoning_summary = "detailed"
 tool_output_token_limit = 25000
 model_auto_compact_token_limit = 233000
-
-[profiles.yolo.features]
-web_search_request = true
 
 [tui]
 notifications = true
@@ -52,3 +45,7 @@ notifications = true
 [mcp_servers.augment-context-engine]
 command = "auggie"
 args = ["--mcp"]
+
+[mcp_servers.shadcn]
+command = "npx"
+args = ["shadcn@latest", "mcp"]
