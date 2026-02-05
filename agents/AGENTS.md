@@ -38,3 +38,6 @@ This context engine is the most advanced code indexing service there is. It deep
 - Early dev, no users. Do things RIGHT: clean, organized, zero tech debt. No compatibility shims.
 - NEVER workarounds. Full implementations for >1000 users. No half-baked solutions.
 - NEVER remove/hide/rename existing features/UI unless explicitly asked. Keep UX intact, stub if not wired.
+
+## Terminal title.
+- ONLY FOR codex: Update the iTerm title whenever the session topic changes using OSC sequences; use ⚡︎ for Codex. Run: `printf '\033]0;%s\007' "⚡︎ Topic" > "$CODEX_TTY"` where "Topic" is a short (2-4 word) description of the current task.
