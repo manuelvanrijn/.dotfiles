@@ -1,6 +1,6 @@
 # ~/.codex/config.toml — managed by codex-1up (patch mode)
 notify = ["~/.codex/notify.sh"]
-profile = "balanced"
+profile = "yolo"
 suppress_unstable_features_warning = true
 web_search = "live"
 
