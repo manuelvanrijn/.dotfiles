@@ -17,7 +17,7 @@
       "skillPath": "hotwire-stimulus/SKILL.md",
       "skillFolderHash": "aa1b53b946979f6ecb4879e583ee678d67bd0d00",
       "installedAt": "2026-02-11T19:09:06.222Z",
-      "updatedAt": "2026-02-11T19:09:06.222Z"
+      "updatedAt": "2026-02-12T09:49:34.090Z"
     },
     "kamal-deployment": {
       "source": "faqndo97/ai-skills",
@@ -26,7 +26,7 @@
       "skillPath": "kamal/SKILL.md",
       "skillFolderHash": "38a1670843b7de29e38dd6a67d41dc2cf088b1fd",
       "installedAt": "2026-02-11T19:09:06.254Z",
-      "updatedAt": "2026-02-11T19:09:06.254Z"
+      "updatedAt": "2026-02-12T09:49:34.112Z"
     },
     "ruby-llm": {
       "source": "faqndo97/ai-skills",
@@ -35,7 +35,7 @@
       "skillPath": "ruby-llm/SKILL.md",
       "skillFolderHash": "bc3a706dd08acd038b0ca5b495cb7f19c583f1fa",
       "installedAt": "2026-02-11T19:09:06.278Z",
-      "updatedAt": "2026-02-11T19:09:06.278Z"
+      "updatedAt": "2026-02-12T09:49:34.133Z"
     }
   },
   "dismissed": {
