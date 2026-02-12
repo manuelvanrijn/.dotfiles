@@ -1,0 +1,13 @@
+# Added by OrbStack: command-line tools and integration
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+# keep Homebrew tools in PATH before calling mise
+if [ -d /opt/homebrew/bin ]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
+
+# mise
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+  export MISE_RUBY_BUILD_OPTS=$RUBY_CONFIGURE_OPTS
+fi
