@@ -16,6 +16,12 @@
       "enabled": true
     }
   },
+  // enable would me we always have to to `opencode attach http: //localhost:4096`
+  // "server": {
+  //   "port": 4096,
+  //   "hostname": "0.0.0.0",
+  //   "mdns": true
+  // },
   "keybinds": {
     "model_cycle_favorite": "ctrl+f"
   },
@@ -53,7 +59,8 @@
       "type": "local",
       "command": [
         "auggie",
-        "--mcp"
+        "--mcp",
+        "--mcp-auto-workspace"
       ]
     }
   },

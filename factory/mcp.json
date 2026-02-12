@@ -4,7 +4,8 @@
       "type": "stdio",
       "command": "auggie",
       "args": [
-        "--mcp"
+        "--mcp",
+        "--mcp-auto-workspace"
       ],
       "disabled": false
     }

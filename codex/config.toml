@@ -25,8 +25,8 @@ model_reasoning_effort = "medium"
 [profiles.yolo]
 approval_policy = "never"
 sandbox_mode = "danger-full-access"
-model = "gpt-5.2"
-model_reasoning_effort = "high"
+model = "gpt-5.3-codex"
+model_reasoning_effort = "medium"
 model_reasoning_summary = "detailed"
 tool_output_token_limit = 25000
 model_auto_compact_token_limit = 233000
@@ -44,7 +44,7 @@ notifications = true
 
 [mcp_servers.augment-context-engine]
 command = "auggie"
-args = ["--mcp"]
+args = ["--mcp", "--mcp-auto-workspace"]
 
 [mcp_servers.shadcn]
 command = "npx"
