@@ -96,13 +96,10 @@
 	enabled = true
 [fetch]
 	prune = true
-[gtr "editor"]
-	default = vscode
-[gtr "ai"]
-	default = none
 [wt]
+	basedir = ".worktrees"
 	copyignored = true
 	copyuntracked = true
 	copymodified = true
-	nocopy = **/log/*
-	nocopy = **/tmp/*
+    nocopy = **/log/*
+    nocopy = **/tmp/*

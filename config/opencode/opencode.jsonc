@@ -28,7 +28,7 @@
     "explore": {
       "mode": "subagent",
       //"model": "github-copilot/gpt-5-mini", // best free default
-      "model": "github-copilot/gpt-5-mini", // fastest free
+      //"model": "github-copilot/gpt-5-mini", // fastest free
       //"model": "openai/ gpt-5.1-codex-mini", // more complex code tracing
       "prompt": "{file:./prompts/explore.txt}"
     },
@@ -36,7 +36,7 @@
       "mode": "subagent",
       // "model": "github-copilot/claude-sonnet-4.5",
       // "model": "openai/gpt-5.2"
-      "model": "github-copilot/gpt-5-mini", // fastest free
+      //"model": "github-copilot/gpt-5-mini", // fastest free
     },
   },
   "plugin": [
@@ -47,6 +47,9 @@
     "agent-browser*": "allow",
     "augment-context-engine*": "allow",
     "brave-search*": "allow",
+    "external_directory": {
+      "/Users/manuel/.local/share/mise/installs/**": "allow"
+    }
   },
   "mcp": {
     "augment-context-engine": {
