@@ -9,3 +9,4 @@ rules/
 tmp/
 sessions/
 skills/.system
+shell_snapshots/

@@ -36,6 +36,42 @@
       "skillFolderHash": "bc3a706dd08acd038b0ca5b495cb7f19c583f1fa",
       "installedAt": "2026-02-11T19:09:06.278Z",
       "updatedAt": "2026-02-12T09:49:34.133Z"
+    },
+    "brave-search": {
+      "source": "steipete/agent-scripts",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/steipete/agent-scripts.git",
+      "skillPath": "skills/brave-search/SKILL.md",
+      "skillFolderHash": "78b3a215eacf7d079b2043fbf78a8fc8b7e630ce",
+      "installedAt": "2026-02-12T11:22:19.103Z",
+      "updatedAt": "2026-02-12T11:22:19.103Z"
+    },
+    "markdown-converter": {
+      "source": "steipete/agent-scripts",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/steipete/agent-scripts.git",
+      "skillPath": "skills/markdown-converter/SKILL.md",
+      "skillFolderHash": "253e4ff037ba0dc5ebaa08648aa9af90c9e11ade",
+      "installedAt": "2026-02-12T11:22:19.129Z",
+      "updatedAt": "2026-02-12T11:22:19.129Z"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "skillFolderHash": "a98fae5eae7cf90e32520fd1144e8c69f26c354c",
+      "installedAt": "2026-02-12T11:24:28.919Z",
+      "updatedAt": "2026-02-12T11:24:28.919Z"
+    },
+    "grill-me": {
+      "source": "marmotize/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/marmotize/skills.git",
+      "skillPath": "grill-me/SKILL.md",
+      "skillFolderHash": "9561066345847960e00df46a3ad4d6e6ae5e1ab2",
+      "installedAt": "2026-02-12T14:58:35.233Z",
+      "updatedAt": "2026-02-12T14:58:35.233Z"
     }
   },
   "dismissed": {

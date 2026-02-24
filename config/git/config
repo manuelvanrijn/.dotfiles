@@ -100,3 +100,9 @@
 	default = vscode
 [gtr "ai"]
 	default = none
+[wt]
+	copyignored = true
+	copyuntracked = true
+	copymodified = true
+	nocopy = **/log/*
+	nocopy = **/tmp/*

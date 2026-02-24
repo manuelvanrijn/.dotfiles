@@ -3,6 +3,7 @@ notify = ["~/.codex/notify.sh"]
 profile = "yolo"
 suppress_unstable_features_warning = true
 web_search = "live"
+responses_websockets_v2 = true
 
 [features]
 collaboration_modes = true

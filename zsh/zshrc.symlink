@@ -36,9 +36,3 @@ export MISE_RUBY_BUILD_OPTS=$RUBY_CONFIGURE_OPTS
 
 # worktree
 eval "$(git wt --init zsh)"
-
-# codex tty terminal title
-DISABLE_AUTO_TITLE=true
-codex() {
-  CODEX_TTY=$(tty) command codex "$@"
-}

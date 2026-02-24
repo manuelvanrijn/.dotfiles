@@ -1,14 +1,55 @@
-# General Agentic rules
-- IMPORTANT: Be extremely concise. Sacrifice grammar for the sake of concision.
+# Core Principles
+- IMPORTANT: Be extremely concise. Sacrifice grammar for concision.
+- IMPORTANT: BEFORE replying, ALWAYS ask: should I use a skill/tool? Use best available.
+- Simplicity First: Smallest possible change. Minimal code impact.
+- Minimal Impact: Touch only what’s necessary. Avoid regressions.
+- No Laziness: Find root causes. No temporary fixes. Senior engineer standards.
+- Think holistically: consider affected areas, files, and side effects.
 
-## Context engine
-This context engine is the most advanced code indexing service there is. It deeply indexes and semantically maps your whole codebase (and history). It can provide tailored code suggestions and answers based on the codebase, best practices, coding patterns, and preferences.
+# Product & Engineering Philosophy
+- Early dev, no users: prioritize correctness, cleanliness, zero tech debt.
+- No compatibility shims or hacks.
+- NEVER remove/hide/rename existing features/UI unless explicitly asked.
+- If something is not wired yet: stub, don’t break UX.
+- For non-trivial work: ask “is there a more elegant solution?” (avoid over-engineering for trivial fixes).
 
-- Use **Augment's context engine** `codebase-retrieval` to it's fullest potential.
-- It retrieves only the most relevant files, symbols, and commits for a given task, so the LLM sees the right slice of your repo instead of a blind big context window.
-- It feeds that curated context so agents behave more like a senior engineer who "knows the codebase."
-- Assume that what is retrieved is what you need to use as truth, no need to perform additional grep searches.
+# Planning Guidelines
+- ALWAYS ask clarifying questions BEFORE committing to a plan.
+- Surface edge cases, constraints, and architectural implications.
+- Plans must be concise, actionable steps (not essays).
+- Include “what” and “why”, not just “how”.
+- Maintain hierarchy: product/UX → architecture → code structure.
+- List unresolved questions at the end of the plan.
+- Write detailed specs upfront to reduce ambiguity.
+- Use subagents to research codebase parts in parallel when possible.
 
+# Execution & Autonomy
+## Autonomous Bug Fixing
+- When given a bug report: fix directly.
+- Use logs, errors, and failing tests as primary signals.
+- No hand-holding or unnecessary context switching.
+- Proactively fix failing CI tests.
+
+## Verification Before Done
+- Never mark complete without proving it works.
+- Run tests, check logs, validate behavior.
+- Diff behavior between main and changes when relevant.
+- Ask: “Would a staff engineer approve this?”
+
+# Self-Improvement Loop
+- After ANY user correction: update `docs/lessons.md`.
+- Capture mistake patterns and prevention rules.
+- Ruthlessly iterate to reduce future error rate.
+- Review relevant lessons at session start.
+
+# Context & Code Intelligence
+## Context Engine (Augment)
+- Use `codebase-retrieval` to its fullest extent.
+- Trust retrieved files/symbols/commits as the primary source of truth.
+- Avoid redundant broad searches when curated context is provided.
+- Treat context as a semantic map of the repo and history.
+
+# Tooling & Operations
 ## File Operations
 - Find files by name: `fd`
 - Find files with path: `fd -p <file-path>`
@@ -16,28 +57,19 @@ This context engine is the most advanced code indexing service there is. It deep
 - Find with extension/pattern: `fd -e <extension> <pattern>`
 
 ## Structured Code Search
-- Find code structure: `ast-grep --lang <language> -p '<pattern>'`
-- List matching files: `ast-grep -l --lang <language> -p '<pattern>' | head -n 10`
-- Prefer `ast-grep` over `rg`/`grep` for syntax-aware matching
+- Syntax-aware search: `ast-grep --lang <language> -p '<pattern>'`
+- List matches: `ast-grep -l --lang <language> -p '<pattern>' | head -n 10`
+- Prefer `ast-grep` over `rg`/`grep` for code structure queries.
 
 ## Data Processing
 - JSON: `jq`
 - YAML/XML: `yq`
 
-## Selection
-- Select from multiple results deterministically (non-interactive filtering)
-- Fuzzy finder: `fzf --filter 'term' | head -n 1`
+## Deterministic Selection
+- Use non-interactive filtering.
+- Fuzzy select deterministically: `fzf --filter 'term' | head -n 1`
+- Prefer deterministic commands (`head`, `--filter`, `--json` + `jq`).
 
-## Guidelines
-- Prefer deterministic, non-interactive commands (`head`, `--filter`, `--json` + `jq`)
-
-## When you're done/finished
-- Output the work you've done in a 1-3 sentence summary
-
-## General Rules
-- Early dev, no users. Do things RIGHT: clean, organized, zero tech debt. No compatibility shims.
-- NEVER workarounds. Full implementations for >1000 users. No half-baked solutions.
-- NEVER remove/hide/rename existing features/UI unless explicitly asked. Keep UX intact, stub if not wired.
-
-## Terminal title.
-- ONLY FOR codex: Update the iTerm title whenever the session topic changes using OSC sequences; use ⚡︎ for Codex. Run: `printf '\033]0;%s\007' "⚡︎ Topic" > "$CODEX_TTY"` where "Topic" is a short (2-4 word) description of the current task.
+# Completion Protocol
+- Do not declare done without validation.
+- Provide a 1–3 sentence summary of the work performed when finished.
