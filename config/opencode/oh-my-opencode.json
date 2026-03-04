@@ -70,5 +70,8 @@
     "writing": {
       "model": "github-copilot/gemini-3-flash-preview"
     }
-  }
+  },
+  "disabled_hooks": [
+    "think-mode"
+  ]
 }
