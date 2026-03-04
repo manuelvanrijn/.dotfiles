@@ -40,6 +40,7 @@ max_threads = 6 # default: 6
 [tui]
 notifications = true
 status_line = ["model-name", "model-with-reasoning", "git-branch", "context-used", "five-hour-limit", "weekly-limit", "codex-version"]
+theme = "one-half-dark"
 
 [notice]
 "hide_gpt-5.1-codex-max_migration_prompt" = true

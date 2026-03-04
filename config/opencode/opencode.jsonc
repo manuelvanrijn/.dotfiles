@@ -40,7 +40,7 @@
     },
   },
   "plugin": [
-    "opencode-openai-codex-auth@4.4.0",
+    "opencode-openai-codex-auth@4.4.0"
     // "oh-my-opencode"
   ],
   "permission": {
