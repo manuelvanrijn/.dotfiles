@@ -1,8 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/dev/assets/oh-my-opencode.schema.json",
+  "sisyphus_agent": {
+    "default_builder_enabled": true,
+    "replace_plan": false
+  },
   "agents": {
     "sisyphus": {
-      "model": "github-copilot/claude-opus-4.6"
+      "model": "github-copilot/claude-opus-4.6",
+      "prompt_append": "Do not create Git worktrees or switch branches automatically. Assume the user manages worktrees. Ask before performing any worktree-related Git actions."
     },
     "hephaestus": {
       "model": "openai/gpt-5.3-codex",
@@ -32,7 +37,8 @@
       "variant": "medium"
     },
     "atlas": {
-      "model": "github-copilot/claude-sonnet-4.6"
+      "model": "github-copilot/claude-sonnet-4.6",
+      "prompt_append": "Do not create Git worktrees or switch branches automatically. Assume the user manages worktrees. Ask before performing any worktree-related Git actions."
     }
   },
   "categories": {
