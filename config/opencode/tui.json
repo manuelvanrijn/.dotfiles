@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "theme": "ayu-dark",
+  "keybinds": {
+    "model_cycle_favorite": "ctrl+f"
+  },
+  "scroll_acceleration": {
+    "enabled": true
+  }
+}

@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "ayu-dark",
   "model": "github-copilot/gpt-5-mini",
   "autoupdate": true,
   "username": "Manuel",
@@ -11,14 +10,6 @@
     "GEMINI.md",
     "WINDSURF.md"
   ],
-  "tui": {
-    "scroll_acceleration": {
-      "enabled": true
-    }
-  },
-  "keybinds": {
-    "model_cycle_favorite": "ctrl+f"
-  },
   "compaction": {
     "auto": true,
     "prune": true
@@ -40,8 +31,8 @@
     },
   },
   "plugin": [
-    "opencode-openai-codex-auth@4.4.0"
-    // "oh-my-opencode"
+    "opencode-openai-codex-auth@4.4.0",
+    "oh-my-opencode@latest"
   ],
   "permission": {
     "agent-browser*": "allow",
@@ -81,11 +72,11 @@
         "gpt-5-mini": {
           "name": "GPT 5 mini [FREE]"
         },
-        "claude-opus-4.5": {
-          "name": "Opus 4.5"
+        "claude-opus-4.6": {
+          "name": "Opus 4.6"
         },
-        "claude-sonnet-4.5": {
-          "name": "Sonnet 4.5"
+        "claude-sonnet-4.6": {
+          "name": "Sonnet 4.6"
         },
         "gemini-2.5-pro": {
           "name": "Gemini 2.5 Pro"
