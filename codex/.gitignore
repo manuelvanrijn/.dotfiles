@@ -2,6 +2,7 @@ auth.json
 history.jsonl
 models_cache.json
 version.json
+*.sqlite*
 
 archived_sessions/
 log/

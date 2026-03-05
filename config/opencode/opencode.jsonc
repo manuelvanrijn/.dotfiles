@@ -14,29 +14,33 @@
     "auto": true,
     "prune": true
   },
-  "default_agent": "builder",
+  // "default_agent": "builder",  // enable for oh-my-opencode
   "agent": {
-    "builder": {
-      "mode": "all",
-      "description": "Build agent (OpenCode default)"
-    },
+    // enable for oh-my-opencode
+    // "builder": {
+    //   "mode": "all",
+    //   "description": "Build agent (OpenCode default)"
+    // },
     "explore": {
       "mode": "subagent",
       //"model": "github-copilot/gpt-5-mini", // best free default
       //"model": "github-copilot/gpt-5-mini", // fastest free
       //"model": "openai/ gpt-5.1-codex-mini", // more complex code tracing
-      "prompt": "{file:./prompts/explore.txt}"
+      "prompt": "{file:./prompts/explore.txt}",
+      "disable": true // disabled for oh-my-opencode-slim
     },
     "general": {
       "mode": "subagent",
       // "model": "github-copilot/claude-sonnet-4.5",
       // "model": "openai/gpt-5.2"
       //"model": "github-copilot/gpt-5-mini", // fastest free
-    },
+      "disable": true // disabled for oh-my-opencode-slim
+    }
   },
   "plugin": [
     "opencode-openai-codex-auth@4.4.0",
-    "oh-my-opencode@latest"
+    // "oh-my-opencode@latest",
+    "oh-my-opencode-slim"
   ],
   "permission": {
     "agent-browser*": "allow",
@@ -84,139 +88,6 @@
         },
         "gemini-2.5-pro": {
           "name": "Gemini 2.5 Pro"
-        }
-      }
-    },
-    "openai": {
-      "name": "OpenAI",
-      "options": {
-        "reasoningEffort": "medium",
-        "reasoningSummary": "auto",
-        "textVerbosity": "medium",
-        "include": [
-          "reasoning.encrypted_content"
-        ],
-        "store": false
-      },
-      "models": {
-        "gpt-5.2": {
-          "name": "GPT 5.2 (OAuth)",
-          "limit": {
-            "context": 272000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "variants": {
-            "none": {
-              "reasoningEffort": "none",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "low": {
-              "reasoningEffort": "low",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "medium": {
-              "reasoningEffort": "medium",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "high": {
-              "reasoningEffort": "high",
-              "reasoningSummary": "detailed",
-              "textVerbosity": "medium"
-            },
-            "xhigh": {
-              "reasoningEffort": "xhigh",
-              "reasoningSummary": "detailed",
-              "textVerbosity": "medium"
-            }
-          }
-        },
-        "gpt-5.2-codex": {
-          "name": "GPT 5.2 Codex (OAuth)",
-          "limit": {
-            "context": 272000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "variants": {
-            "low": {
-              "reasoningEffort": "low",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "medium": {
-              "reasoningEffort": "medium",
-              "reasoningSummary": "auto",
-              "textVerbosity": "medium"
-            },
-            "high": {
-              "reasoningEffort": "high",
-              "reasoningSummary": "detailed",
-              "textVerbosity": "medium"
-            },
-            "xhigh": {
-              "reasoningEffort": "xhigh",
-              "reasoningSummary": "detailed",
-              "textVerbosity": "medium"
-            }
-          }
-        },
-        "gpt-5.1-codex-max": {
-          "name": "GPT 5.1 Codex Max (OAuth)",
-          "limit": {
-            "context": 272000,
-            "output": 128000
-          },
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "variants": {
-            "low": {
-              "reasoningEffort": "low",
-              "reasoningSummary": "detailed",
-              "textVerbosity": "medium"
-            },
-            "medium": {
-              "reasoningEffort": "medium",
-              "reasoningSummary": "detailed",
-              "textVerbosity": "medium"
-            },
-            "high": {
-              "reasoningEffort": "high",
-              "reasoningSummary": "detailed",
-              "textVerbosity": "medium"
-            },
-            "xhigh": {
-              "reasoningEffort": "xhigh",
-              "reasoningSummary": "detailed",
-              "textVerbosity": "medium"
-            }
-          }
         }
       }
     }
