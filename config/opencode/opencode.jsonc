@@ -14,33 +14,32 @@
     "auto": true,
     "prune": true
   },
-  // "default_agent": "builder",  // enable for oh-my-opencode
+  "default_agent": "builder", // enable for oh-my-opencode
   "agent": {
-    // enable for oh-my-opencode
-    // "builder": {
-    //   "mode": "all",
-    //   "description": "Build agent (OpenCode default)"
-    // },
+    "builder": {
+      "mode": "primary",
+      "description": "Build",
+      "name": "builder"
+    },
     "explore": {
       "mode": "subagent",
       //"model": "github-copilot/gpt-5-mini", // best free default
       //"model": "github-copilot/gpt-5-mini", // fastest free
       //"model": "openai/ gpt-5.1-codex-mini", // more complex code tracing
       "prompt": "{file:./prompts/explore.txt}",
-      "disable": true // disabled for oh-my-opencode-slim
+      "disable": true
     },
     "general": {
       "mode": "subagent",
       // "model": "github-copilot/claude-sonnet-4.5",
       // "model": "openai/gpt-5.2"
       //"model": "github-copilot/gpt-5-mini", // fastest free
-      "disable": true // disabled for oh-my-opencode-slim
+      "disable": true
     }
   },
   "plugin": [
     "opencode-openai-codex-auth@4.4.0",
-    // "oh-my-opencode@latest",
-    "oh-my-opencode-slim"
+    "oh-my-opencode@latest"
   ],
   "permission": {
     "agent-browser*": "allow",
