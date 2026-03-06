@@ -42,7 +42,7 @@
       "variant": "medium"
     },
     "atlas": {
-      "model": "github-copilot/claude-sonnet-4.6",
+      "model": "github-copilot/gpt-5.4",
       "prompt_append": "Do not create Git worktrees or switch branches automatically. Assume the user manages worktrees. Ask before performing any worktree-related Git actions."
     }
   },
