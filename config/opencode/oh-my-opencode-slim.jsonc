@@ -3,7 +3,7 @@
   "presets": {
     "custom": {
       "oracle": {
-        "model": "openai/gpt-5.2",
+        "model": "openai/gpt-5.4",
         "variant": "high",
         "skills": [
           "context7",
@@ -15,7 +15,8 @@
         ]
       },
       "orchestrator": {
-        "model": "github-copilot/gpt-5.2-codex",
+        "model": "github-copilot/gpt-5.4",
+        "variant": "medium",
         "skills": [
           "*"
         ],
