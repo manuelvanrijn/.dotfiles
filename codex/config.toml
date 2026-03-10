@@ -27,7 +27,7 @@ model_reasoning_effort = "medium"
 [profiles.yolo]
 approval_policy = "never"
 sandbox_mode = "danger-full-access"
-model = "gpt-5.2"
+model = "gpt-5.4"
 model_reasoning_effort = "high"
 model_reasoning_summary = "detailed"
 tool_output_token_limit = 25000
@@ -39,7 +39,15 @@ max_threads = 6 # default: 6
 
 [tui]
 notifications = true
-status_line = ["model-name", "model-with-reasoning", "git-branch", "context-used", "five-hour-limit", "weekly-limit", "codex-version"]
+status_line = [
+  "model-name",
+  "model-with-reasoning",
+  "git-branch",
+  "context-used",
+  "five-hour-limit",
+  "weekly-limit",
+  "codex-version",
+]
 theme = "one-half-dark"
 
 [notice]
@@ -50,6 +58,7 @@ hide_rate_limit_model_nudge = true
 "gpt-5.2" = "gpt-5.3-codex"
 "gpt-5.1" = "gpt-5.2-codex"
 "gpt-5.1-codex-max" = "gpt-5.2-codex"
+"gpt-5.3-codex" = "gpt-5.4"
 
 [mcp_servers.augment-context-engine]
 command = "auggie"
@@ -58,6 +67,12 @@ args = ["--mcp", "--mcp-auto-workspace"]
 [mcp_servers.shadcn]
 command = "npx"
 args = ["shadcn@latest", "mcp"]
+
+[projects."/Users/manuel/.dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/manuel/Working"]
+trust_level = "trusted"
 
 # [mcp_servers.atlassian]
 # command = "npx"

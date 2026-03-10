@@ -1,1 +1,0 @@
-/Users/manuel/.local/share/superpowers/.opencode/plugins/superpowers.js
