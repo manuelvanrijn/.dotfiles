@@ -18,7 +18,7 @@ You **never read repository files**, **never write code**, and **never make desi
 You receive a plan file path:
 
 ```
-.opencode/plans/<plan-name>/<task-name>.md
+.opencode/plans/<plan-name>.md
 ```
 
 ---
