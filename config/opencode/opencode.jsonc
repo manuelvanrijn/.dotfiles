@@ -28,7 +28,10 @@
     }
   },
   "plugin": [
-    "opencode-openai-codex-auth@4.4.0"
+    "opencode-openai-codex-auth@4.4.0",
+    "@mohak34/opencode-notifier@latest",
+    "@tarquinen/opencode-dcp@latest",
+    "true-mem"
   ],
   "permission": {
     "agent-browser*": "allow",
