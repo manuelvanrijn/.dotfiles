@@ -31,8 +31,8 @@ _ignore/
 # visual studio code
 *.vscode/
 
-.ck
 .augment/
+.claude/
 mise.local.toml
 .factory/
 .kilocode/
