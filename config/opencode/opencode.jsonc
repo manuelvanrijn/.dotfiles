@@ -31,7 +31,7 @@
     "opencode-openai-codex-auth@4.4.0",
     "@mohak34/opencode-notifier@latest",
     "@tarquinen/opencode-dcp@latest",
-    "true-mem"
+    "opencode-brain"
   ],
   "permission": {
     "agent-browser*": "allow",
