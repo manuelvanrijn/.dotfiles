@@ -10,6 +10,5 @@ idiomatic_version_file_enable_tools = ["node", "ruby"]
 trusted_config_paths = ["~/Working"]
 
 [env]
-AGENT_BROWSER_SCREENSHOT_DIR = "tmp"
 OPENCODE_EXPERIMENTAL_MARKDOWN = 1
 OPENCODE_EXPERIMENTAL_PLAN_MODE = 1

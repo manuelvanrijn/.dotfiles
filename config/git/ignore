@@ -31,9 +31,9 @@ _ignore/
 # visual studio code
 *.vscode/
 
-.augment/
-.claude/
+.augment
+.claude
 mise.local.toml
-.factory/
-.kilocode/
+.factory
+.kilocode
 AGENTS.md

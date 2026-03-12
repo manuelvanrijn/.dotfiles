@@ -39,7 +39,7 @@ agent-browser open https://example.com && agent-browser wait --load networkidle 
 agent-browser fill @e1 "user@example.com" && agent-browser fill @e2 "password123" && agent-browser click @e3
 
 # Navigate and capture
-agent-browser open https://example.com && agent-browser wait --load networkidle && agent-browser screenshot page.png
+agent-browser open https://example.com && agent-browser wait --load networkidle && agent-browser screenshot ./tmp/page.png
 ```
 
 **When to chain:** Use `&&` when you don't need to read the output of an intermediate command before proceeding (e.g., open + wait + screenshot). Run commands separately when you need to parse the output first (e.g., snapshot to discover refs, then interact using those refs).
@@ -86,6 +86,18 @@ agent-browser wait --download ./output.zip     # Wait for any download to comple
 agent-browser --download-path ./downloads open <url>  # Set default download directory
 
 # Capture
+
+# CRITICAL: ALWAYS save screenshots to ./tmp/ (project's tmp directory)
+# - If ./tmp/ does NOT exist, you MUST create it first with: mkdir -p ./tmp/
+# - ALWAYS use ./tmp/ as the path prefix for ALL screenshots
+# - Example: agent-browser screenshot ./tmp/screenshot.png
+# - NEVER use other paths like ~/Downloads, /tmp, or relative paths without ./tmp/
+
+agent-browser screenshot ./tmp/screenshot.png   # Screenshot to ./tmp/ in project
+agent-browser screenshot ./tmp/page-full.png     # Full page screenshot to ./tmp/
+agent-browser screenshot ./tmp/page-annotated.png --annotate  # Annotated screenshot
+
+# Legacy syntax (still works but ./tmp/ is recommended)
 agent-browser screenshot              # Screenshot to temp dir
 agent-browser screenshot --full       # Full page screenshot
 agent-browser screenshot --annotate   # Annotated screenshot with numbered element labels
@@ -237,7 +249,7 @@ Use `AGENT_BROWSER_HEADED=1` to enable headed mode via environment variable. Bro
 # Open local files with file:// URLs
 agent-browser --allow-file-access open file:///path/to/document.pdf
 agent-browser --allow-file-access open file:///path/to/page.html
-agent-browser screenshot output.png
+agent-browser screenshot ./tmp/output.png
 ```
 
 ### iOS Simulator (Mobile Safari)
@@ -256,7 +268,7 @@ agent-browser -p ios fill @e2 "text"
 agent-browser -p ios swipe up         # Mobile-specific gesture
 
 # Take screenshot
-agent-browser -p ios screenshot mobile.png
+agent-browser -p ios screenshot ./tmp/mobile.png
 
 # Close session (shuts down simulator)
 agent-browser -p ios close
@@ -331,9 +343,9 @@ For visual regression testing or monitoring:
 
 ```bash
 # Save a baseline screenshot, then compare later
-agent-browser screenshot baseline.png
+agent-browser screenshot ./tmp/baseline.png
 # ... time passes or changes are made ...
-agent-browser diff screenshot --baseline baseline.png
+agent-browser diff screenshot --baseline ./tmp/baseline.png
 
 # Compare staging vs production
 agent-browser diff url https://staging.example.com https://prod.example.com --screenshot
@@ -406,7 +418,7 @@ agent-browser click @e1              # Use new refs
 Use `--annotate` to take a screenshot with numbered labels overlaid on interactive elements. Each label `[N]` maps to ref `@eN`. This also caches refs, so you can interact with elements immediately without a separate snapshot.
 
 ```bash
-agent-browser screenshot --annotate
+agent-browser screenshot ./tmp/annotated.png --annotate
 # Output includes the image path and a legend:
 #   [1] @e1 button "Submit"
 #   [2] @e2 link "Home"
