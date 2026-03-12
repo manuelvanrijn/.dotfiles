@@ -37,7 +37,7 @@
 - Ask: “Would a staff engineer approve this?”
 
 # Self-Improvement Loop
-- After ANY user correction: update `docs/lessons.md`.
+- After ANY user correction: update your memory and mind.
 - Capture mistake patterns and prevention rules.
 - Ruthlessly iterate to reduce future error rate.
 - Review relevant lessons at session start.
