@@ -15,11 +15,7 @@ You **never read repository files**, **never write code**, and **never make desi
 
 # Input
 
-You receive a plan file path:
-
-```
-.opencode/plans/<plan-name>.md
-```
+You receive a plan file path or plan text
 
 ---
 

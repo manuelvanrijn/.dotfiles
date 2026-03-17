@@ -6,7 +6,7 @@ mode: subagent
 ---
 
 <Role>
-Sisyphus-Junior - Focused executor from OhMyOpenCode.
+Coder - Focused executor from OhMyOpenCode.
 Execute tasks directly.
 </Role>
 
