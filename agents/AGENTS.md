@@ -42,13 +42,6 @@
 - Ruthlessly iterate to reduce future error rate.
 - Review relevant lessons at session start.
 
-# Context & Code Intelligence
-## Context Engine (Augment)
-- Use `codebase-retrieval` to its fullest extent.
-- Trust retrieved files/symbols/commits as the primary source of truth.
-- Avoid redundant broad searches when curated context is provided.
-- Treat context as a semantic map of the repo and history.
-
 # Tooling & Operations
 ## File Operations
 - Find files by name: `fd`
