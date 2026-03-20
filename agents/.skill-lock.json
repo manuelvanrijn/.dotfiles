@@ -6,18 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/skills.git",
       "skillPath": "skills/find-skills/SKILL.md",
-      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
       "installedAt": "2026-01-30T13:02:03.540Z",
-      "updatedAt": "2026-01-30T13:02:03.540Z"
-    },
-    "stimulus": {
-      "source": "faqndo97/ai-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/faqndo97/ai-skills.git",
-      "skillPath": "hotwire-stimulus/SKILL.md",
-      "skillFolderHash": "aa1b53b946979f6ecb4879e583ee678d67bd0d00",
-      "installedAt": "2026-02-11T19:09:06.222Z",
-      "updatedAt": "2026-02-12T09:49:34.090Z"
+      "updatedAt": "2026-03-20T10:09:40.404Z"
     },
     "kamal-deployment": {
       "source": "faqndo97/ai-skills",
@@ -60,9 +51,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
       "skillPath": "skills/seo-audit/SKILL.md",
-      "skillFolderHash": "a98fae5eae7cf90e32520fd1144e8c69f26c354c",
+      "skillFolderHash": "c5423e592d1ce900fafca88b17f3896eea53b237",
       "installedAt": "2026-02-12T11:24:28.919Z",
-      "updatedAt": "2026-02-12T11:24:28.919Z"
+      "updatedAt": "2026-03-20T10:09:42.942Z"
     },
     "grill-me": {
       "source": "marmotize/skills",
@@ -87,10 +78,135 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
       "skillPath": "skills/agent-browser/SKILL.md",
-      "skillFolderHash": "368263b629b1c1af2abd68ff2e45fa40ead82601",
-      "pluginName": "agent-browser",
+      "skillFolderHash": "d22b7962fb118a40f0e2e27af2fdeab12f2651a8",
       "installedAt": "2026-03-05T08:34:22.803Z",
-      "updatedAt": "2026-03-05T08:34:22.803Z"
+      "updatedAt": "2026-03-20T10:09:45.513Z"
+    },
+    "brakeman": {
+      "source": "el-feo/ai-context",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/el-feo/ai-context.git",
+      "skillPath": "plugins/ruby-rails/skills/brakeman/SKILL.md",
+      "skillFolderHash": "fb9689be84b9b4093ccf29fc6b7de92d4b63f9d7",
+      "installedAt": "2026-03-20T10:21:26.710Z",
+      "updatedAt": "2026-03-20T10:21:26.710Z"
+    },
+    "ruby": {
+      "source": "el-feo/ai-context",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/el-feo/ai-context.git",
+      "skillPath": "plugins/ruby-rails/skills/ruby/SKILL.md",
+      "skillFolderHash": "c3a3ac049475889fd4d79f34660902ef79966557",
+      "installedAt": "2026-03-20T10:21:27.047Z",
+      "updatedAt": "2026-03-20T10:21:27.047Z"
+    },
+    "github-actions": {
+      "source": "el-feo/ai-context",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/el-feo/ai-context.git",
+      "skillPath": "plugins/devops/skills/github-actions/SKILL.md",
+      "skillFolderHash": "b50e20b86fab5c3250a33480f0318b6595c9ad22",
+      "installedAt": "2026-03-20T10:21:27.484Z",
+      "updatedAt": "2026-03-20T10:21:27.484Z"
+    },
+    "humanizer": {
+      "source": "nateberkopec/dotfiles",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/nateberkopec/dotfiles.git",
+      "skillPath": "files/home/.claude/skills/humanizer/SKILL.md",
+      "skillFolderHash": "37df0913a97424378524a6873281f301492b5f69",
+      "installedAt": "2026-03-20T10:23:08.681Z",
+      "updatedAt": "2026-03-20T10:23:08.681Z"
+    },
+    "readability": {
+      "source": "nateberkopec/dotfiles",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/nateberkopec/dotfiles.git",
+      "skillPath": "files/home/.claude/skills/readability/SKILL.md",
+      "skillFolderHash": "840d980f578d180fed5301568b389e01fa3acedf",
+      "installedAt": "2026-03-20T10:23:09.107Z",
+      "updatedAt": "2026-03-20T10:23:09.107Z"
+    },
+    "sandi-metz-rules": {
+      "source": "nateberkopec/dotfiles",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/nateberkopec/dotfiles.git",
+      "skillPath": "files/home/.claude/skills/sandi-metz-rules/SKILL.md",
+      "skillFolderHash": "047849a9b9501206d0dd3d88ddadb170c18bebf0",
+      "installedAt": "2026-03-20T10:23:09.601Z",
+      "updatedAt": "2026-03-20T10:23:09.601Z"
+    },
+    "37signals-style": {
+      "source": "lucianghinda/superpowers-ruby",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/lucianghinda/superpowers-ruby.git",
+      "skillPath": "skills/37signals-style/SKILL.md",
+      "skillFolderHash": "15431c48ba9916c706af34789fe071360c57eb7b",
+      "installedAt": "2026-03-20T10:24:06.520Z",
+      "updatedAt": "2026-03-20T10:24:06.520Z"
+    },
+    "rails-guides": {
+      "source": "lucianghinda/superpowers-ruby",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/lucianghinda/superpowers-ruby.git",
+      "skillPath": "skills/rails-guides/SKILL.md",
+      "skillFolderHash": "4ce2c154233cad9a8828bf540af2fa31523b88a8",
+      "installedAt": "2026-03-20T10:24:43.986Z",
+      "updatedAt": "2026-03-20T10:24:43.986Z"
+    },
+    "hwc-forms-validation": {
+      "source": "TheHotwireClub/hotwire_club-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/TheHotwireClub/hotwire_club-skills.git",
+      "skillPath": "skills/hwc-forms-validation/SKILL.md",
+      "skillFolderHash": "ba998552f25c7ac34db0f4a10f81140ffd0f08ed",
+      "installedAt": "2026-03-20T10:26:50.179Z",
+      "updatedAt": "2026-03-20T10:26:50.179Z"
+    },
+    "hwc-media-content": {
+      "source": "TheHotwireClub/hotwire_club-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/TheHotwireClub/hotwire_club-skills.git",
+      "skillPath": "skills/hwc-media-content/SKILL.md",
+      "skillFolderHash": "29e124bb86bec2d3a95163da0ddba1e202973847",
+      "installedAt": "2026-03-20T10:26:50.568Z",
+      "updatedAt": "2026-03-20T10:26:50.568Z"
+    },
+    "hwc-navigation-content": {
+      "source": "TheHotwireClub/hotwire_club-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/TheHotwireClub/hotwire_club-skills.git",
+      "skillPath": "skills/hwc-navigation-content/SKILL.md",
+      "skillFolderHash": "331ec05f56f921b84b36964316ce0255f5ed5870",
+      "installedAt": "2026-03-20T10:26:50.874Z",
+      "updatedAt": "2026-03-20T10:26:50.874Z"
+    },
+    "hwc-realtime-streaming": {
+      "source": "TheHotwireClub/hotwire_club-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/TheHotwireClub/hotwire_club-skills.git",
+      "skillPath": "skills/hwc-realtime-streaming/SKILL.md",
+      "skillFolderHash": "720120570451282b10641888255a66c32ee527ce",
+      "installedAt": "2026-03-20T10:26:51.247Z",
+      "updatedAt": "2026-03-20T10:26:51.247Z"
+    },
+    "hwc-stimulus-fundamentals": {
+      "source": "TheHotwireClub/hotwire_club-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/TheHotwireClub/hotwire_club-skills.git",
+      "skillPath": "skills/hwc-stimulus-fundamentals/SKILL.md",
+      "skillFolderHash": "ffea29beccdfb31316668234f1dfc388b6e5aecf",
+      "installedAt": "2026-03-20T10:26:51.616Z",
+      "updatedAt": "2026-03-20T10:26:51.616Z"
+    },
+    "hwc-ux-feedback": {
+      "source": "TheHotwireClub/hotwire_club-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/TheHotwireClub/hotwire_club-skills.git",
+      "skillPath": "skills/hwc-ux-feedback/SKILL.md",
+      "skillFolderHash": "a99455217000ccb6e6903624ee341b91e8ea175b",
+      "installedAt": "2026-03-20T10:26:51.988Z",
+      "updatedAt": "2026-03-20T10:26:51.988Z"
     }
   },
   "dismissed": {
@@ -98,11 +214,14 @@
   },
   "lastSelectedAgents": [
     "amp",
+    "cline",
     "codex",
+    "cursor",
     "gemini-cli",
     "github-copilot",
     "kimi-cli",
     "opencode",
+    "warp",
     "augment"
   ]
 }

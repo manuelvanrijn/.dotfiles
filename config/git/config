@@ -92,6 +92,7 @@
         defaultBranch = main
 [advice]
 	detachedHead = false
+	forceDeleteBranch = false
 [rerere]
 	enabled = true
 [fetch]
