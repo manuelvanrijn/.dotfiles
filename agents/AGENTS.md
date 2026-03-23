@@ -64,7 +64,7 @@
 - Prefer `ast-grep` over `rg`/`grep` for code structure queries.
 
 ## MCP Vector Search / Context engine (`mcp_vector_search_search_code`, `search_context`)
-IMPORTANT: These are the primary tools for searching and understanding the codebase. Always consider these as the FIRST CHOICE for any codebase search.
+Primary tools for searching and understanding the codebase. Always FIRST CHOICE for any codebase search.
 
 These MCP tools:
 1. Take a natural language description of what you are looking for;
@@ -83,12 +83,12 @@ Use this tool when:
 - You are not sure what exact code or patterns to search for
 - The question is broad or architectural
 
-Examples of good queries:
+Good queries:
 - "code handling user authentication and login flows"
 - "how background jobs are used in data processing"
 - "code related to SSO and identity providers"
 
-Examples of bad queries:
+Bad queries:
 - "auth login oauth sso mfa session"
 - "perform_later migration job"
 
@@ -100,13 +100,13 @@ Use this tool when:
 - You need concrete examples or snippets
 - You have a clearer idea of what to look for
 
-Examples of good queries:
+Good queries:
 - "Where is the function that handles user authentication?"
 - "What tests exist for the login functionality?"
 - "How is the database connected to the application?"
 - "Find where Single Sign-On (SSO) login is implemented, including controllers, routes, and services involved"
 
-Examples of bad queries:
+Bad queries:
 - "sso oauth login auth mfa"
 - "migration perform_later async job"
 - "class Foo constructor" (use grep/ast-grep instead)
@@ -117,8 +117,7 @@ Examples of bad queries:
 
 #### Tool Selection for Code Search
 
-CRITICAL: When searching for code, classes, functions, or understanding the codebase:
-
+When searching for code, classes, functions, or understanding the codebase:
 - ALWAYS use `search_context` first when the problem is broad or unclear
 - THEN use `mcp_vector_search_search_code` for precise follow-up queries
 - ALWAYS use `mcp_vector_search_search_code` as the PRIMARY tool for semantic code retrieval
@@ -127,9 +126,6 @@ CRITICAL: When searching for code, classes, functions, or understanding the code
 - When in doubt between grep and these tools, ALWAYS choose these tools
 
 #### Query Construction
-
-CRITICAL:
-
 - ALWAYS write the query as a natural language description of what you are looking for
 - DO NOT send keyword lists or repeated tokens
 - DO NOT compress the query into search-engine-style terms
@@ -143,7 +139,6 @@ A query is INVALID if:
 - does not describe what you want to find
 
 #### Usage Guidelines
-
 - Use `search_context` to explore and understand the problem space
 - Use `mcp_vector_search_search_code` to retrieve concrete implementations
 - Prefer one clear, complete query over multiple shallow queries
