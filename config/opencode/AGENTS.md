@@ -1,1 +1,0 @@
-/Users/manuel/.agents/AGENTS.md

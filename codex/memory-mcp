@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+memory_dir="${PWD}/.opencode"
+mkdir -p "$memory_dir"
+
+exec mms --memory "${memory_dir}/memory.db"

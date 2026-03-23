@@ -68,6 +68,9 @@ args = ["--mcp", "--mcp-auto-workspace"]
 command = "npx"
 args = ["shadcn@latest", "mcp"]
 
+[mcp_servers.memory]
+command = "/Users/manuel/.dotfiles/codex/memory-mcp"
+
 [projects."/Users/manuel/.dotfiles"]
 trust_level = "trusted"
 

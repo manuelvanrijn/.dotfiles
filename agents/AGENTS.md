@@ -37,6 +37,21 @@
 - Ask: “Would a staff engineer approve this?”
 
 # Tooling & Operations
+## Memory & Knowledge Graph Memory
+- IMPORTANT: Always check memory before answering questions needing past context.
+### Saving:
+- create_entities: Add new people, places, concepts (check search_nodes first)
+- create_relations: Record entity relations
+- add_observations: Add facts to existing entities
+### Retrieving:
+- search_nodes: Find entities by keyword (supports synonyms)
+- open_nodes: Get full entity details
+- read_graph: Get overview (use "summary" first)
+### Managing:
+- merge_entities: Combine duplicates
+- detect_conflicts: Find contradictions
+- update_entities / update_observations: Fix data
+
 ## File Operations
 - Find files by name: `fd`
 - Find files with path: `fd -p <file-path>`

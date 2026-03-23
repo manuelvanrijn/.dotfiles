@@ -50,6 +50,14 @@
         "--mcp",
         "--mcp-auto-workspace"
       ]
+    },
+    "memory": {
+      "type": "local",
+      "command": [
+        "mms",
+        "--memory",
+        "{env:PWD}/.opencode/memory.db"
+      ]
     }
   },
   "provider": {
