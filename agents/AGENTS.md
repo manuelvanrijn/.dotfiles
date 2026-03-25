@@ -1,165 +1,95 @@
-# Core Principles
-- IMPORTANT: Be extremely concise. Sacrifice grammar for concision.
-- IMPORTANT: BEFORE replying, ALWAYS ask: should I use a skill/tool? Use best available.
-- Simplicity First: Smallest possible change. Minimal code impact.
-- Minimal Impact: Touch only what’s necessary. Avoid regressions.
-- No Laziness: Find root causes. No temporary fixes. Senior engineer standards.
+# Core
+These are IMPORTANT principles you MUST follow at all times.
+- Be extremely concise. Sacrifice grammar for brevity.
+- BEFORE replying, ALWAYS use skills/tools proactively when they apply.
+- Simplicity first: make the smallest change that solves the problem.
+- Minimal impact: touch only what is necessary. Avoid regressions.
+- Find the root cause. No temporary fixes.
 - Think holistically: consider affected areas, files, and side effects.
 
-# Product & Engineering Philosophy
-- Early dev, no users: prioritize correctness, cleanliness, zero tech debt.
-- No compatibility shims or hacks.
-- NEVER remove/hide/rename existing features/UI unless explicitly asked.
-- If something is not wired yet: stub, don’t break UX.
-- For non-trivial work: ask “is there a more elegant solution?” (avoid over-engineering for trivial fixes).
+## Product & Engineering Philosophy
+- Assume unreleased branch work can be changed directly; avoid compatibility shims unless explicitly needed.
+- If part of a feature is not wired yet, stub it safely without breaking UX.
+- For non-trivial work, choose the simplest solution that fully solves the problem.
 
-# Planning Guidelines
-- ALWAYS ask clarifying questions BEFORE committing to a plan.
-- Surface edge cases, constraints, and architectural implications.
-- Plans must be concise, actionable steps (not essays).
-- Include “what” and “why”, not just “how”.
-- Maintain hierarchy: product/UX → architecture → code structure.
-- List unresolved questions at the end of the plan.
-- Write detailed specs upfront to reduce ambiguity.
-- Use subagents to research codebase parts in parallel when possible.
+## Planning Guidelines
+- Use subagents in parallel when they clearly reduce time on non-trivial research or review.
 
-# Execution & Autonomy
-## Autonomous Bug Fixing
-- When given a bug report: fix directly.
-- Use logs, errors, and failing tests as primary signals.
-- No hand-holding or unnecessary context switching.
-- Proactively fix failing CI tests.
+## Execution & Autonomy
 
-## Verification Before Done
-- Never mark complete without proving it works.
-- Run tests, check logs, validate behavior.
-- Diff behavior between main and changes when relevant.
-- Ask: “Would a staff engineer approve this?”
+### Tool Selection & Operations
+- Prefer purpose-built tools over shell. Use shell only when no suitable MCP tool exists.
+- Prefer the `seek` cli over `Glob`, `Grep`, and `rg`.
+- Verify tool availability before assuming it is missing.
+- If `seek` fails, state the exact failure once, then use the narrowest fallback tool.
 
-# Tooling & Operations
-## Memory & Knowledge Graph Memory
-- IMPORTANT: Always check memory before answering questions needing past context.
-### Saving:
-- create_entities: Add new people, places, concepts (check search_nodes first)
-- create_relations: Record entity relations
-- add_observations: Add facts to existing entities
-### Retrieving:
-- search_nodes: Find entities by keyword (supports synonyms)
-- open_nodes: Get full entity details
-- read_graph: Get overview (use "summary" first)
-### Managing:
-- merge_entities: Combine duplicates
-- detect_conflicts: Find contradictions
-- update_entities / update_observations: Fix data
+Use the tool that matches the query stage, and do not skip stages without stating why:
+1. Unknown location, architecture, or "where does this live?" -> `mcp_vector_search_search_context`
+2. Known or partially known identifier, symbol, filename, route, path, or exact code pattern -> `seek`
+3. If `seek` fails, say so explicitly, then use the narrowest fallback tool
+4. Behavior-oriented follow-up after narrowing context -> `mcp_vector_search_search_code`
+5. Structural or syntax-aware matching -> `ast-grep`
+6. Logs, comments, error strings, or exact plain text -> `rg` or `grep`
 
-## File Operations
-- Find files by name: `fd`
-- Find files with path: `fd -p <file-path>`
-- List directory: `fd . <directory>`
-- Find with extension/pattern: `fd -e <extension> <pattern>`
+NOTE:
+- Do not continue with `Glob`, `rg`, or `grep` once you already have concrete search terms.
+- `Glob` is for file listing only, not code search.
+- `rg`/`grep` are for plain text only, not normal code exploration.
+- If concrete search terms are known, using `grep`, `rg`, or `Glob` instead of `seek` is a workflow violation unless `seek` failed.
+- If you deviate from the preferred tool path, state the reason in one sentence before continuing.
+- Do not treat model-guessed terms as concrete search terms.
+- Only use `seek` first when the term is user-provided, already verified from prior search results, or directly visible in known context.
+- If the terms are inferred guesses about possible implementation details, start with `mcp_vector_search_search_context`.
 
-## Structured Code Search
-- Syntax-aware search: `ast-grep --lang <language> -p '<pattern>'`
-- List matches: `ast-grep -l --lang <language> -p '<pattern>' | head -n 10`
-- Prefer `ast-grep` over `rg`/`grep` for code structure queries.
+#### `mcp_vector_search_search_context`
+Use this tool only when you do not yet know where the code lives.
+IMPORTANT: If `mcp_vector_search_search_context` returns concrete names, files, symbols, routes, or paths, you MUST switch to `seek`.
 
-## MCP Vector Search / Context engine (`mcp_vector_search_search_code`, `search_context`)
-Primary tools for searching and understanding the codebase. Always FIRST CHOICE for any codebase search.
+#### `seek`
+Use this tool when you know the concrete search term.
 
-These MCP tools:
-1. Take a natural language description of what you are looking for;
-2. Use semantic/vector search to retrieve relevant code from across the codebase;
-3. Return results based on the current state of the codebase on disk;
-4. Work across different programming languages.
+Examples:
+- `seek 'needle'` - basic text
+- `seek 'sym:validate file:agents/skills/skill-creator/scripts'` - symbol + path scope
+- `seek 'content:"validation" lang:python file:agents/skills/skill-creator/scripts'` - content + language + path scope
+- `seek 'content:/validate_.*/ file:/agents\\/skills\\/skill-creator\\/scripts\\/.*\.py/'` - regex content + regex file
+- `seek '(lang:go or lang:python) validation'` - boolean grouping
+- `seek 'type:file config'` - filenames only
+- `seek 'content:"foo\"bar"'` - escaped quote
 
-### Tool Roles
+Prefer examples that match files or symbols that exist in the current workspace.
 
-#### `search_context`
-Use for broad, exploratory understanding.
-
-Use this tool when:
-- You are exploring a topic (e.g. authentication, SSO, background jobs)
-- You want high-level understanding before diving into specifics
-- You are not sure what exact code or patterns to search for
-- The question is broad or architectural
-
-Good queries:
-- "code handling user authentication and login flows"
-- "how background jobs are used in data processing"
-- "code related to SSO and identity providers"
-
-Bad queries:
-- "auth login oauth sso mfa session"
-- "perform_later migration job"
+Rules:
+- pass exactly ONE quoted argument
+- keep all filters in one string
 
 #### `mcp_vector_search_search_code`
-Use for precise retrieval of implementations and examples.
-
 Use this tool when:
-- You want to understand how something is implemented
-- You need concrete examples or snippets
-- You have a clearer idea of what to look for
+- the code area is already narrowed
+- you need behavioral understanding
+- `seek` did not help because the question is still conceptual
 
-Good queries:
-- "Where is the function that handles user authentication?"
-- "What tests exist for the login functionality?"
-- "How is the database connected to the application?"
-- "Find where Single Sign-On (SSO) login is implemented, including controllers, routes, and services involved"
+#### Structural search `ast-grep`
+Use `ast-grep --lang <language> -p '<pattern>'` for AST-aware matching and refactors.
 
-Bad queries:
-- "sso oauth login auth mfa"
-- "migration perform_later async job"
-- "class Foo constructor" (use grep/ast-grep instead)
-- "find all references to bar" (use grep/ast-grep instead)
-- "show contents of file foo.rb" (open the file directly)
+#### Plain-text search `rg` or `grep`
+Use `rg` or `grep` only for:
+- logs
+- comments
+- error strings
+- exact literals
 
-### RULES
+#### Data Processing
+- JSON -> `jq`
+- YAML/XML -> `yq`
 
-#### Tool Selection for Code Search
+### Verification Before Done
+- Do not claim success without verification.
+- Run the relevant tests, builds, or checks for the work you changed.
+- Compare against the base branch when that meaningfully reduces risk.
 
-When searching for code, classes, functions, or understanding the codebase:
-- ALWAYS use `search_context` first when the problem is broad or unclear
-- THEN use `mcp_vector_search_search_code` for precise follow-up queries
-- ALWAYS use `mcp_vector_search_search_code` as the PRIMARY tool for semantic code retrieval
-- DO NOT use grep/rg/ast-grep for understanding code structure or behavior
-- Use grep/ast-grep ONLY for exact string matching or known identifiers
-- When in doubt between grep and these tools, ALWAYS choose these tools
+## Selection
+- Choose results deterministically with non-interactive filters
 
-#### Query Construction
-- ALWAYS write the query as a natural language description of what you are looking for
-- DO NOT send keyword lists or repeated tokens
-- DO NOT compress the query into search-engine-style terms
-- DO NOT rewrite a natural query into a shorter keyword query
-
-The tools perform semantic search — more context and clarity improves results.
-
-A query is INVALID if:
-- is just a list of keywords
-- repeats terms without structure
-- does not describe what you want to find
-
-#### Usage Guidelines
-- Use `search_context` to explore and understand the problem space
-- Use `mcp_vector_search_search_code` to retrieve concrete implementations
-- Prefer one clear, complete query over multiple shallow queries
-- Only perform follow-up queries if new information requires deeper inspection
-
-When asking about code, include all relevant details in a single query:
-- related concepts (e.g. OAuth, SAML, perform_later)
-- relevant behaviors (e.g. async jobs, authentication flow)
-- related components (e.g. controllers, services, jobs)
-
-When in doubt, include more context rather than less
-
-## Data Processing
-- JSON: `jq`
-- YAML/XML: `yq`
-
-## Deterministic Selection
-- Use non-interactive filtering.
-- Fuzzy select deterministically: `fzf --filter 'term' | head -n 1`
-- Prefer deterministic commands (`head`, `--filter`, `--json` + `jq`).
-
-# Completion Protocol
-- Do not declare done without validation.
-- Provide a 1–3 sentence summary of the work performed when finished.
+## Completion Protocol
+- End with a brief summary of what changed and how you verified it.

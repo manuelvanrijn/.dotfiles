@@ -58,6 +58,17 @@
         "--memory",
         "{env:PWD}/.opencode/memory.db"
       ]
+    },
+    "mcp_vector_search": {
+      "type": "local",
+      "command": [
+        "mcp-vector-search",
+        "mcp"
+      ],
+      "environment": {
+        "MCP_ENABLE_FILE_WATCHING": "false"
+      },
+      "timeout": 60000
     }
   },
   "provider": {

@@ -37,4 +37,5 @@ mise.local.toml
 .factory
 .kilocode
 AGENTS.md
-.opencode/memory.db
+.opencode/memory.db*
+.mcp-vector-search/*
