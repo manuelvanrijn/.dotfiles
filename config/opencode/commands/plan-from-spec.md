@@ -6,7 +6,7 @@ reasoningEffort: high
 temperature: 0.1
 ---
 
-Prerequisite: If `.opencode/plans` doesn't exist, create a symlink to the folder `~/Documents/Notes/agent-memory/plans`.
+Prerequisite: If `.opencode/plans` doesn't exist, create a symlink to the folder `~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/Notes/agent-memory/<project-name>/plans/`, where <project-name> is the name of the project you are working on. If in doubt, ask the user for the project name.
 
 Write a plan for the provided specification given by the user as input.
 
