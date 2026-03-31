@@ -57,7 +57,7 @@
   ],
   "includeCoAuthoredByDroid": false,
   "enableDroidShield": true,
-  "todoDisplayMode": "pinned",
+  "todoDisplayMode": "inline",
   "allowBackgroundProcesses": true,
   "showThinkingInMainView": true,
   "ideAutoConnect": false,
@@ -581,5 +581,12 @@
       "noImageSupport": false,
       "provider": "openai"
     }
-  ]
+  ],
+  "hasSeenMissionOnboarding": true,
+  "missionModelSettings": {
+    "workerModel": "custom:Claude-Sonnet-4.6-(copilot)-36",
+    "workerReasoningEffort": "none",
+    "validationWorkerModel": "custom:Claude-Opus-4.6-(copilot)-40",
+    "validationWorkerReasoningEffort": "none"
+  }
 }

@@ -16,3 +16,6 @@ temp/
 updates/
 _IGNORE/
 cache/
+missions/
+snapshots/
+tools/

@@ -51,9 +51,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
       "skillPath": "skills/seo-audit/SKILL.md",
-      "skillFolderHash": "c5423e592d1ce900fafca88b17f3896eea53b237",
+      "skillFolderHash": "363d92283cd9566761d8ec18d4fa9def5cbc2c29",
       "installedAt": "2026-02-12T11:24:28.919Z",
-      "updatedAt": "2026-03-20T10:09:42.942Z"
+      "updatedAt": "2026-03-30T11:31:50.738Z"
     },
     "grill-me": {
       "source": "marmotize/skills",
@@ -78,9 +78,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
       "skillPath": "skills/agent-browser/SKILL.md",
-      "skillFolderHash": "d22b7962fb118a40f0e2e27af2fdeab12f2651a8",
+      "skillFolderHash": "c05134c73b2b1446146ba90f9a980a30ba139298",
       "installedAt": "2026-03-05T08:34:22.803Z",
-      "updatedAt": "2026-03-20T10:09:45.513Z"
+      "updatedAt": "2026-03-30T11:31:53.808Z"
     },
     "brakeman": {
       "source": "el-feo/ai-context",
@@ -207,6 +207,51 @@
       "skillFolderHash": "a99455217000ccb6e6903624ee341b91e8ea175b",
       "installedAt": "2026-03-20T10:26:51.988Z",
       "updatedAt": "2026-03-20T10:26:51.988Z"
+    },
+    "defuddle": {
+      "source": "git@github.com:kepano/obsidian-skills.git",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:kepano/obsidian-skills.git",
+      "skillPath": "skills/defuddle/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-30T11:41:37.091Z",
+      "updatedAt": "2026-03-30T11:41:37.091Z"
+    },
+    "json-canvas": {
+      "source": "git@github.com:kepano/obsidian-skills.git",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:kepano/obsidian-skills.git",
+      "skillPath": "skills/json-canvas/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-30T11:41:37.099Z",
+      "updatedAt": "2026-03-30T11:41:37.099Z"
+    },
+    "obsidian-bases": {
+      "source": "git@github.com:kepano/obsidian-skills.git",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-bases/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-30T11:41:37.103Z",
+      "updatedAt": "2026-03-30T11:41:37.103Z"
+    },
+    "obsidian-cli": {
+      "source": "git@github.com:kepano/obsidian-skills.git",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-cli/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-30T11:41:37.104Z",
+      "updatedAt": "2026-03-30T11:41:37.104Z"
+    },
+    "obsidian-markdown": {
+      "source": "git@github.com:kepano/obsidian-skills.git",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-markdown/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-30T11:41:37.105Z",
+      "updatedAt": "2026-03-30T11:41:37.105Z"
     }
   },
   "dismissed": {
@@ -214,9 +259,11 @@
   },
   "lastSelectedAgents": [
     "amp",
+    "antigravity",
     "cline",
     "codex",
     "cursor",
+    "deepagents",
     "gemini-cli",
     "github-copilot",
     "kimi-cli",
