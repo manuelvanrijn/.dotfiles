@@ -14,26 +14,22 @@ These are IMPORTANT principles you MUST follow at all times.
 
 ### Tool Selection & Operations
 - Prefer purpose-built tools over shell. Use shell only when no suitable MCP tool exists.
-- Prefer the `seek` cli over `glob`, `grep`, and `rg`.
-- Skip `seek` if we aren't in a git repository.
-- Verify tool availability before assuming it is missing.
-- If `seek` fails, state the exact failure once, then use the narrowest fallback tool.
-
-Use the tool that matches the query stage, and do not skip stages without stating why:
-1. Any identifier, symbol, filename, route, path, or code pattern -> `seek`
-2. If `seek` fails, say so explicitly, then use the narrowest fallback tool
-3. Structural or syntax-aware matching -> `ast-grep`
-4. Logs, comments, error strings, or exact plain text -> `rg` or `grep`
-
-NOTE:
-- Do not continue with `glob`, `rg`, or `grep` once you already have concrete search terms.
-- `glob` is for file listing only, not code search.
-- `rg`/`grep` are for plain text only, not normal code exploration.
-- If concrete search terms are known, using `grep`, `rg`, or `glob` instead of `seek` is a workflow violation unless `seek` failed.
-- If you deviate from the preferred tool path, state the reason in one sentence before continuing.
+- Prefer `seek` over `glob`, `grep`, and `rg` for code search and repo exploration.
 
 #### `seek`
 Use this tool when you know the concrete search term.
+
+Use one quoted argument only. Keep every filter inside that single string. Single quotes only.
+
+When spawning sub-agents that may not inherit this config, pass: `Use seek 'pattern' for code search. All filters in ONE quoted string. Never use grep/rg.`
+
+Patterns:
+- `sym:Name` definitions via ctags
+- `file:path` include paths
+- `-file:path` exclude paths
+- `lang:python` language filter
+- `content:regex` content-only regex
+- `type:file` file-name matches
 
 Examples:
 - `seek 'needle'` - basic text
@@ -42,13 +38,11 @@ Examples:
 - `seek 'content:/validate_.*/ file:/agents\\/skills\\/skill-creator\\/scripts\\/.*\.py/'` - regex content + regex file
 - `seek '(lang:go or lang:python) validation'` - boolean grouping
 - `seek 'type:file config'` - filenames only
-- `seek 'content:"foo\"bar"'` - escaped quote
+- `seek 'type:file AGENTS.md'` - agent instruction files
+- `seek 'sym:main file:agents/skills/skill-creator/scripts -file:test'` - project symbol search
+- `seek 'lang:python content:def main file:agents/skills'` - Python entrypoints
 
 Prefer examples that match files or symbols that exist in the current workspace.
-
-Rules:
-- pass exactly ONE quoted argument
-- keep all filters in one string
 
 #### Structural search `ast-grep`
 Use `ast-grep --lang <language> -p '<pattern>'` for AST-aware matching and refactors.

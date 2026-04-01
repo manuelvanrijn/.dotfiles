@@ -102,7 +102,7 @@
 	copyignored = true
 	copyuntracked = true
 	copymodified = true
-    nocopy = **/log/*
-    nocopy = **/tmp/*
+	nocopy = **/log/*
+	nocopy = **/tmp/*
 	nocopy = .claude/
 	hook = "sh -c 'common=$(git rev-parse --path-format=absolute --git-common-dir); gitroot=${common%/.git}; [ -d \"$gitroot/.claude\" ] || exit 0; [ -e .claude ] || ln -s \"$gitroot/.claude\" .claude'"
