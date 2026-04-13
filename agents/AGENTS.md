@@ -4,7 +4,7 @@ These are IMPORTANT principles you MUST follow at all times.
 - BEFORE replying, ALWAYS use skills/tools proactively when they apply.
 - Simplicity first: make the smallest change that solves the problem.
 - Find the root cause. No temporary fixes.
-- Think holistically to find the right scope; then minimize the change within that scope.
+- Think holistically to find the right scope, then minimize the change within it.
 
 ## Product & Engineering Philosophy
 - Assume unreleased branch work can be changed directly; avoid compatibility shims unless explicitly needed.
@@ -13,24 +13,53 @@ These are IMPORTANT principles you MUST follow at all times.
 ## Execution & Autonomy
 
 ### Tool Selection
-Prefer purpose-built tools over shell. Shell only when no MCP tool exists.
+Prefer purpose-built tools over shell. Use shell only when no MCP tool exists.
 
 #### Search tool selection
-Match tool to question type, not as fallback chain.
+Match the primary tool to the question type. Use fallbacks only if the primary tool is unavailable, incomplete, or too noisy.
 
 | Tool | Use for |
 |------|---------|
-| `seek` | Concrete: known symbol, class, filename, regex, references, text |
+| `seek` | Concrete: known symbol, class name, filename, regex, references, text search |
+| `lsp` | Code intelligence: definition, references, type/docs, call hierarchy, implementations |
 | `codebase-retrieval` | Conceptual: architecture questions, pattern discovery, flow understanding, "how does X work", high-level codebase orientation |
 | `ast-grep` | Structural: AST-aware matching, refactors across files |
 | `rg` / `grep` | Literals only: logs, comments, error strings |
 
-`seek` is free (local). `codebase-retrieval` costs per call but is the right tool for semantic/conceptual work. Use each where it excels, not one as fallback for the other.
+`seek` is free/local. `lsp` is compiler-accurate. `codebase-retrieval` costs per call but is right for semantic/conceptual/pattern-recognition work. Use each where it fits. Substitute only per fallback rules.
+
+#### Default tool per intent
+
+| Intent | Primary | Fallback |
+|--------|---------|----------|
+| Definition of a known symbol | `lsp goToDefinition` | `seek 'sym:Name'` |
+| All call sites / references | `lsp findReferences` | `seek 'functionName('` |
+| Type signature / docs | `lsp hover` | — |
+| Call graph | `lsp incomingCalls` / `outgoingCalls` | — |
+| Interface implementations | `lsp goToImplementation` | `seek` |
+| Broad text/symbol search across codebase | `seek` | — |
+| Find file by name | `seek 'type:file ...'` | — |
+| Conceptual / architectural understanding | `codebase-retrieval` | `seek` + `lsp` |
+| Syntax-aware pattern matching / bulk refactor | `ast-grep` | — |
+| Logs, comments, error strings | `rg` | `seek` if `rg` unavailable |
+
+Fallback rules:
+- If `lsp` is unavailable or returns nothing, use `seek`
+- If `codebase-retrieval` is too vague, narrow with `seek` or `lsp`
+- If `seek` is too noisy for a code pattern, use `ast-grep`
+
+#### When to combine tools
+Complex tasks often need multiple tools:
+- Orientation: `codebase-retrieval`
+- Navigation: `lsp`
+- Sweep: `seek`
+- Refactor: `ast-grep`
+- Verify: tests/build
 
 #### `seek`
-Concrete search: files, symbols, references, text/regex.
+Broad concrete search: files, symbols, references, text/regex. Use for multi-file text search, filenames, or when LSP is unavailable.
 
-One quoted argument. All filters in that single string. Single quotes only.
+Use one quoted argument only. Put all filters in that string. Use single quotes only.
 
 Patterns:
 - `sym:Name` definitions via ctags
@@ -40,39 +69,56 @@ Patterns:
 - `type:file` file-name matches
 
 Examples:
-- `seek 'needle'` — basic text
-- `seek 'sym:validate file:agents/skills/skill-creator/scripts'` — symbol + path
-- `seek 'content:"validation" lang:python file:agents/skills/skill-creator/scripts'` — content + lang + path
-- `seek 'content:/validate_.*/ file:/agents\\/skills\\/skill-creator\\/scripts\\/.*\.py/'` — regex content + regex file
-- `seek '(lang:go or lang:python) validation'` — boolean grouping
-- `seek 'type:file config'` — filenames only
-- `seek 'type:file AGENTS.md'` — agent instruction files
-- `seek 'sym:main file:agents/skills/skill-creator/scripts -file:test'` — project symbol
-- `seek 'lang:python content:def main file:agents/skills'` — Python entrypoints
+- `seek 'needle'`
+- `seek 'sym:validate file:agents/skills/skill-creator/scripts'`
+- `seek 'content:"validation" lang:python file:agents/skills/skill-creator/scripts'`
+- `seek 'content:/validate_.*/ file:/agents\\/skills\\/skill-creator\\/scripts\\/.*\.py/'`
+- `seek '(lang:go or lang:python) validation'`
+- `seek 'type:file config'`
+- `seek 'type:file AGENTS.md'`
+- `seek 'sym:main file:agents/skills/skill-creator/scripts -file:test'`
+- `seek 'lang:python content:def main file:agents/skills'`
 
 Prefer examples matching files/symbols in the current workspace.
 
-#### `codebase-retrieval` (augment)
-Semantic search for conceptual questions. Use as **first choice** when the question is about understanding, not locating.
+#### `lsp`
+Compiler-accurate code intelligence. Prefer over `seek` for precise, type-checked results.
+
+Operations: `goToDefinition`, `findReferences`, `hover`, `documentSymbol`, `workspaceSymbol`, `goToImplementation`, `prepareCallHierarchy`, `incomingCalls`, `outgoingCalls`.
 
 Use for:
-- "Where is user authentication handled?" — cross-cutting, no single keyword
-- "How does the payment flow work end-to-end?" — architecture/flow
-- "What patterns does this codebase use for error handling?" — pattern discovery
-- Gathering high-level context before starting a task
-- Understanding how modules/systems relate
+- Exact symbol definition → `goToDefinition`
+- Type-checked call sites → `findReferences`
+- Type signature / docs → `hover`
+- All symbols in a file → `documentSymbol`
+- Who calls this function / what it calls → `incomingCalls` / `outgoingCalls`
+- Interface implementations → `goToImplementation`
 
-Do NOT use for (use `seek`):
-- Known class/symbol → `seek 'sym:Foo'`
-- All references to a function → `seek 'bar('`
+Use `seek` for broad text search, filenames, or when LSP is unavailable for the language.
+
+#### `codebase-retrieval`
+Semantic search for conceptual questions. First choice for understanding, not locating.
+
+Use for:
+- "Where is user authentication handled?"
+- "How does the payment flow work end-to-end?"
+- "What patterns does this codebase use for error handling?"
+- High-level context before starting
+- Understanding module/system relationships
+
+Do not use for:
+- Known class/symbol → `seek 'sym:Foo'` or `lsp goToDefinition`
+- All references to a function → `lsp findReferences` or `seek 'bar('`
 - File by name → `seek 'type:file config'`
 - Scoped definition → `seek 'sym:validate file:services'`
 
 #### `ast-grep`
-`ast-grep --lang <language> -p '<pattern>'` for AST-aware matching and refactors.
+Use `ast-grep --lang <language> -p '<pattern>'` for AST-aware matching and refactors.
+
+Use for syntax-tree pattern matching and bulk refactors. For symbol-aware navigation and call graphs, use `lsp`.
 
 #### `rg` / `grep`
-Only for: logs, comments, error strings, exact literals.
+Only for non-code plaintext: logs, comments, error strings, build output. For code search, prefer `seek`.
 
 #### Data Processing
 - JSON → `jq`
@@ -80,14 +126,15 @@ Only for: logs, comments, error strings, exact literals.
 
 ### Verification
 - No success claims without verification.
-- Run relevant tests/builds/checks for changed work.
+- Run the narrowest relevant tests/checks that cover the change.
+- Broaden verification when risk, scope, or failure signals justify it.
 - Compare against base branch when it reduces risk.
 
 ## Selection
 Choose results deterministically with non-interactive filters.
 
 ## Completion
-End with brief summary: what changed, how verified.
+End with a brief summary: what changed, how verified.
 
 ## Session Documentation & Memory
-- Project naming: dot-prefix repos (e.g. `.dotfiles`) → strip dot for `set_project_context` (e.g. `dotfiles`). Always pass stripped name as `project_folder`.
+- Dot-prefixed repos (e.g. `.dotfiles`) → strip the dot for `set_project_context` (e.g. `dotfiles`). Always pass the stripped name as `project_folder`.

@@ -10,17 +10,15 @@ You are a senior software engineering consultant tasked with estimating the deve
 ## Step 1: Analyze the Codebase
 
 Read the entire codebase to understand:
-- Total lines of code (Swift, C++, Metal shaders)
+- Total lines of code per language
 - Architectural complexity (frameworks, integrations, APIs)
-- Advanced features (Metal rendering, CoreMediaIO, AVFoundation)
+- Advanced features and specialized domains
 - Testing coverage
 - Documentation quality
 
 Use the Glob and Read tools to systematically review:
-- All Swift source files in Sources/
-- All C++ files in DALPlugin/
-- All Metal shader files
-- All test files in Tests/
+- All source files
+- All test files
 - Build scripts and configuration files
 
 ## Step 2: Calculate Development Hours
@@ -30,9 +28,9 @@ Based on industry standards for a **senior full-stack developer** (5+ years expe
 **Hourly Productivity Estimates**:
 - Simple CRUD/UI code: 30-50 lines/hour
 - Complex business logic: 20-30 lines/hour
-- GPU/Metal programming: 10-20 lines/hour
-- Native C++ interop: 10-20 lines/hour
-- Video/audio processing: 10-15 lines/hour
+- GPU/compute programming: 10-20 lines/hour
+- Native interop (FFI, C extensions): 10-20 lines/hour
+- Media processing (video/audio): 10-15 lines/hour
 - System extensions/plugins: 8-12 lines/hour
 - Comprehensive tests: 25-40 lines/hour
 
@@ -60,9 +58,9 @@ Use WebSearch to find current 2025 hourly rates for:
 
 Search queries to use:
 - "senior full stack developer hourly rate 2025"
-- "macOS Swift developer contractor rate 2025"
+- "macOS/iOS/web/backend developer contractor rate 2025" (adjust to project domain)
 - "senior software engineer hourly rate United States 2025"
-- "iOS developer freelance rate 2025"
+- "[primary language] developer freelance rate 2025"
 
 ## Step 4: Calculate Organizational Overhead
 
@@ -140,32 +138,29 @@ Provide a comprehensive estimate in this format:
 
 ---
 
-## KeyMe MVP - Development Cost Estimate
+## [Project Name] - Development Cost Estimate
 
 **Analysis Date**: [Current Date]
 
 ### Codebase Metrics
 
 - **Total Lines of Code**: [number]
-  - Swift: [number] lines
-  - C++: [number] lines
-  - Metal Shaders: [number] lines
+  - [Language 1]: [number] lines
+  - [Language 2]: [number] lines
   - Tests: [number] lines
   - Documentation: [number] lines
 
 - **Complexity Factors**:
   - Advanced frameworks: [list key ones]
-  - System-level programming: [Camera Extensions, DAL Plugins, etc.]
-  - GPU programming: [Metal shaders, rendering]
-  - Third-party integrations: [OpenAI, etc.]
+  - Specialized domains: [list]
+  - Third-party integrations: [list]
 
 ### Development Time Estimate
 
 **Base Development Hours**: [number] hours
-- Phase 1 (Foundation): [hours] hours
-- Phase 2 (Virtual Camera): [hours] hours
-- Phase 3 (Audio/Transcription): [hours] hours
-- Remaining phases: [hours] hours
+- [Phase 1]: [hours] hours
+- [Phase 2]: [hours] hours
+- [Phase N]: [hours] hours
 
 **Overhead Multipliers**:
 - Architecture & Design: +[X]% ([hours] hours)
@@ -200,7 +195,7 @@ Provide a comprehensive estimate in this format:
 
 **Recommended Rate for This Project**: $[X]/hour
 
-*Rationale*: This project requires specialized macOS development skills (CoreMediaIO, Metal, system extensions) which command premium rates.
+*Rationale*: [Explain why this rate based on the project's specific technology requirements]
 
 ### Total Cost Estimate
 

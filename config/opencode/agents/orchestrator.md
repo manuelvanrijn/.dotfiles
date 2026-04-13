@@ -166,7 +166,7 @@ Verify: tests pass, linting clean, build succeeds, files match plan expectations
 Example — sequential dispatch (Wave 2, depends on Wave 1):
 
 ```
-@verifier-agent implement task 3
+@coder-agent implement task 3
 "Plan: <plan-path>. Task: Add user routes. Prior context: user model created at app/models/user.rb, migration at db/migrate/create_users.rb."
 ```
 

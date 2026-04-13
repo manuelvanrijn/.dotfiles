@@ -1,6 +1,6 @@
 ---
-description: Contextual search/grep for codebases. Answers "Where is X?", "Which file has Y?", "Find the code that does Z". Fire multiple in parallel for broad searches.
-model: github-copilot/grok-code-fast-1
+description: Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples using GitHub CLI, Context7, and Web Search. MUST BE USED when users ask to look up code in remote repositories, explain library internals, or find usage examples in open source.
+model: openai/gpt-5.4-mini
 temperature: 0.1
 mode: subagent
 ---
