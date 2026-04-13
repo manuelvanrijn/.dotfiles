@@ -29,7 +29,8 @@
   "plugin": [
     "opencode-openai-codex-auth@4.4.0",
     "@mohak34/opencode-notifier@latest",
-    "@tarquinen/opencode-dcp@latest"
+    "@tarquinen/opencode-dcp@latest",
+    "opencode-handoff@0.5.0"
   ],
   "permission": {
     "agent-browser*": "allow",
@@ -48,14 +49,6 @@
         "auggie",
         "--mcp",
         "--mcp-auto-workspace"
-      ]
-    },
-    "memory": {
-      "type": "local",
-      "command": [
-        "mms",
-        "--memory",
-        "{env:PWD}/.opencode/memory.db"
       ]
     }
   },

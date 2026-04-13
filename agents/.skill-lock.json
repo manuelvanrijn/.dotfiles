@@ -64,15 +64,6 @@
       "installedAt": "2026-02-12T14:58:35.233Z",
       "updatedAt": "2026-02-12T14:58:35.233Z"
     },
-    "simplify": {
-      "source": "brianlovin/claude-config",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/brianlovin/claude-config.git",
-      "skillPath": "skills/simplify/SKILL.md",
-      "skillFolderHash": "83566973442dc05bcf5abbe83053e8a8e5f50b6b",
-      "installedAt": "2026-03-05T08:34:20.780Z",
-      "updatedAt": "2026-03-05T08:34:20.780Z"
-    },
     "agent-browser": {
       "source": "vercel-labs/agent-browser",
       "sourceType": "github",
@@ -215,7 +206,7 @@
       "skillPath": "skills/defuddle/SKILL.md",
       "skillFolderHash": "",
       "installedAt": "2026-03-30T11:41:37.091Z",
-      "updatedAt": "2026-03-30T11:41:37.091Z"
+      "updatedAt": "2026-04-13T08:37:07.545Z"
     },
     "json-canvas": {
       "source": "git@github.com:kepano/obsidian-skills.git",
@@ -224,7 +215,7 @@
       "skillPath": "skills/json-canvas/SKILL.md",
       "skillFolderHash": "",
       "installedAt": "2026-03-30T11:41:37.099Z",
-      "updatedAt": "2026-03-30T11:41:37.099Z"
+      "updatedAt": "2026-04-13T08:37:07.544Z"
     },
     "obsidian-bases": {
       "source": "git@github.com:kepano/obsidian-skills.git",
@@ -233,7 +224,7 @@
       "skillPath": "skills/obsidian-bases/SKILL.md",
       "skillFolderHash": "",
       "installedAt": "2026-03-30T11:41:37.103Z",
-      "updatedAt": "2026-03-30T11:41:37.103Z"
+      "updatedAt": "2026-04-13T08:37:07.543Z"
     },
     "obsidian-cli": {
       "source": "git@github.com:kepano/obsidian-skills.git",
@@ -242,7 +233,7 @@
       "skillPath": "skills/obsidian-cli/SKILL.md",
       "skillFolderHash": "",
       "installedAt": "2026-03-30T11:41:37.104Z",
-      "updatedAt": "2026-03-30T11:41:37.104Z"
+      "updatedAt": "2026-04-13T08:37:07.543Z"
     },
     "obsidian-markdown": {
       "source": "git@github.com:kepano/obsidian-skills.git",
@@ -251,7 +242,7 @@
       "skillPath": "skills/obsidian-markdown/SKILL.md",
       "skillFolderHash": "",
       "installedAt": "2026-03-30T11:41:37.105Z",
-      "updatedAt": "2026-03-30T11:41:37.105Z"
+      "updatedAt": "2026-04-13T08:37:07.541Z"
     },
     "opencode-memory": {
       "source": "carson2222/skills",

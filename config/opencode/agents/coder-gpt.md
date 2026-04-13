@@ -3,7 +3,7 @@ description: Focused task executor. Same discipline, no delegation. Using OpenAI
 hidden: true
 mode: subagent
 model: github-copilot/gpt-5.4-mini
-reasoningEffort: xhigh
+reasoningEffort: high
 temperature: 0.3
 ---
 

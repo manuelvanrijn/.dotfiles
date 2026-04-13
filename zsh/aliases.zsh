@@ -37,3 +37,4 @@ if [ -f /usr/local/bin/trash ]; then alias rm="/usr/local/bin/trash"; fi
 alias routes="bin/rails routes | fzf -e"
 
 alias ring="open raycast://confetti"
+alias tokscale="bunx tokscale@latest"

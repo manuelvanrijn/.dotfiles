@@ -38,4 +38,5 @@ mise.local.toml
 .kilocode
 AGENTS.md
 .opencode/memory.db*
+.opencode/package-lock.json
 .mcp-vector-search/*
