@@ -67,15 +67,13 @@ Your response has **FAILED** if:
 
 ## Tool Strategy
 
-Use the right tool for the job:
-- **Conceptual code discovery** ("where does SSO auth in gate live?", "how does this work?", domain concepts, fuzzy wording): `mcp_vector_search_search_context` first
-- **Semantic follow-up** (once context is known but the wording is still conceptual): `mcp_vector_search_search_code`
-- **Exact local code search** (known identifier, symbol, path, language, ranked lexical search): use the `seek` tool before `glob` or broad `grep`
-- **Structural patterns** (function shapes, class structures): `ast-grep`
-- **Text patterns** (strings, comments, logs, exact literals only): `grep`
-- **Cross-check / extra semantic context**: `mcp_vector_search_search_code`
-- **File patterns** (find by name/extension): `glob`
-- **History/evolution** (when added, who changed): `git` commands
-- **Date Processing**: `jq` for json, `yq` for yaml.
+Match tool to question type:
+- Conceptual/semantic ("how does auth work?", "where is X handled?", architecture, patterns): `codebase-retrieval`
+- Concrete lookup (known symbol, class, filename, regex, references): `seek`
+- Structural (function shapes, class structures, AST refactors): `ast-grep`
+- Literals (logs, comments, error strings): `grep`
+- File by name/extension: `seek 'type:file ...'` or `glob`
+- History/evolution: `git`
+- Data: `jq` (JSON), `yq` (YAML/XML)
 
-Workflow: semantic discovery -> `seek` narrowing -> targeted `read`. Never do `mcp_vector_search_search_context` -> broad `glob`/`grep` by default. Use `glob` only when you already know the path pattern; use `grep` only for exact literals, logs, or comments. Do not treat model-guessed terms as concrete search terms; if the terms are inferred guesses about implementation details, start with `mcp_vector_search_search_context` and switch to `seek` only after you have concrete names, files, symbols, routes, or paths.
+Workflow: conceptual discovery via `codebase-retrieval` → narrow with `seek` → targeted `read`. Use `grep`/`glob` only for exact literals or known path patterns.

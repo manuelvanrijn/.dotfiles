@@ -74,13 +74,13 @@ Your response has **FAILED** if:
 
 ## Tool Strategy
 
-Use the right tool for the job:
-- **Conceptual code discovery** ("where does SSO auth in gate live?", "how does this work?", domain concepts, fuzzy wording): `seek -semantic` first
-- **Semantic follow-up** (once context is known but the wording is still conceptual): `seek`
-- **Exact local code search** (known identifier, symbol, path, language, ranked lexical search): use the `seek` tool before `glob` or broad `grep`
-- **Structural patterns** (function shapes, class structures): `ast-grep`
-- **Text patterns** (strings, comments, logs, exact literals only): `grep`
-- **Cross-check / extra semantic context**: `seek` or `seek -semantic`
-- **File patterns** (find by name/extension): `glob`
-- **History/evolution** (when added, who changed): `git` commands
-- **Date Processing**: `jq` for json, `yq` for yaml.
+Match tool to question type:
+- Conceptual/semantic ("how does auth work?", "where is X handled?", architecture, patterns): `codebase-retrieval`
+- Concrete lookup (known symbol, class, filename, regex, references): `seek`
+- Structural (function shapes, class structures, AST refactors): `ast-grep`
+- Literals (logs, comments, error strings): `grep`
+- File by name/extension: `seek 'type:file ...'` or `glob`
+- History/evolution: `git`
+- Data: `jq` (JSON), `yq` (YAML/XML)
+
+Workflow: conceptual discovery via `codebase-retrieval` → narrow with `seek` → targeted `read`. Use `grep`/`glob` only for exact literals or known path patterns.
