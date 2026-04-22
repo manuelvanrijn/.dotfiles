@@ -19,9 +19,6 @@ npm-debug.log
 # Ruby
 .byebug_history
 
-# Pow
-.powrc
-
 # global ignore folder
 _ignore/
 
@@ -32,4 +29,4 @@ _ignore/
 *.vscode/
 
 mise.local.toml
-.opencode/package-lock.json
+.opencode/
