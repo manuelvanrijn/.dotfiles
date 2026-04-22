@@ -64,12 +64,9 @@ hide_rate_limit_model_nudge = true
 command = "auggie"
 args = ["--mcp", "--mcp-auto-workspace"]
 
-[mcp_servers.shadcn]
-command = "npx"
-args = ["shadcn@latest", "mcp"]
-
-[mcp_servers.memory]
-command = "/Users/manuel/.dotfiles/codex/memory-mcp"
+#[mcp_servers.shadcn]
+#command = "npx"
+#args = ["shadcn@latest", "mcp"]
 
 [projects."/Users/manuel/.dotfiles"]
 trust_level = "trusted"
@@ -80,3 +77,7 @@ trust_level = "trusted"
 # [mcp_servers.atlassian]
 # command = "npx"
 # args = ["mcp-remote", "https://mcp.atlassian.com/v1/mcp"]
+
+[mcp_servers.atlassian]
+command = "npx"
+args = ["mcp-remote", "https://mcp.atlassian.com/v1/mcp"]

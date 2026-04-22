@@ -31,12 +31,5 @@ _ignore/
 # visual studio code
 *.vscode/
 
-.augment
-.claude
 mise.local.toml
-.factory
-.kilocode
-AGENTS.md
-.opencode/memory.db*
 .opencode/package-lock.json
-.mcp-vector-search/*

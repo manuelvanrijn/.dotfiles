@@ -1,0 +1,17 @@
+{
+  "firstLaunchAt": "2026-04-16T12:47:38.180Z",
+  "banner": "never",
+  "lastLoggedInUser": {
+    "host": "https://github.com",
+    "login": "uppersource-bot"
+  },
+  "loggedInUsers": [
+    {
+      "host": "https://github.com",
+      "login": "uppersource-bot"
+    }
+  ],
+  "colorMode": "default",
+  "model": "gpt-5.3-codex",
+  "effortLevel": "high"
+}

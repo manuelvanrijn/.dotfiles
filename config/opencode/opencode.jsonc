@@ -39,6 +39,7 @@
     "external_directory": {
       "/private/tmp/**": "allow",
       "/tmp/**": "allow",
+      "/var/folders/**": "allow",
       "/Users/manuel/.local/share/mise/installs/**": "allow"
     }
   },

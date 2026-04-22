@@ -1,0 +1,15 @@
+{
+  "commandHistory": [
+    "/plan in de huidige folder hebben we @seek-mcp.mjs wat de `seek` cli exposed in een\n  mcp jasje. Dit werkt alleen wil ik dat we hier een package van maken zodat we\n  dit mooier kunnen gaan aanbieden.\n\nIk wil dat je eerst goed doorleest wat we hebben gedaan en geprobeerd door met\nobsidian cli skill het document projects/seek-mcp/2026-04-16\n-seek-mcp-session-report.md door te nemen.\n\nDaarna wil ik dat je hetgeen wat we hebben omzet naar een correcte manier van\nmcp doormiddel van de mcp-builder skill te gebruiken.",
+    "/model",
+    "/agent",
+    "/mcp show github",
+    "/changelog",
+    "/theme",
+    "/usage",
+    "/ide",
+    "/mcp show appsignal",
+    "/login",
+    "/mcp"
+  ]
+}
