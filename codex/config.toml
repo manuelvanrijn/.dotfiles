@@ -64,6 +64,10 @@ hide_rate_limit_model_nudge = true
 command = "auggie"
 args = ["--mcp", "--mcp-auto-workspace"]
 
+[mcp_servers.seek]
+command = "npx"
+args = ["-y", "@manuelvanrijn/seek-mcp-server@0.1.2"]
+
 #[mcp_servers.shadcn]
 #command = "npx"
 #args = ["shadcn@latest", "mcp"]

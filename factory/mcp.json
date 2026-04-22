@@ -8,6 +8,14 @@
         "--mcp-auto-workspace"
       ],
       "disabled": false
+    },
+    "seek": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@manuelvanrijn/seek-mcp-server@0.1.2"
+      ]
     }
   }
 }

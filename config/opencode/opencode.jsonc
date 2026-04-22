@@ -36,6 +36,7 @@
     "agent-browser*": "allow",
     "augment-context-engine*": "allow",
     "brave-search*": "allow",
+    "seek*": "allow",
     "external_directory": {
       "/private/tmp/**": "allow",
       "/tmp/**": "allow",
@@ -50,6 +51,14 @@
         "auggie",
         "--mcp",
         "--mcp-auto-workspace"
+      ]
+    },
+    "seek": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@manuelvanrijn/seek-mcp-server@0.1.2"
       ]
     }
   },

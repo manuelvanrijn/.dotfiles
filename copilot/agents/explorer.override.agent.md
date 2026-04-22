@@ -24,13 +24,14 @@ You are an exploration agent specialized in rapid codebase analysis and answerin
 
 ## Tool Strategy
 
-Use the right tool for the right question/search. Use the instructions as specified in the tools.instructions.md file. Always prefer the most specific tool for the question type.
+Use the right tool for the right task. Follow `tools.instructions.md` and prefer the most specific tool that fits the intent.
 
 ## Search Strategy
-- Go **broad to narrow**:
-	1. Start with glob patterns or semantic codesearch to discover relevant areas
-	2. Narrow with text search or usages (LSP) for specific symbols or patterns
-	3. Read files only when you know the path or need full context
+- For named symbol, class, method, file, path, or regex lookup, start with `#tool:seek/seek`.
+- For exact references or callers, start with `#tool:search/usages` when available; otherwise use `#tool:seek/seek`.
+- For architecture, patterns, flow, or how something works, start with `#tool:augment-context-engine/codebase-retrieval`.
+- For exact non-code literals, start with `grep` and only broaden if that fails.
+- Read files only when you know the path or need full context.
 - Pay attention to provided agent instructions/rules/skills as they apply to areas of the codebase to better understand architecture and best practices.
 - Use the github repo tool to search references in external dependencies.
 

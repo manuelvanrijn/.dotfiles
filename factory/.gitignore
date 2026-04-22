@@ -2,6 +2,7 @@ auth.*
 history.json
 mcp-oauth.*
 background-processes.json
+background-tasks.json
 
 .factory/
 artifacts/
@@ -19,3 +20,4 @@ cache/
 missions/
 snapshots/
 tools/
+plugins/

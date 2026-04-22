@@ -71,20 +71,12 @@ Response has FAILED if:
 
 ## Tool Strategy
 
-Match primary tool to question type. Fallback only if primary is unavailable or too noisy.
-- Conceptual/semantic (architecture, patterns, "how does X work?"): `codebase-retrieval`
-- Exact definition / references / type info / call hierarchy: `lsp`
-- Broad concrete search (text, symbol name, filename, regex): `seek`
-- Structural (AST-aware matching, refactors): `ast-grep`
-- Non-code plaintext (logs, comments, error strings): `grep`
-- File by name: `seek 'type:file ...'`
-- History/evolution: `git`
-- Data: `jq` (JSON), `yq` (YAML/XML)
+Apply routing to the task itself, not only the user's wording.
+- Named symbol, class, method, file, path, or regex lookup: `seek`
+- Exact non-code literals (logs, comments, error strings): `grep`
+- Architecture, patterns, flow, or "how does X work?": `codebase-retrieval`
+- References, callers, implementations, type information, or call hierarchy: `lsp` first, fallback `seek`
 
-Default per intent:
-- Definition: `lsp goToDefinition` → fallback `seek 'sym:Name'`
-- References: `lsp findReferences` → fallback `seek 'funcName('`
-- Conceptual: `codebase-retrieval` → narrow with `seek` + `lsp`
-- Bulk refactor: `ast-grep`
-
-Workflow: orientation (`codebase-retrieval`) → precise navigation (`lsp`) → broad sweep (`seek`) → targeted `read`.
+Do not use `codebase-retrieval` for named lookups.
+Use `grep` for exact literals; only broaden if the literal search fails.
+Read files only after the search area is narrow enough.
