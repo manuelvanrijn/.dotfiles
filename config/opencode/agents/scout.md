@@ -71,12 +71,6 @@ Response has FAILED if:
 
 ## Tool Strategy
 
-Apply routing to the task itself, not only the user's wording.
-- Named symbol, class, method, file, path, or regex lookup: `seek`
-- Exact non-code literals (logs, comments, error strings): `grep`
-- Architecture, patterns, flow, or "how does X work?": `codebase-retrieval`
-- References, callers, implementations, type information, or call hierarchy: `lsp` first, fallback `seek`
-
-Do not use `codebase-retrieval` for named lookups.
-Use `grep` for exact literals; only broaden if the literal search fails.
+Follow tool-selection and search guidance from `AGENTS.md` (`Context & Code Intelligence` and `Tooling & Operations`) as the single source of truth.
+Do not redefine or override tool priority rules here.
 Read files only after the search area is narrow enough.

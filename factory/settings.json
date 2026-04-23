@@ -588,5 +588,8 @@
     "workerReasoningEffort": "none",
     "validationWorkerModel": "custom:Claude-Opus-4.6-(copilot)-40",
     "validationWorkerReasoningEffort": "none"
+  },
+  "enabledPlugins": {
+    "core@factory-plugins": true
   }
 }

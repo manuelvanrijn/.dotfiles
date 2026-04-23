@@ -2,13 +2,6 @@
   "$schema": "https://opencode.ai/config.json",
   "model": "github-copilot/gpt-5-mini",
   "autoupdate": true,
-  "instructions": [
-    "CLAUDE.md",
-    ".cursor/rules/*.md",
-    ".github/instructions/*.md",
-    "GEMINI.md",
-    "WINDSURF.md"
-  ],
   "compaction": {
     "auto": true,
     "prune": true

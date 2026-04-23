@@ -28,5 +28,5 @@ Gebruik de questiontool om zo elke comment door te nemen.
 
 Zodra de antwoorden gegeven zijn zal je eerst:
 1. Bepaal welke comments er parallel aan elkaar uitgevoerd kunnen worden
-2. Voer parallel de comments uit met een maximum van 5 subagents. Zorg ervoor dat deze agents NOOIT `jp checkup` draaien, enkel gerichte testen voor het betreffende probleem.
+2. Voer parallel de comments uit met een maximum van 5 subagents. Zorg ervoor dat deze agents enkel gerichte testen voor het betreffende probleem draaien.
 3. Als alle subagents/comments verwerkt zijn beoordeel je zelf of het handig is nog een @verifier te triggeren die alles onafhankelijk beoordeeld.

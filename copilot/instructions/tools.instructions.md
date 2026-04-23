@@ -6,8 +6,14 @@ applyTo: "**"
 
 # Tool selection
 
-- Prefer purpose-built tools over shell. Use shell only when no better tool exists.
 - Match the first meaningful search step to the task type.
+
+## Context Engine (Augment)
+
+- Use #tool:augment-context-engine/codebase-retrieval to its fullest extent for understanding and discovery.
+- Trust retrieved files/symbols as the primary source of truth for codebase context.
+- Avoid redundant broad searches when curated context is already available.
+- Treat retrieved context as a semantic map of the repository state.
 
 ## Search Routing
 
@@ -16,15 +22,14 @@ applyTo: "**"
 - References / callers when Copilot exposes them: #tool:search/usages
 - Inspect file contents after you know the path: #tool:read
 - Non-code literals such as logs, comments, or error strings: `grep`
+- Structural code-shape queries: `ast-grep` (via `#tool:execute`)
 
 Rules:
 - Apply this routing to the task itself, including your own intermediate search steps, not only to the user's wording.
-- Do not spend #tool:augment-context-engine/codebase-retrieval on trivial known-file or exact-literal lookups.
-- Do not use #tool:augment-context-engine/codebase-retrieval for named symbol/class/method/file lookups.
 - Prefer #tool:search/usages over #tool:seek/seek for exact references/callers when it fits the question.
-- Use #tool:seek/seek for broad concrete search and when no more precise navigation tool fits.
 - If #tool:search/usages is unavailable, fall back to #tool:seek/seek.
 - If semantic results are too broad, narrow with #tool:seek/seek and #tool:read.
+- Prefer dedicated tools (#tool:augment-context-engine/codebase-retrieval, #tool:seek/seek, #tool:search/usages, #tool:read) over shell search.
 - Read files only after narrowing context.
 - Use #tool:execute for commands and verification.
 - Choose results deterministically with non-interactive filters.

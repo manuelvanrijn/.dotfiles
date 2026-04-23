@@ -27,10 +27,8 @@ You are an exploration agent specialized in rapid codebase analysis and answerin
 Use the right tool for the right task. Follow `tools.instructions.md` and prefer the most specific tool that fits the intent.
 
 ## Search Strategy
-- For named symbol, class, method, file, path, or regex lookup, start with `#tool:seek/seek`.
-- For exact references or callers, start with `#tool:search/usages` when available; otherwise use `#tool:seek/seek`.
-- For architecture, patterns, flow, or how something works, start with `#tool:augment-context-engine/codebase-retrieval`.
-- For exact non-code literals, start with `grep` and only broaden if that fails.
+- Follow `tools.instructions.md` tool-selection and search guidance as the single source of truth.
+- Do not redefine or override routing priority rules here.
 - Read files only when you know the path or need full context.
 - Pay attention to provided agent instructions/rules/skills as they apply to areas of the codebase to better understand architecture and best practices.
 - Use the github repo tool to search references in external dependencies.

@@ -12,6 +12,7 @@ export const CheckAgentsMdPlugin = async ({
 }) => {
   return {
     event: async ({ event }) => {
+      return; // Disable this plugin for now...
       if (event.type === "session.created") {
         try {
           const agentsMdPath = join(directory, AGENTS_FILENAME);
