@@ -23,7 +23,7 @@ npm-debug.log
 _ignore/
 
 # ignore custom initializer with helpers
-**/initializers/_uppersource.rb
+**/initializers/zz_uppersource.rb
 
 # visual studio code
 *.vscode/

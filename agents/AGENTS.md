@@ -18,6 +18,39 @@ These are global rules for all projects.
 - Treat context as a semantic map of the repo and history.
 - Use `seek_search` for known symbol, class, method, file, path, or regex lookups.
 
+# Memory
+## Obsidian Memory
+- Use `obsidian-cli` for all memory reads and writes in the `Notes` vault.
+- If `obsidian-cli` is unavailable or fails, skip memory work and continue the task.
+- Use the `obsidian-markdown` skill before creating or updating memory notes.
+- Store memory under `agent-memory/` in the `Notes` vault.
+- Use Obsidian properties and wikilinks for memory notes.
+- Keep state in readable Markdown. Prefer updating existing notes over creating new ones.
+
+## Session Start
+- Using `obsidian-cli` in the `Notes` vault, read `agent-memory/index.md`.
+- Resolve the current project name from the workspace folder.
+- For Git worktrees, use `git rev-parse --show-toplevel` and `git rev-parse --git-common-dir`; if the common dir reveals the parent repo, use that repo basename.
+- Normalize project names by removing leading dots, so `.dotfiles` becomes `dotfiles`.
+- Using `obsidian-cli` in the `Notes` vault, read `agent-memory/<project-name>/memory.md` if it exists.
+- Using `obsidian-cli` in the `Notes` vault, read the last few days of logs in `agent-memory/<project-name>/sessions/`.
+- Read the relevant project files for the current request.
+
+## Project Memory
+- `agent-memory/index.md` tracks active projects with project wikilinks, status, last touched date, and short next action.
+- `agent-memory/<project-name>/memory.md` holds durable project state: decisions, conventions, gotchas, recurring issues, and next actions.
+- Create `agent-memory/<project-name>/memory.md` only for long-term projects, not one-off requests.
+- Session logs are history. Project memory holds current state.
+- If a useful state note is missing, create it in the same simple style.
+
+## Sessions
+- Before ending a session or at applicable stopping points, write or update `agent-memory/<project-name>/sessions/YYYY-MM-DD-session-NNN.md`.
+- Session logs must include YAML properties with `opencode_session: ses_...`; use `opencode_session: unknown` if unavailable.
+- Session logs must use the OpenCode session title as both the YAML `title` and the first `#` heading; fall back to a concise descriptive title if unavailable.
+- Session logs should include summary, decisions, files touched, verification, and next steps.
+- Update `agent-memory/index.md` if active projects changed or completed.
+- Update the relevant `memory.md` if durable project state changed.
+
 # Tooling & Operations
 ## File Operations
 - Find files by name: `fd`
